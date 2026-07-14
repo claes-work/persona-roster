@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Generate .claude/agents/<slug>-advisor.md and <slug>-operator.md from roster.json.
 
-Single source of truth is each clone's persona/system-prompt.md. The generated agents
-are THIN LOADERS: they instruct the sub-agent to read that system prompt at runtime and
-adopt it, so persona content is never duplicated or allowed to go stale here.
+Cross-platform + machine-local. roster.json stores each clone's path RELATIVE to the
+roster root (clones/<name>); this script resolves them to LOCAL ABSOLUTE paths for the
+machine it runs on (Windows D:\\..., macOS /Users/..., Linux /home/...). The generated
+agent files are therefore a machine-specific BUILD ARTIFACT — they are gitignored, and
+every collaborator regenerates them after cloning by running this script.
+
+Single source of truth for persona content stays each clone's persona/system-prompt.md;
+the agents are thin loaders that Read it at runtime, so nothing is duplicated or stale.
 
 Advisor  = read-only council voice (Read/Grep/Glob over its own repo).
 Operator = embodied worker: full Claude Code tools, persona as a values/taste layer,
@@ -26,10 +31,10 @@ tools: Read, Grep, Glob
 You ARE **{name}**. Your identity, voice, and beliefs live in **`{repo}`**.
 
 ## Before you answer
-1. Read `{repo}\\{system_prompt}` in full and adopt it completely — voice, frameworks,
+1. Read `{system_prompt_path}` in full and adopt it completely — voice, frameworks,
    opinions. That file IS you.
-2. Ground the problem in your wiki: start at `{repo}\\index.md`, then drill into the
-   relevant `wiki/**` pages.
+2. Ground the problem in your wiki: start at `{index_path}`, then drill into the
+   relevant `wiki/**` pages under `{repo}`.
 
 ## How you answer
 - First person, in character. Grounded and cited — end with `Sources:` (wiki paths).
@@ -52,10 +57,10 @@ You ARE **{name}**, operating as a hands-on contributor inside the user's ACTUAL
 (not your own repo). Persona = your judgment and priorities; the tools = your hands.
 
 ## Load your identity first
-1. Read `{repo}\\{system_prompt}` in full and adopt it — your taste, standards, and
+1. Read `{system_prompt_path}` in full and adopt it — your taste, standards, and
    priorities come from there.
-2. When a decision touches your expertise, ground it by reading the relevant
-   `{repo}\\wiki/**` pages, and note the basis.
+2. When a decision touches your expertise, ground it by reading the relevant `wiki/**`
+   pages under `{repo}`, and note the basis.
 
 ## How you work
 - Do the real work with your tools (edit files, run commands, research) the way **{name}**
@@ -77,11 +82,15 @@ def main() -> None:
     AGENTS.mkdir(parents=True, exist_ok=True)
     written = []
     for c in data.get("clones", []):
+        repo_abs = (ROOT / c["repo"]).resolve()
+        sysprompt = repo_abs / c.get("system_prompt", "persona/system-prompt.md")
+        index = repo_abs / "index.md"
         ctx = {
             "slug": c["slug"],
             "name": c["name"],
-            "repo": c["repo"],
-            "system_prompt": c.get("system_prompt", "persona/system-prompt.md").replace("/", "\\"),
+            "repo": str(repo_abs),
+            "system_prompt_path": str(sysprompt),
+            "index_path": str(index),
             "domains": ", ".join(c.get("domains", [])),
             "status_note": (
                 ""
@@ -94,7 +103,7 @@ def main() -> None:
             path = AGENTS / f"{c['slug']}-{suffix}.md"
             path.write_text(tmpl.format(**ctx), encoding="utf-8")
             written.append(path.name)
-    print(f"Generated {len(written)} agent file(s):")
+    print(f"Generated {len(written)} agent file(s) with local paths under {AGENTS}:")
     for n in sorted(written):
         print(f"  {n}")
 

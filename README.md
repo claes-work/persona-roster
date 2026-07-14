@@ -66,6 +66,37 @@ or, in any Claude Code session, summon a single voice:
 @mkbhd-operator   Improve the thumbnail pipeline in youtube-engine.
 ```
 
+## Setup on a new machine (macOS / Windows / Linux)
+
+The roster is **portable**: `roster.json` references clones by a path *relative* to this
+repo (`clones/<name>`), and `tools/gen_agents.py` resolves those to local absolute paths
+for whatever machine and base folder you use. Nothing is hardcoded to one computer.
+
+```bash
+# 1. Clone this umbrella wherever you keep projects (e.g. ~/Projects on macOS)
+git clone https://github.com/claes-work/persona-roster.git
+cd persona-roster
+
+# 2. Pull every clone repo into clones/  (idempotent; skips ones already there)
+python3 tools/clone_all.py
+#    -> clones a fork instead:  PERSONA_ROSTER_OWNER=<gh-user> python3 tools/clone_all.py
+
+# 3. Generate the persona agents for THIS machine (paths resolved locally; gitignored)
+python3 tools/gen_agents.py
+
+# 4. Open the folder in Claude Code and run a council
+#    /council <your problem>
+```
+
+`clones/` and `.claude/agents/` are **gitignored**: each clone is its own independent git
+repo (never nested into this one), and the agents are a machine-local build artifact.
+
+**Collaborating on ingest/synthesis:** the clones are separate GitHub repos, so two people
+can grow different clones in parallel. Two hard rules: (a) **never run two ingest/synthesis
+loops on the *same* clone at once** — split the roster between you (e.g. one person drives
+Hormozi + Chris Do, the other Neil Patel + MKBHD); (b) pushing your ingest work back needs
+write access — the repo owner adds you as a collaborator on the clone repos you take.
+
 ## Add a clone to the roster
 
 1. Build the clone in its own repo from `persona-clone-template` (`/clone-setup <Name>`,

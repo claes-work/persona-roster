@@ -2,6 +2,9 @@
 # The umbrella never tracks their contents; roster.json records the canonical paths.
 clones/
 
+# Generated per machine by tools/gen_agents.py (absolute local paths) — regenerate after clone.
+.claude/agents/
+
 # Python
 __pycache__/
 *.pyc
