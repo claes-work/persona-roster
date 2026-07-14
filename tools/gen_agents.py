@@ -84,10 +84,10 @@ def main() -> None:
             "system_prompt": c.get("system_prompt", "persona/system-prompt.md").replace("/", "\\"),
             "domains": ", ".join(c.get("domains", [])),
             "status_note": (
-                "STUB — clone bootstrapped but system-prompt not compiled yet; excluded "
-                "from councils until ingested."
-                if c.get("status") == "bootstrapped"
-                else ""
+                ""
+                if c.get("status") == "active"
+                else "STUB — clone repo exists but system-prompt not compiled yet; "
+                "excluded from councils until ingested."
             ),
         }
         for suffix, tmpl in (("advisor", ADVISOR), ("operator", OPERATOR)):

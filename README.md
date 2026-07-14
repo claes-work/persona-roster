@@ -13,9 +13,8 @@ their knowledge — that is the whole point (see "Hard rules").
 ```
 persona-roster/
 ├── roster.json           canonical registry (machine-readable): every clone + its path/domains/status
-├── clones/               the clones, grouped here (Windows junctions to their real repos)
-│   ├── alex-hormozi-clone/   → D:\Dev\alex-hormozi-clone   (junction)
-│   └── chris-do-clone/       → D:\Dev\chris-do-clone       (junction)
+├── clones/               the clones, grouped here (Windows junctions to their real repos;
+│                         gitignored — each clone is its own repo, paths live in roster.json)
 ├── orchestrator/
 │   ├── roundtable.md     the council harness: fan-out → (cross-examine) → synthesize
 │   └── moderator-prompt.md   the neutral curator that combines the takes
@@ -24,6 +23,23 @@ persona-roster/
 │   └── commands/council.md   /council <problem> — run a roundtable
 └── tools/gen_agents.py   regenerates .claude/agents/* from roster.json + each clone's system-prompt
 ```
+
+## Current roster
+
+Primary tier has a repo each; secondary tier is planned (names in `roster.json`).
+
+| Clone | Slug | Domains | Status |
+|---|---|---|---|
+| Alex Hormozi | `hormozi` | acquisition, offers, sales, pricing, scaling | **active** (system-prompt v35) |
+| Chris Do | `chris-do` | branding, positioning, pricing creative work | bootstrapped (not compiled) |
+| Neil Patel | `neil-patel` | SEO, digital marketing, content | created (run `/clone-setup`) |
+| Marques Brownlee | `mkbhd` | tech review, production quality, creator business | created |
+| Gary Vaynerchuk | `garyvee` | marketing, brand, attention | created |
+| Chuck Keith | `networkchuck` | IT, networking, homelab | created |
+
+Only **active** clones join a council; the rest hold a reserved seat until ingested.
+Secondary tier (planned): Simon Sinek, Seth Godin, Ali Abdaal, Cal Newport, Derek Muller,
+Cleo Abram, Linus Sebastian, Jeff Geerling, Theo Browne, Tim Ferriss.
 
 ## Two ways to use a clone
 

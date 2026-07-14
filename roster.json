@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical registry of persona clones. gen_agents.py reads this to emit .claude/agents/*. status: active | bootstrapped | planned. tier: 1 primary, 2 secondary.",
+  "_comment": "Canonical registry of persona clones. gen_agents.py reads this to emit .claude/agents/*. status: active (system-prompt compiled) | bootstrapped (/clone-setup run, not compiled) | created (repo scaffolded from template, not bootstrapped) | planned (name only, no repo). tier: 1 primary, 2 secondary.",
   "clones": [
     {
       "slug": "hormozi",
@@ -20,13 +20,49 @@
       "tier": 1,
       "status": "bootstrapped",
       "note": "Bootstrapped 2026-07-14. system-prompt not compiled yet (needs ingest + first synthesis)."
+    },
+    {
+      "slug": "neil-patel",
+      "name": "Neil Patel",
+      "repo": "D:\\Dev\\neil-patel-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["seo", "digital-marketing", "content"],
+      "tier": 1,
+      "status": "created",
+      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+    },
+    {
+      "slug": "mkbhd",
+      "name": "Marques Brownlee",
+      "repo": "D:\\Dev\\mkbhd-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["tech-review", "production-quality", "creator-business"],
+      "tier": 1,
+      "status": "created",
+      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+    },
+    {
+      "slug": "garyvee",
+      "name": "Gary Vaynerchuk",
+      "repo": "D:\\Dev\\garyvee-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["marketing", "brand", "attention"],
+      "tier": 1,
+      "status": "created",
+      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+    },
+    {
+      "slug": "networkchuck",
+      "name": "Chuck Keith",
+      "repo": "D:\\Dev\\networkchuck-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["it", "networking", "homelab"],
+      "tier": 1,
+      "status": "created",
+      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
     }
   ],
   "planned": [
-    {"name": "Neil Patel", "domains": ["seo", "digital-marketing", "content"], "tier": 1},
-    {"name": "Marques Brownlee (MKBHD)", "domains": ["tech-review", "production-quality", "creator"], "tier": 1},
-    {"name": "Gary Vaynerchuk", "domains": ["marketing", "brand", "attention"], "tier": 1},
-    {"name": "Chuck Keith (NetworkChuck)", "domains": ["it", "networking", "homelab"], "tier": 1},
     {"name": "Simon Sinek", "domains": ["leadership", "culture"], "tier": 2},
     {"name": "Seth Godin", "domains": ["marketing", "positioning"], "tier": 2, "note": "book/blog/podcast-first — text ingest, not YouTube"},
     {"name": "Ali Abdaal", "domains": ["productivity", "creator-business"], "tier": 2},
