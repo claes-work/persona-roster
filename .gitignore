@@ -1,0 +1,7 @@
+# clones/ holds junctions to the independent clone repos — each is its own git repo.
+# The umbrella never tracks their contents; roster.json records the canonical paths.
+clones/
+
+# Python
+__pycache__/
+*.pyc

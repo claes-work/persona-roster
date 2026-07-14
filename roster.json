@@ -1,0 +1,41 @@
+{
+  "_comment": "Canonical registry of persona clones. gen_agents.py reads this to emit .claude/agents/*. status: active | bootstrapped | planned. tier: 1 primary, 2 secondary.",
+  "clones": [
+    {
+      "slug": "hormozi",
+      "name": "Alex Hormozi",
+      "repo": "D:\\Dev\\alex-hormozi-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["acquisition", "offers", "sales", "pricing", "scaling", "money-models"],
+      "tier": 1,
+      "status": "active",
+      "note": "Mature: system-prompt v35, ~1,760 videos + $100M library."
+    },
+    {
+      "slug": "chris-do",
+      "name": "Chris Do",
+      "repo": "D:\\Dev\\chris-do-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["branding", "positioning", "pricing-creative", "design-business", "client-relationships"],
+      "tier": 1,
+      "status": "bootstrapped",
+      "note": "Bootstrapped 2026-07-14. system-prompt not compiled yet (needs ingest + first synthesis)."
+    }
+  ],
+  "planned": [
+    {"name": "Neil Patel", "domains": ["seo", "digital-marketing", "content"], "tier": 1},
+    {"name": "Marques Brownlee (MKBHD)", "domains": ["tech-review", "production-quality", "creator"], "tier": 1},
+    {"name": "Gary Vaynerchuk", "domains": ["marketing", "brand", "attention"], "tier": 1},
+    {"name": "Chuck Keith (NetworkChuck)", "domains": ["it", "networking", "homelab"], "tier": 1},
+    {"name": "Simon Sinek", "domains": ["leadership", "culture"], "tier": 2},
+    {"name": "Seth Godin", "domains": ["marketing", "positioning"], "tier": 2, "note": "book/blog/podcast-first — text ingest, not YouTube"},
+    {"name": "Ali Abdaal", "domains": ["productivity", "creator-business"], "tier": 2},
+    {"name": "Cal Newport", "domains": ["deep-work", "knowledge-work"], "tier": 2, "note": "book/blog/podcast-first — text ingest, not YouTube"},
+    {"name": "Derek Muller (Veritasium)", "domains": ["science-storytelling"], "tier": 2},
+    {"name": "Cleo Abram", "domains": ["future-tech", "storytelling"], "tier": 2},
+    {"name": "Linus Sebastian (LTT)", "domains": ["consumer-tech", "media-business"], "tier": 2},
+    {"name": "Jeff Geerling", "domains": ["infrastructure", "open-source"], "tier": 2},
+    {"name": "Theo Browne (t3.gg)", "domains": ["web-dev", "developer-tools"], "tier": 2},
+    {"name": "Tim Ferriss", "domains": ["learning", "expert-interviews"], "tier": 2}
+  ]
+}
