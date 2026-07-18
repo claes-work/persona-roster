@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical registry of persona clones. Paths in 'repo' are RELATIVE to this repo root (clones/<name>) so the roster is portable across machines/OSes. tools/gen_agents.py resolves them to local absolute paths. status: active (system-prompt compiled) | bootstrapped (/clone-setup run, not compiled) | created (repo scaffolded from template, not bootstrapped) | planned (name only, no repo). tier: 1 primary, 2 secondary.",
+  "_comment": "Canonical registry of persona clones. Paths in 'repo' are RELATIVE to this repo root (clones/<name>) so the roster is portable across machines/OSes. tools/gen_agents.py resolves them to local absolute paths. status: active (system-prompt compiled) | bootstrapped (/clone-setup run, not compiled) | created (repo scaffolded from template, not bootstrapped) | planned (name only, no repo) | deprecated (retired from councils). tier: 1 primary, 2 secondary. strong_for/weak_for are ROUTING metadata only (read by tools/route.py); the persona's actual knowledge stays in its clone repo.",
   "github_owner": "claes-work",
   "clones": [
     {
@@ -8,6 +8,8 @@
       "repo": "clones/alex-hormozi-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["acquisition", "offers", "sales", "pricing", "scaling", "money-models"],
+      "strong_for": ["offer-design", "value-proposition", "bottleneck-analysis", "lead-generation", "pricing-review", "monetization"],
+      "weak_for": ["software-architecture", "visual-design", "legal"],
       "tier": 1,
       "status": "active",
       "note": "Mature: system-prompt v35, ~1,760 videos + $100M library."
@@ -18,9 +20,11 @@
       "repo": "clones/chris-do-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["branding", "positioning", "pricing-creative", "design-business", "client-relationships"],
+      "strong_for": ["positioning", "brand-language", "value-based-pricing", "client-conversations"],
+      "weak_for": ["seo", "software-architecture", "performance-marketing"],
       "tier": 1,
-      "status": "bootstrapped",
-      "note": "Bootstrapped 2026-07-14. system-prompt not compiled yet (needs ingest + first synthesis)."
+      "status": "active",
+      "note": "Active since 2026-07-18: system-prompt v7 compiled from 378 L2 sources (detected by tools/roster_status.py; ingest continues)."
     },
     {
       "slug": "neil-patel",
@@ -28,6 +32,8 @@
       "repo": "clones/neil-patel-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["seo", "digital-marketing", "content"],
+      "strong_for": ["seo", "traffic", "funnel-context", "content-distribution", "conversion"],
+      "weak_for": ["production-craft", "software-architecture"],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
@@ -38,6 +44,8 @@
       "repo": "clones/mkbhd-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["tech-review", "production-quality", "creator-business"],
+      "strong_for": ["audience-perspective", "credibility-check", "video-packaging", "production-quality", "product-review"],
+      "weak_for": ["seo", "email-marketing", "enterprise-sales"],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
@@ -48,6 +56,8 @@
       "repo": "clones/garyvee-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["marketing", "brand", "attention"],
+      "strong_for": ["attention", "distribution", "repurposing", "personal-brand", "social-platforms"],
+      "weak_for": ["software-architecture", "seo-technical", "detailed-funnel-math"],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
@@ -58,6 +68,8 @@
       "repo": "clones/networkchuck-clone",
       "system_prompt": "persona/system-prompt.md",
       "domains": ["it", "networking", "homelab"],
+      "strong_for": ["tech-education", "beginner-clarity", "curiosity-hooks", "infrastructure", "self-hosting"],
+      "weak_for": ["business-strategy", "pricing", "brand-positioning"],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."

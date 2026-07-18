@@ -14,6 +14,15 @@ advisors on one problem and produce a single, decision-ready synthesis.
 4. **Per-persona contribution.** One line each: what this seat uniquely added.
 5. **Gaps / low-confidence.** Seats that deflected or lacked grounding; open questions.
 
+## Decision Record (persisted output)
+
+When the council was convened to decide (intent `decide`, or /council), additionally
+emit the block the orchestrator files under `wiki/decisions/` (format:
+`wiki/decisions/README.md`): decision + confidence, context, reasoning, **dissent
+(verbatim in spirit, attributed — never smoothed away or dropped)**, assumptions,
+rejected alternatives, risks + next experiment, review trigger. The chat synthesis is
+for the user; the record is for the future session that has to know why.
+
 ## Rules
 - **Attribute everything.** Never present a claim as consensus if only one persona made it.
 - **Preserve citations.** Carry each persona's `Sources:` through so the recommendation

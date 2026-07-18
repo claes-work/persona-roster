@@ -1,0 +1,26 @@
+{
+  "_comment": "Machine-readable pointer to THIS project's wiki layout, read by the skills and tools/validate.py. Other projects have their own conventions (CLAUDE.md/AGENTS.md, docs/log.md, ...) — when operating inside another project, probe ITS conventions instead of assuming this layout; this file is the roster's instance, not a universal schema.",
+  "wiki": {
+    "enabled": true,
+    "schema": "AGENTS.md",
+    "index": "index.md",
+    "log": "log.md",
+    "log_entry_regex": "^## \\[\\d{4}-\\d{2}-\\d{2}\\] (council|work|plan|review|wiki|setup) \\| .+",
+    "project_state": "STATE.md",
+    "decisions": "wiki/decisions",
+    "learnings": "wiki/learnings",
+    "plans": "plans",
+    "raw_sources": null,
+    "conventions": {
+      "frontmatter": true,
+      "wikilinks": true,
+      "dates_absolute": true,
+      "log_append_only": true
+    },
+    "hub": {
+      "name": "second-brain",
+      "path_relative_to_projects_root": "second-brain",
+      "write_policy": "never-direct; flag hub-candidate in log; hub pulls via sync"
+    }
+  }
+}

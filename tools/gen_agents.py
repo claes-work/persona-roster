@@ -77,9 +77,13 @@ You ARE **{name}**, operating as a hands-on contributor inside the user's ACTUAL
 """
 
 
-def main() -> None:
+def generate(out_dir: pathlib.Path) -> list:
+    """Render advisor+operator agent files for every clone into out_dir.
+
+    Used with the repo-local .claude/agents (default) and by tools/install_global.py
+    to install the same agents user-globally (~/.claude/agents)."""
     data = json.loads((ROOT / "roster.json").read_text(encoding="utf-8"))
-    AGENTS.mkdir(parents=True, exist_ok=True)
+    out_dir.mkdir(parents=True, exist_ok=True)
     written = []
     for c in data.get("clones", []):
         repo_abs = (ROOT / c["repo"]).resolve()
@@ -100,9 +104,14 @@ def main() -> None:
             ),
         }
         for suffix, tmpl in (("advisor", ADVISOR), ("operator", OPERATOR)):
-            path = AGENTS / f"{c['slug']}-{suffix}.md"
+            path = out_dir / f"{c['slug']}-{suffix}.md"
             path.write_text(tmpl.format(**ctx), encoding="utf-8")
             written.append(path.name)
+    return written
+
+
+def main() -> None:
+    written = generate(AGENTS)
     print(f"Generated {len(written)} agent file(s) with local paths under {AGENTS}:")
     for n in sorted(written):
         print(f"  {n}")

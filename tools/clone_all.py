@@ -4,7 +4,9 @@
 Reads roster.json, derives each GitHub repo name from its 'repo' path, and clones
 https://github.com/<owner>/<name>.git into clones/<name>. Skips repos already present.
 
-Owner resolution: $PERSONA_ROSTER_OWNER, else roster.json "github_owner", else claes-work.
+Owner resolution per clone: the clone's own optional "github" field ("owner/name" or a
+full https URL — for clones hosted under a different account, e.g. a collaborator's),
+else $PERSONA_ROSTER_OWNER, else roster.json "github_owner", else claes-work.
 
 Usage:
     python tools/clone_all.py
@@ -29,7 +31,13 @@ def main() -> None:
         if (dest / ".git").exists():
             print(f"exists: {name}")
             continue
-        url = f"https://github.com/{owner}/{name}.git"
+        gh = c.get("github")  # per-clone override: "owner/name" or full URL
+        if gh and gh.startswith("http"):
+            url = gh if gh.endswith(".git") else gh + ".git"
+        elif gh:
+            url = f"https://github.com/{gh}.git"
+        else:
+            url = f"https://github.com/{owner}/{name}.git"
         print(f"clone:  {url} -> clones/{name}")
         subprocess.run(["git", "clone", url, str(dest)], check=True)
     print("\nDone. Next: python tools/gen_agents.py")

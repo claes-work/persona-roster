@@ -3,10 +3,16 @@
 How the orchestrator (a plain Claude Code session, or the `/council` command) turns a
 problem into a synthesized, multi-persona answer.
 
+> The full council described here is only ONE way to convene the roster. For the broader
+> menu — ad-hoc teams, named preset groups, adversarial debates, and the skill layer that
+> reaches them — see [`composition-modes.md`](composition-modes.md).
+
 ## Inputs
-- **problem** — the question/decision, plus any project context.
-- **roster** — which clones sit at the table (default: all `status: active` in
-  `roster.json`; or an explicit pick like "Hormozi × Neil Patel").
+- **problem** — the question/decision, plus any project context (STATE.md + relevant
+  decisions/learnings are loaded first — see [`knowledge-commit.md`](knowledge-commit.md)).
+- **roster** — which clones sit at the table. Default: resolved by the router
+  ([`router.md`](router.md) + `tools/route.py` — team, conditional seats, status
+  gating); or an explicit pick like "Hormozi × Neil Patel" / `--team` / `--include`.
 
 ## Procedure
 
@@ -15,12 +21,15 @@ problem into a synthesized, multi-persona answer.
    Prompt each with the *same* problem. No agent sees another's wiki or answer — this is
    the one-repo-one-person rule at runtime. Each returns: its take (in character) +
    `Sources:` (wiki paths).
-2. **Cross-examine (optional, for high-stakes problems).** Give each persona the *others'
-   takes as statements* (never their wikis) and ask it to critique/agree, in character,
-   citing its own sources. This surfaces real disagreement instead of parallel monologue.
+2. **Cross-examine (standard for councils; skippable only at fast depth).** Give each
+   persona the *others' takes as statements* (never their wikis) and ask it to
+   critique/agree, in character, citing its own sources. This surfaces real disagreement
+   instead of parallel monologue. At deep depth this becomes a structured debate
+   (adversarial pairing — see [`composition-modes.md`](composition-modes.md) mode 4).
 3. **Synthesize.** A single **moderator** agent (neutral curator, NOT a persona — see
    `moderator-prompt.md`) combines the takes into one recommendation with per-persona
-   attribution and flagged disagreements.
+   attribution and flagged disagreements — plus, for decisions, the Decision Record
+   that gets persisted to `wiki/decisions/` (dissent preserved).
 
 ## Rules
 - Personas exchange **statements, not knowledge bases.**

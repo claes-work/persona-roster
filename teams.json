@@ -1,0 +1,156 @@
+{
+  "_comment": "Declarative team + functional-role configuration. Read by tools/route.py (deterministic routing) and the skills in .claude/commands/. Teams are curated subsets of the roster (bench vs council: 3-6 non-redundant voices beat headcount). Members reference roster.json slugs; roles reference the 'roles' registry below. Only status:active clones actually take a seat — others are reported as reserved. conditional_members: tag -> members added when the task classification carries that tag. review lists who checks the output; validate.py enforces that at least one review seat is NOT a default member (independent review).",
+  "roles": {
+    "moderator": {
+      "display_name": "Moderator / Synthesizer",
+      "prompt": "orchestrator/moderator-prompt.md",
+      "purpose": "Neutral curator: synthesizes takes, preserves attribution and dissent, emits the Decision Record."
+    },
+    "skeptical-reviewer": {
+      "display_name": "Skeptical Reviewer",
+      "prompt": "orchestrator/roles/skeptical-reviewer.md",
+      "purpose": "Attacks assumptions, surfaces risks and failure modes before anything ships."
+    },
+    "evidence-reviewer": {
+      "display_name": "Evidence Reviewer",
+      "prompt": "orchestrator/roles/evidence-reviewer.md",
+      "purpose": "Checks every claim for grounding; separates cited fact from plausible simulation."
+    },
+    "editorial-reviewer": {
+      "display_name": "Editorial Reviewer",
+      "prompt": "orchestrator/roles/editorial-reviewer.md",
+      "purpose": "Clarity, readability, structure, tone-fit of written artifacts."
+    },
+    "technical-reviewer": {
+      "display_name": "Technical Reviewer",
+      "prompt": "orchestrator/roles/technical-reviewer.md",
+      "purpose": "Correctness, maintainability, security and complexity of technical claims and code."
+    },
+    "customer-advocate": {
+      "display_name": "Customer Advocate",
+      "prompt": "orchestrator/roles/customer-advocate.md",
+      "purpose": "Represents the end user/viewer/buyer: value received, friction, comprehension."
+    }
+  },
+  "teams": {
+    "executive": {
+      "display_name": "Executive Council",
+      "domains": ["business-strategy", "business-model", "pricing", "offers", "monetization", "strategic-decision"],
+      "default_members": ["hormozi", "chris-do"],
+      "conditional_members": {
+        "seo": ["neil-patel"],
+        "traffic": ["neil-patel"],
+        "attention": ["garyvee"],
+        "personal-brand": ["garyvee"],
+        "product": ["mkbhd"],
+        "credibility": ["mkbhd"]
+      },
+      "roles": ["moderator", "skeptical-reviewer"],
+      "review": ["evidence-reviewer", "skeptical-reviewer"],
+      "default_depth": "deep",
+      "notes": "For big, hard-to-reverse business/project decisions."
+    },
+    "growth": {
+      "display_name": "Growth Council",
+      "domains": ["marketing", "acquisition", "growth", "funnel", "conversion", "traffic", "seo", "leadgen"],
+      "default_members": ["hormozi", "neil-patel", "garyvee"],
+      "conditional_members": {
+        "positioning": ["chris-do"],
+        "branding": ["chris-do"]
+      },
+      "roles": ["moderator"],
+      "review": ["evidence-reviewer"],
+      "default_depth": "standard"
+    },
+    "content": {
+      "display_name": "Content Council",
+      "domains": ["content", "storytelling", "editorial", "social-media", "repurposing"],
+      "default_members": ["mkbhd", "garyvee"],
+      "conditional_members": {
+        "tech-education": ["networkchuck"],
+        "positioning": ["chris-do"],
+        "seo": ["neil-patel"]
+      },
+      "roles": ["moderator"],
+      "review": ["editorial-reviewer"],
+      "default_depth": "standard"
+    },
+    "youtube": {
+      "display_name": "YouTube Team",
+      "domains": ["youtube", "video", "thumbnail", "title", "packaging", "hook", "retention", "channel"],
+      "default_members": ["mkbhd", "networkchuck", "hormozi"],
+      "conditional_members": {
+        "personal-brand": ["garyvee"],
+        "positioning": ["chris-do"],
+        "seo": ["neil-patel"]
+      },
+      "roles": ["moderator"],
+      "member_roles": {
+        "audience_advocate": "mkbhd",
+        "technical_educator": "networkchuck",
+        "value_and_click_reason": "hormozi"
+      },
+      "stages": {
+        "strategy": ["hormozi", "mkbhd"],
+        "ideation": ["networkchuck", "mkbhd"],
+        "packaging": ["hormozi", "mkbhd"],
+        "review": ["skeptical-reviewer", "evidence-reviewer"]
+      },
+      "review": ["skeptical-reviewer", "evidence-reviewer"],
+      "default_depth": "standard",
+      "notes": "Before councils run, read wiki/learnings/ for own-channel evidence — own results outrank persona defaults."
+    },
+    "email": {
+      "display_name": "Email Marketing Team",
+      "domains": ["email", "newsletter", "subject-lines", "sequences", "email-marketing"],
+      "default_members": ["hormozi", "chris-do", "neil-patel"],
+      "conditional_members": {
+        "attention": ["garyvee"],
+        "storytelling": ["garyvee"]
+      },
+      "roles": ["moderator"],
+      "review": ["editorial-reviewer", "evidence-reviewer"],
+      "default_depth": "standard"
+    },
+    "product": {
+      "display_name": "Product Council",
+      "domains": ["product", "ux", "feature", "user-experience", "product-strategy"],
+      "default_members": ["mkbhd", "hormozi"],
+      "conditional_members": {
+        "technical": ["networkchuck"],
+        "positioning": ["chris-do"]
+      },
+      "roles": ["moderator", "customer-advocate"],
+      "review": ["skeptical-reviewer", "customer-advocate"],
+      "default_depth": "standard"
+    },
+    "engineering": {
+      "display_name": "Engineering Council",
+      "domains": ["engineering", "architecture", "code", "infrastructure", "security", "devops", "tech-debt"],
+      "default_members": [],
+      "conditional_members": {
+        "infrastructure": ["networkchuck"],
+        "networking": ["networkchuck"],
+        "homelab": ["networkchuck"],
+        "self-hosting": ["networkchuck"]
+      },
+      "roles": ["moderator", "technical-reviewer", "skeptical-reviewer"],
+      "review": ["technical-reviewer", "skeptical-reviewer"],
+      "default_depth": "standard",
+      "notes": "Honest coverage: the bench has no software architect yet, so this council is role-driven (technical + skeptical reviewer) with NetworkChuck as conditional infra voice. Grows when an engineering persona (e.g. a planned tier-2 clone) goes active."
+    },
+    "research": {
+      "display_name": "Research Team",
+      "domains": ["research", "evidence", "sources", "fact-check", "comparison"],
+      "default_members": [],
+      "conditional_members": {
+        "seo": ["neil-patel"],
+        "marketing": ["neil-patel"]
+      },
+      "roles": ["moderator", "evidence-reviewer"],
+      "review": ["skeptical-reviewer"],
+      "default_depth": "standard",
+      "notes": "Role-driven; also reach for the /brain skill (second-brain hub) and /deep-research for external evidence."
+    }
+  }
+}

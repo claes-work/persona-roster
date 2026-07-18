@@ -8,3 +8,6 @@ clones/
 # Python
 __pycache__/
 *.pyc
+
+# Obsidian per-machine UI state (vault config app/appearance/core-plugins IS tracked)
+.obsidian/workspace.json
