@@ -23,6 +23,12 @@ n/a — this is infrastructure; no persona claims ingest-scheduling expertise.
   Same-day re-run: +0 everywhere — idempotency confirmed. The fresh-upload→P1
   promotion put the same-day Hormozi video ("Why AI won't make you rich in 2026",
   2026-07-19) at the head of the ingest queue.
+- **2026-07-19 (run 1, supervised, user-ended at 0.48h of 2h):** 3 cycles, all
+  hormozi Stage B (fresh uploads), 22 videos → L2. ~6–8 min/cycle wall clock,
+  ~90–103k subagent tokens/cycle (≈293k total) + dispatcher overhead. Zero rate
+  limits. Dispatcher-premise correction worked: cycle 2's executor verified the
+  synthesis checkpoint was already drained and ran Stage B instead of the expected
+  Stage S — "clone stage machine decides" holds.
 - **Usage calibration:** none yet. Sebastian's prior observation: one clone's ingest
   loop can run 5–7h without exhausting the weekly limit (single-clone sessions,
   Opus 4.8). Record post-run data points here as
