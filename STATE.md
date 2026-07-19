@@ -1,6 +1,6 @@
 ---
 type: state
-last_updated: 2026-07-18
+last_updated: 2026-07-19
 ---
 
 # Project state
@@ -31,20 +31,37 @@ persistence. See `AGENTS.md`.
   (2026-07-18, see `wiki/decisions/2026-07-18-agent-os-architecture.md`).
 - Clone maturity policy: graded capability, experimental seats via `--include`
   (2026-07-18, see `wiki/decisions/2026-07-18-clone-maturity-policy.md`).
+- Ingest scheduling policy: freshness first → focus-until-active (neil-patel → mkbhd
+  → garyvee → networkchuck); maturity target = P1+P2 drained + debt 0 + compiled
+  prompt; budget time-boxed with user calibration (2026-07-19, see
+  `wiki/decisions/2026-07-19-ingest-scheduling-policy.md`).
 
 ## Open questions
 
+- How to measure subscription usage programmatically for the roster loop's budget guard
+  (no official API; candidates: time-boxing, ccusage/OTel token counts, rate-limit
+  errors as back-off signal) — see `plans/2026-07-19-roster-ingest-autopilot.md`.
 - Which composition mode wins for which problem type — resolve empirically once ≥3
   clones are active (`orchestrator/composition-modes.md`).
 - Debate mode: does it need a judge-variant of the moderator prompt? (likely yes).
 
 ## Next actions
 
-- Continue Chris Do ingestion (more synthesis passes deepen the v7 prompt).
-- Ingest Neil Patel & MKBHD (enumerated, `/clone-setup` + ingest loop pending), then
-  GaryVee/NetworkChuck.
-- Run a first real `/work` task end-to-end (e.g. from youtube-engine) and record the
-  learning; retro the routing per the architecture decision's review trigger.
+- **Autopilot built (WP1–WP5 done 2026-07-19)** — daily nudge: `/loop /roster-loop`
+  (time-boxed dispatcher; discovery refresh + focus-until-active ingest via clone
+  loops). First supervised run pending (WP4 review step: `/loop /roster-loop 2`),
+  then report observed usage for calibration
+  (`python tools/autopilot_journal.py append usage observed_pct=<n>`). WP6
+  (headless cron local → server) still open: `plans/2026-07-19-roster-ingest-autopilot.md`.
+- Clone ingestion now runs THROUGH the autopilot (policy order: neil-patel → mkbhd →
+  garyvee → networkchuck, then deepening hormozi/chris-do; fresh uploads first).
+- ~~Run a first real `/work` task end-to-end~~ **done 2026-07-18** (youtube-engine
+  Titelvarianten; learning: `wiki/learnings/work-pipeline-standard.md`). Follow-up: nach
+  Livegang des Videos die Titel-Performance messen (48h/7d/28d) und die Learning-Seite
+  um Ergebnis-Evidenz ergänzen; Routing-Retro per Architektur-Review-Trigger steht aus.
+- Produce the YouTube video about this system once ≥4 clones are active — fully
+  pre-planned in `../youtube-engine/videos/geplant/2026-07-18-persona-klone-council/`
+  (content inventory, drehplan v0, title hypotheses; update the numbers before filming).
 
 ## Blocked
 

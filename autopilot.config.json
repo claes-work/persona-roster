@@ -1,0 +1,16 @@
+{
+  "_comment": "Config for the roster ingest autopilot (/roster-loop + tools/refresh_sources.py). Policy rationale: wiki/decisions/2026-07-19-ingest-scheduling-policy.md. Budget is TIME-BOXED (no reliable API for subscription usage %); calibration evidence accumulates in wiki/learnings/roster-ingest-autopilot.md and autopilot/journal.jsonl.",
+  "timebox_hours_default": 6,
+  "batch_size_default": 8,
+  "discovery": {
+    "stale_hours": 24,
+    "playlist_end": 30,
+    "fresh_days": 14,
+    "top_promote": 50
+  },
+  "scheduling": {
+    "freshness_first": true,
+    "focus_order": ["neil-patel", "mkbhd", "garyvee", "networkchuck", "hormozi", "chris-do"],
+    "backoff_minutes": 60
+  }
+}

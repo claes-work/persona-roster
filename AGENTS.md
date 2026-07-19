@@ -14,9 +14,10 @@ persistence.
 | Teams + roles | `teams.json` (declarative; validated by `tools/validate.py`) |
 | Role prompts | `orchestrator/moderator-prompt.md`, `orchestrator/roles/*.md` |
 | Procedures | `orchestrator/router.md` · `pipelines.md` · `roundtable.md` · `knowledge-commit.md` · `composition-modes.md` |
-| Entry points | `.claude/commands/`: `/council` `/work` `/plan` `/run-plan` `/review` `/wiki` (installed user-globally) · `/setup` `/add-clone` (roster-repo only) |
+| Entry points | `.claude/commands/`: `/council` `/work` `/plan` `/run-plan` `/review` `/wiki` (installed user-globally) · `/setup` `/add-clone` `/refresh-sources` `/roster-loop` (roster-repo only) |
 | Wiki (roster memory) | `index.md` · `log.md` · `STATE.md` · `wiki/decisions/` · `wiki/learnings/` · `plans/` |
-| Tools | `tools/route.py` (routing) · `validate.py` (configs/wiki/done-gate) · `roster_status.py` (clone readiness + mismatch detection) · `gen_agents.py` · `install_global.py` (user-global shims → use from any project) · `clone_all.py` · `tools/tests/` |
+| Autopilot | `/roster-loop` (time-boxed cross-clone ingest dispatcher, run via `/loop /roster-loop`) · `autopilot.config.json` (policy parameters) · `autopilot/journal.jsonl` (operational memory, via `tools/autopilot_journal.py`) · policy: `wiki/decisions/2026-07-19-ingest-scheduling-policy.md` |
+| Tools | `tools/route.py` (routing) · `validate.py` (configs/wiki/done-gate) · `roster_status.py` (clone readiness, backlog/freshness, maturity target) · `refresh_sources.py` (discovery refresh: new videos → clone ledgers) · `autopilot_journal.py` · `gen_agents.py` · `install_global.py` (user-global shims → use from any project) · `clone_all.py` · `tools/tests/` |
 
 ## Hard rules (superset of the clone rules)
 
