@@ -97,3 +97,12 @@ autopilot/journal.jsonl + tools/autopilot_journal.py; 15 new tests (32 green).
 Live verification: hormozi +32 video/+61 short (same-day upload "Why AI won't make you
 rich in 2026" -> P1), neil-patel +4/+12, mkbhd +2, re-run +0; clone commits pushed.
 Knowledge: decision + learning page + plan progress + STATE updated. Open: WP6 cron.
+
+## [2026-07-19] work | Autopilot run 1 (supervised): 3 cycles, 22 videos L2, user-ended at 0.48h
+First supervised /loop /roster-loop run (timebox 2h, ended early by user). 3 cycles, all
+hormozi Stage B freshness work: batches 276-278 -> 22 videos L2 (incl. same-day flagship
+"Why AI won't make you rich in 2026" as L3-candidate), 1 dup, 1 unavailable; 8 fresh P1
+remain on @MoreMozi; synthesis debt 4/10. Zero rate limits, zero errors; dispatcher
+premise correction worked (cycle 2: subagent verified checkpoint already drained, ran B
+not S). ~10 min/cycle, ~98k subagent tokens/cycle. Journal: autopilot/journal.jsonl.
+Knowledge: first calibration data point pending user's observed-usage report.
