@@ -32,9 +32,15 @@ persistence. See `AGENTS.md`.
 - Clone maturity policy: graded capability, experimental seats via `--include`
   (2026-07-18, see `wiki/decisions/2026-07-18-clone-maturity-policy.md`).
 - Ingest scheduling policy: freshness first → focus-until-active (neil-patel → mkbhd
-  → garyvee → networkchuck); maturity target = P1+P2 drained + debt 0 + compiled
-  prompt; budget time-boxed with user calibration (2026-07-19, see
+  → networkchuck → hormozi/chris-do; GaryVee removed from focus_order 2026-07-19 —
+  Sebastian may resume him manually later); maturity target = P1+P2 drained + debt 0 +
+  compiled prompt; budget time-boxed with user calibration (2026-07-19, see
   `wiki/decisions/2026-07-19-ingest-scheduling-policy.md`).
+- Parallel ingest + worker partition: `/roster-loop` works up to `max_parallel_clones`
+  distinct clones per iteration and can split clones across two machines via
+  `workers.assignments` (each machine `set-worker` once); no identity = all clones.
+  Start command unchanged (2026-07-19, see
+  `wiki/decisions/2026-07-19-parallel-ingest-and-workers.md`).
 
 ## Open questions
 
@@ -44,6 +50,10 @@ persistence. See `AGENTS.md`.
 - Which composition mode wins for which problem type — resolve empirically once ≥3
   clones are active (`orchestrator/composition-modes.md`).
 - Debate mode: does it need a judge-variant of the moderator prompt? (likely yes).
+- Best `max_parallel_clones` value vs token/usage burn and same-IP yt-dlp throttling —
+  calibrate on the first fan-out run (default 2).
+- Florian two-machine onboarding: needs the roster + his clone repos locally AND
+  GitHub collaborator write on those clone repos (only real coordination cost).
 
 ## Next actions
 
@@ -54,7 +64,8 @@ persistence. See `AGENTS.md`.
   (`python tools/autopilot_journal.py append usage observed_pct=<n>`). WP6
   (headless cron local → server) still open: `plans/2026-07-19-roster-ingest-autopilot.md`.
 - Clone ingestion now runs THROUGH the autopilot (policy order: neil-patel → mkbhd →
-  garyvee → networkchuck, then deepening hormozi/chris-do; fresh uploads first).
+  networkchuck, then deepening hormozi/chris-do; fresh uploads first; GaryVee excluded
+  until Sebastian opts him back in). Now parallel-capable per machine + across two.
 - ~~Run a first real `/work` task end-to-end~~ **done 2026-07-18** (youtube-engine
   Titelvarianten; learning: `wiki/learnings/work-pipeline-standard.md`). Follow-up: nach
   Livegang des Videos die Titel-Performance messen (48h/7d/28d) und die Learning-Seite

@@ -106,3 +106,176 @@ remain on @MoreMozi; synthesis debt 4/10. Zero rate limits, zero errors; dispatc
 premise correction worked (cycle 2: subagent verified checkpoint already drained, ran B
 not S). ~10 min/cycle, ~98k subagent tokens/cycle. Journal: autopilot/journal.jsonl.
 Knowledge: first calibration data point pending user's observed-usage report.
+
+## [2026-07-19] work | Parallel ingest + per-machine worker partition (roster-loop)
+Made `/roster-loop` faster (single machine) and shareable (two accounts) with NO change
+to how it's started. (1) Bounded fan-out: dispatcher works up to
+`scheduling.max_parallel_clones` (default 2) *distinct* clones per iteration, one subagent
+each in parallel. (2) Per-machine worker partition: `workers.assignments` maps worker→
+clones; a machine sets identity once (`autopilot_journal.py set-worker <name>`), then only
+works its clones and journals to a local gitignored `journal-<worker>.jsonl`; no identity =
+all clones (unchanged). Enabling insight (verified): the clone is an independent git repo =
+atomic unit of isolation; two units on the SAME clone is the one forbidden case (no
+row-lock in the ledger). GaryVee already removed from `focus_order` earlier this session.
+Files: autopilot.config.json, .gitignore, tools/autopilot_journal.py (+whoami/set-worker),
+.claude/commands/roster-loop.md; +6 tests (38 green); validate clean.
+Decision: `2026-07-19-parallel-ingest-and-workers` (amends `2026-07-19-ingest-scheduling-policy`).
+Knowledge: decision recorded + old policy amended. Open: Florian one-time onboarding
+(clone repos + collaborator write access); calibration of max_parallel_clones vs usage.
+
+## [2026-07-19] wiki | Index-coverage check in validate.py (drift guard)
+Extended `tools/validate.py --wiki`: new `check_index_coverage()` warns for any page in
+wiki/decisions, wiki/learnings, or plans/ that is referenced neither in index.md nor in
+its directory's README.md (sub-index pattern). Replaces the narrower decisions-only
+check. Rationale: the curated index IS our retrieval layer ("read before work, targeted
+via index") — an unreferenced page is invisible to navigation; this guards index
+freshness instead of building a separate software index (assessed same session: file +
+content index already exist natively via index.md/topics/wiki.config.json; a generated
+retrieval index would add staleness/silent-miss risk for ~no speed gain — bottleneck is
+synthesis, not search). Verified: clean run on current wiki; negative test (unreferenced
+learning) triggers the warning. Warning-level, non-blocking.
+
+## [2026-07-19] work | Autopilot run 2 (session /loop): 29 cycles, 207 videos L2, neil-patel built to persona v2
+Time-boxed roster-ingest autopilot, 6h box, batch 8, ended cleanly on timebox
+(11:49→17:53, elapsed 6.06h). **29 cycles**: hormozi ×1 (Stage B), neil-patel ×28
+(26 Stage B ingest + 2 Stage S synthesis). Zero rate-limit hits across the whole run;
+one background subagent stalled mid-bookkeeping (cycle 19) and was recovered by resuming
+the same agent to finish its own ledger/index/log/commit — no work lost, no duplicate
+ingest.
+
+Freshness-first fired once (hormozi @MoreMozi fresh-upload P1 tail, 8→0), then
+focus-until-active drove neil-patel from a bootstrapped-but-unstarted clone (0 L2) to a
+grounded persona: **0 → 207 L2 sources**, both long-form P1 eras drained (@neilpatel +
+@MarketingSchoolPod, attribution-gated for co-host Eric Siu — disguised
+guest-interview / Perpetual-Traffic-crossover / multi-presenter episodes detected and
+quarantined), **2 synthesis passes** (8 topic hubs + persona beliefs/voice/biography),
+and **system-prompt compiled v1→v2** from all 135 P1-era sources (`/neilpatel` now
+loadable). neil-patel then continued into its P2 backlog (1,823 → 1,751 open).
+
+Follow-ups for a human: (1) consider flipping neil-patel roster status `created → active`
+now that a v2 persona exists; (2) calibration — report observed usage via
+`autopilot_journal.py append usage observed_pct=<n>`; (3) process note captured for the
+autopilot learnings: the dispatcher must verify commit state (git log + ledger) rather
+than trust a subagent's completion summary, since async subagents can stall mid-unit.
+
+## [2026-07-20] work | Autopilot run 3 (session /loop, 15h box, parallel x2): 86 cycles, ~600 videos L2, hit weekly limit
+Time-boxed roster-ingest autopilot, 15h box, batch 8, **parallel x2** (bounded-parallelism
+policy: up to max_parallel_clones=2 distinct clones per iteration). Started 2026-07-19
+18:20; **hit the weekly API subscription limit ~03:54 (resets 06:00)**, both in-flight
+cycle-46 subagents terminated mid-work; resumed after the 06:00 reset to recover the one
+uncommitted unit (mkbhd), then graceful-stopped at the 15h box. **86 cycles** (neil-patel
+45, mkbhd 41): 79 Stage B ingest + 7 Stage S synthesis. 1 backoff (mkbhd 429s early),
+1 recorded weekly-limit event.
+
+Output: **neil-patel 207 → 533 L2** (+326; 2017-2019 P2 tactical era + both P1 eras from
+run 2), **6 synthesis passes, system-prompt v3 → v6**; **mkbhd 0 → 274 L2** (built from
+scratch: @Waveform + @mkbhd 2009-2025 P1 complete, @AutoFocus EV, into 2009 origin P2),
+**3 synthesis passes, system-prompt v0 → v3 (/mkbhd now loadable)**; plus 1 hormozi
+fresh-upload batch at the start. Attribution gating held throughout (Eric Siu / Waveform
+co-hosts / interview guests Musk/Gates/Zuckerberg/Obama/Cook/Pichai/Neistat / AutoFocus
+co-host Miles all quarantined out of persona). A subagent surfaced and a later one fixed
+a real clone-side driver bug (FLAG_RE matched "429" inside view counts, silently hiding
+the Humane AI Pin review) — the autopilot self-repaired.
+
+Both clones ended at synthesis-DUE (debt 10/10) — the 7th (neil-patel) and 4th (mkbhd)
+passes are pending and will run first on the next /roster-loop (idempotent, nothing lost).
+
+**Calibration (headline result):** from an 84%-consumed weekly limit at start (plus other
+concurrent sessions), the remaining ~16% weekly budget sustained **~9.5h of parallel-x2
+ingest** before the wall. Not a clean single-run figure (concurrent sessions confound it);
+the per-session $ meter remains the cleaner signal. Evidence in
+wiki/learnings/roster-ingest-autopilot.md.
+
+**Process learnings confirmed:** (1) async single subagents reliably stall mid-bookkeeping;
+the "write pages yourself sequentially, no background sub-agents" brief eliminated it.
+(2) The dispatcher must verify commit state (git log + tree) rather than trust a completion
+summary — caught 3 stalls + 2 limit-interruptions this session. (3) Weekly-limit mid-run
+needs no special handling: idempotent resume after reset recovered cleanly.
+
+## [2026-07-20] council | Skool premium community: exit, not revival (sunset vs. structured transfer)
+
+Executive Council, deep depth, seats Hormozi × Chris Do (full adversarial round; both
+amended, neither switched). Convergent core: end the half-alive state now; never another
+rev-share operator; annual members made 100% whole; Masterclass carved out, kept, and
+productized via YouTube; hard 60-day window for a real ownership transfer to a successor,
+else 90-day honorable sunset. Open fork (dissent preserved): Hormozi = seller-financed
+10–20% fixed-term earn-out + staged face transfer + reversion; Chris Do = clean asset/
+license sale for cash or fixed note, no performance royalty, no face transfer. Record:
+wiki/decisions/2026-07-20-skool-premium-community-exit.md. Second-brain context (Marco
+Hanczuch precedent, 2026-07-06 focus decision) was decisive as own evidence in both
+briefs. Knowledge: decision record; hub-candidate (business decision for Sebastian's
+GmbH — hub should pull on next sync). Orchestration learning: cross-exam produced real
+convergence (both seats adopted pieces of the other's plan) — debate mode worked without
+a judge variant at 2 seats.
+
+## [2026-07-20] work | Pitchdeck für die Community-Übergabe (Artefakt zum Council 2026-07-20)
+
+Visuelles HTML-Pitchdeck (10 Slides, Brand-CI: Indigo #3B2EF0, Instrument Sans) für das
+Übernahme-Gespräch mit Alexander, abgeleitet aus
+wiki/decisions/2026-07-20-skool-premium-community-exit.md — beide Deal-Wege (Earn-out /
+Clean Buy) als Verhandlungsbasis, rote Linien (Jahreszahler, Masterclass-IP), 60-Tage-
+Fahrplan, 90-Tage-Gesichts-Transfer. Artefakt:
+https://claude.ai/code/artifact/da96dcac-2f6e-48c2-ae52-351a7586339c (Quelle im
+Session-Scratchpad; Zahlen vor Versand prüfen: Jahreszahler-Bestand fehlt noch).
+Knowledge: none (Artefakt-Pointer only).
+
+## [2026-07-20] work | 2Key-Investor-Pitch-Deck (Enno Miedl/Bleispitz) — executive council + dual review
+
+/work standard (--include chris-do, target: 2key-workforce). Seats Hormozi + Chris Do (konvergent:
+Confirmation-Deck, Mitarbeiter-Frame, Accusation-Audit-Namensfolie, Proof-vor-Promise, MESO).
+Artefakte im Zielprojekt: pitch/investor-deck-bleispitz.html (14 Folien, offline-faehig, 2Key-Brand)
++ pitch/gespraechsleitfaden.md (Anker/harte Linien/BATNA). Review: Evidence "mixed" (7 Must-fixes,
+alle eingearbeitet), Skeptical "ship-with-changes" (Vehikel/IP-Luecke, Anker-neben-Untergrenze ->
+Option C auf 8 %; alle Top-Risiken mitigiert). Decision: wiki/decisions/2026-07-20-2key-investor-pitch-deck.md.
+Knowledge: Orchestrierungs-Learning im Decision-Record (Doppel-Review fand disjunkte materielle Fehler).
+Artefakt-Wissen im Zielprojekt (wiki/investment-und-exit.md + dessen log). hub-candidate: Exit-/Deal-Kontext
+liegt bereits im Hub (gespraech-florian-2key-investment).
+
+## [2026-07-20] council | 2Key-Deal-Struktur: Ein Lead-Szenario statt MESO-Menue
+
+Runde 2 zum Investor-Pitch (Frage Sebastian: welche Option ist die beste + wie bewertet man
+guten Gewissens?). Seats Hormozi + Chris Do verwarfen unabhaengig ihre eigenen
+Standard-Doktrinen fuer diesen Kaeufertyp: Lead = Direktbeteiligung 150k/10% (Preis fix,
+Ticket flexibel), Fallback verdeckt = Wandeldarlehen 1,5M Cap/20%, Option B gestrichen
+(Dienstvertrag statt Cap-Rabatt fuer Ennos Frau). Paralleler Recherche-Agent lieferte
+Bewertungsmethodik + DE-Marktzahlen (Pre-Seed-Median 3,7M) -> 1,35M pre = unterer Rand des
+vertretbaren Korridors. Decision: wiki/decisions/2026-07-20-2key-deal-struktur.md (proposed,
+wartet auf Gruender-Bestaetigung). Artefakt: 2key-workforce/pitch/deal-szenario.md.
+Knowledge: Seats-verwerfen-eigene-Doktrin als Konvergenz-Signal (im Decision-Record).
+
+## [2026-07-20] council | 2Key-Werbebudget: 25k ist Test-Budget, nicht Wachstums-Budget (einstimmig, 3 Fixes)
+
+Growth Council (Hormozi + Chris Do via positioning-Tag; Reserve: neil-patel, garyvee — Paid-Ads-
+Benchmark-Luecke explizit ausgewiesen). Fan-out + Cross-Examine. Einstimmig: 25k = Lern-Budget
+(Rule of 100, ~68 EUR/Tag), Skalierung = CFA-Loop statt Budgetzeile. Hormozi fand Gate-Widerspruch
+(3:1 erlaubt 56 EUR CAC vs. 30d-Payback erlaubt 13,50) -> Fix Jahres-Vorauszahlung; Chris Do
+korrigierte die Verpackung (Founding-Member/Value-Add statt Discount) und setzte durch: Loaded-CAC
+(222 vs. 170) ins Deck drucken, Marketer-Scorecard zweistufig (Monate 1-6 Audience-Conversion,
+nicht CAC-only). Dissens bewahrt (karmic-equity-Gewichtung; financing- vs. self-funding-Framing =
+Payback-abhaengig). Decision: wiki/decisions/2026-07-20-2key-werbebudget-25k.md. Artefakt-Folgen
+im Zielprojekt notiert (deal-szenario.md), Deck-Umsetzung folgt mit naechster Deck-Iteration.
+
+## [2026-07-20] council | 2Key-Zielgruppe: EIN Avatar (Owner-Operator) statt B2C/B2B-Binaerfrage (deep)
+
+Executive Council deep (Hormozi + Chris Do + Skeptical-Reviewer). Beide Seats konvergent:
+Avatar = deutschsprachiger Owner-Operator (kauft wie Konsument, expandiert wie Firma); kein
+B2B-Vertrieb Jahr 1 (Kapazitaetsmathe: 15-18 Founder-Logos unmoeglich bei 4 Tagen/Woche);
+Piloten produktisiert per Ausnahme. Kreuzbefragung durch Skeptiker-Attacke ersetzt (Konvergenz
+= Groupthink-Risiko) — Verdikt ship-with-changes mit 4 Treffern: Avatar-Praemisse ungetestet
+(Pre-Order-Test >=50 in 30d definiert), Expansion ohne Produktmechanismus (Upside statt These
++ 6-Mo-Zeitlimit), Enno nicht als Pilot #1 auf die Folie (Verquickungsrisiko), Marken-Gate vor
+Annual-Prepay. Offener Zielkonflikt Exit-Kurs vs. MRR-Gates an Gruender eskaliert. Decision:
+wiki/decisions/2026-07-20-2key-zielgruppe-owner-operator.md. Learning: bei Seat-Konvergenz ist
+der Skeptical-Review wichtiger, nicht ueberfluessig (im Record).
+
+## [2026-07-20] work | 2Key-Deck Final-Review (v4->v5) + Gruender-Briefing
+
+/work review (executive, standard). Beide Advisor lasen erstmals das ECHTE Artefakt (HTML) statt
+Zusammenfassungen — deutlich schaerfere Findings: Hormozi fand Margen-Zahlenkollision, gedruckten
+TODO-Marker, fehlendes IP-/Vesting-/Miss-Szenario und forderte die Reichweiten-Zusage als
+Vertragszeile; Chris Do fand Fake-Zitat-Styling (Kostuem-Zitat ohne Kunden = Ehrlichkeits-Leck),
+Doppel-Verwendung desselben Assets (Reichweite als Gegenleistung UND Einsatz), gedruckte
+Schmerzgrenze (~15 %) und setzte Angebot-als-Schlussfolie durch (nie am Verkauf vorbeireden).
+Alle 10 Must-Fixes in v5 umgesetzt (16 Folien); zusaetzlich gruender-briefing.md (Begriffe/
+Zahlen/Ablauf/Einwaende) als Lernunterlage. Knowledge: Advisors auf ECHTEN Artefakten reviewen
+lassen (Read-Zugriff) schlaegt Prompt-Zusammenfassungen deutlich — als Muster uebernehmen.

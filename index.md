@@ -35,7 +35,13 @@ knowledge-commit procedure whenever pages are added or change meaning.
 - [wiki/decisions/](wiki/decisions/README.md) — decision records (append-only, dissent preserved)
   - [2026-07-18-agent-os-architecture](wiki/decisions/2026-07-18-agent-os-architecture.md) — the agent-OS upgrade decisions
   - [2026-07-18-clone-maturity-policy](wiki/decisions/2026-07-18-clone-maturity-policy.md) — graded council capability per clone build state; experimental seats via --include
-  - [2026-07-19-ingest-scheduling-policy](wiki/decisions/2026-07-19-ingest-scheduling-policy.md) — autopilot scheduling: freshness first, focus-until-active, maturity target, time-boxed budget
+  - [2026-07-19-ingest-scheduling-policy](wiki/decisions/2026-07-19-ingest-scheduling-policy.md) — autopilot scheduling: freshness first, focus-until-active, maturity target, time-boxed budget (amended below)
+  - [2026-07-19-parallel-ingest-and-workers](wiki/decisions/2026-07-19-parallel-ingest-and-workers.md) — bounded fan-out (max_parallel_clones) + per-machine worker partition (workers.assignments) for two-account load-sharing
+  - [2026-07-20-skool-premium-community-exit](wiki/decisions/2026-07-20-skool-premium-community-exit.md) — first real deep council (Hormozi × Chris Do): exit the premium Skool community; 60-day transfer window, else honorable sunset; earn-out-vs-clean-sale fork preserved as dissent
+  - [2026-07-20-2key-investor-pitch-deck](wiki/decisions/2026-07-20-2key-investor-pitch-deck.md) — /work standard (Hormozi × Chris Do + dual review): confirmation-deck strategy, MESO options (C at 8%), accusation-audit name slide, vehicle/IP answer mandatory
+  - [2026-07-20-2key-deal-struktur](wiki/decisions/2026-07-20-2key-deal-struktur.md) — council round 2: ONE lead scenario (priced 150k/10%) + hidden convertible fallback, option B killed (services never in cap table), valuation stack from market research
+  - [2026-07-20-2key-werbebudget-25k](wiki/decisions/2026-07-20-2key-werbebudget-25k.md) — growth council: 25k ads = test budget (Rule of 100), scaling = CFA loop; gate contradiction found (3:1 vs 30d payback) -> annual-prepay founding-member fix; two-stage marketer scorecard; print loaded CAC
+  - [2026-07-20-2key-zielgruppe-owner-operator](wiki/decisions/2026-07-20-2key-zielgruppe-owner-operator.md) — deep council: ONE avatar (German owner-operator, buys like consumer/expands like business), no B2B sales motion year 1, pilots productized+investor-separated, pre-order avatar test, trademark gate before prepay
 - [wiki/learnings/](wiki/learnings/README.md) — operative learnings; persona view vs own evidence vs effective rule
   - [work-pipeline-standard](wiki/learnings/work-pipeline-standard.md) — first real /work runs: seat convergence as signal, functional reviewers earn their keep
   - [roster-ingest-autopilot](wiki/learnings/roster-ingest-autopilot.md) — autopilot cadence/batch/budget evidence (usage calibration accumulates here)
