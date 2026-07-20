@@ -169,14 +169,29 @@ def lint_wiki(w):
                     err(f"{f.relative_to(ROOT)}: frontmatter missing {key!r}")
             if fm.get("status") and fm["status"] not in statuses:
                 err(f"{f.relative_to(ROOT)}: invalid status {fm['status']!r}")
-            if sub == "decisions" and f.stem not in index_text:
-                warn(f"{f.relative_to(ROOT)}: decision not referenced in index.md")
 
     learn = ROOT / w.get("learnings", "wiki/learnings")
     if learn.is_dir():
         for f in sorted(learn.glob("*.md")):
             if f.name != "README.md" and frontmatter(f).get("type") != "learning":
                 warn(f"{f.relative_to(ROOT)}: frontmatter type should be 'learning'")
+
+    check_index_coverage(w, index_text)
+
+
+def check_index_coverage(w, index_text):
+    """Index drift guard: every wiki page must be referenced in index.md or in
+    its directory's README.md (the sub-index pattern). Unreferenced pages are
+    invisible to targeted read-before-work navigation."""
+    for sub in ("decisions", "learnings", "plans"):
+        d = ROOT / w.get(sub, sub)
+        if not d.is_dir():
+            continue
+        readme = d / "README.md"
+        coverage = index_text + (readme.read_text(encoding="utf-8") if readme.exists() else "")
+        for f in sorted(d.glob("*.md")):
+            if f.name != "README.md" and f.stem not in coverage:
+                warn(f"{f.relative_to(ROOT)}: not referenced in index.md or {sub} README.md (index drift)")
 
 
 def check_done(w):

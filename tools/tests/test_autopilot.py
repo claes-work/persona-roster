@@ -5,6 +5,7 @@ roster_status metrics, refresh_sources parsing/promotion, autopilot_journal stat
 Run:  python -m unittest discover tools/tests
 """
 import datetime
+import os
 import pathlib
 import sys
 import tempfile
@@ -161,6 +162,45 @@ class JournalState(unittest.TestCase):
         self.assertIsNone(st["run"])
         self.assertEqual(st["last_run_end"]["reason"], "timebox")
         self.assertEqual([b["clone"] for b in st["backoffs"]], ["hormozi"])
+
+
+class WorkerPartition(unittest.TestCase):
+    CFG = {"workers": {"assignments": {"a": ["x", "y"], "b": ["z"]}},
+           "scheduling": {"max_parallel_clones": 3}}
+
+    def test_owned_none_without_worker(self):
+        # unpartitioned default -> all clones (represented as None)
+        self.assertIsNone(autopilot_journal.owned_clones(None, self.CFG))
+
+    def test_owned_none_without_assignments(self):
+        self.assertIsNone(autopilot_journal.owned_clones("a", {}))
+
+    def test_owned_list_for_assigned_worker(self):
+        self.assertEqual(autopilot_journal.owned_clones("a", self.CFG), ["x", "y"])
+
+    def test_owned_empty_for_unassigned_named_worker(self):
+        # safety: a named worker missing from a non-empty map owns NOTHING, never all
+        self.assertEqual(autopilot_journal.owned_clones("ghost", self.CFG), [])
+
+    def test_env_override_sets_worker_and_journal(self):
+        old = os.environ.get("ROSTER_WORKER")
+        os.environ["ROSTER_WORKER"] = "florian"
+        try:
+            self.assertEqual(autopilot_journal.resolve_worker(), "florian")
+            self.assertEqual(autopilot_journal.journal_path().name, "journal-florian.jsonl")
+        finally:
+            os.environ.pop("ROSTER_WORKER", None)
+            if old is not None:
+                os.environ["ROSTER_WORKER"] = old
+
+    def test_journal_path_defaults_to_global_without_worker(self):
+        old = os.environ.pop("ROSTER_WORKER", None)
+        try:
+            self.assertIsNone(autopilot_journal.resolve_worker())
+            self.assertEqual(autopilot_journal.journal_path(), autopilot_journal.JOURNAL)
+        finally:
+            if old is not None:
+                os.environ["ROSTER_WORKER"] = old
 
 
 if __name__ == "__main__":

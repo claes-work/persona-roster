@@ -5,6 +5,12 @@ clones/
 # Generated per machine by tools/gen_agents.py (absolute local paths) — regenerate after clone.
 .claude/agents/
 
+# Per-machine autopilot worker identity + its journal. The default journal.jsonl
+# stays committed; a machine that opts into a worker identity keeps its journal LOCAL
+# so two machines running /roster-loop never conflict on it (ledgers are the truth for resume).
+autopilot/worker
+autopilot/journal-*.jsonl
+
 # Python
 __pycache__/
 *.pyc

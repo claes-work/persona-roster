@@ -9,6 +9,13 @@ review_trigger: revisit after the first 3 unattended /roster-loop runs (calibrat
 
 # Ingest scheduling policy: freshness first, then focus-until-active
 
+> **Amended 2026-07-19 by [[2026-07-19-parallel-ingest-and-workers]]:** the "one work
+> unit per iteration / parallel ingestion explicitly rejected" stance below is
+> superseded. The autopilot may now work multiple *distinct* clones per iteration
+> (bounded fan-out) and split clones across two machines (per-worker partition).
+> Freshness-first and `focus_order` still hold — now as the priority ordering *within*
+> each worker's owned set.
+
 **Decision.** The roster ingest autopilot (`/roster-loop`) schedules cross-clone work
 by three rules, in order. Confidence: high on the rules, medium on the parameters
 (they live in `autopilot.config.json` and are expected to be tuned).

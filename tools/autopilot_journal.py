@@ -25,22 +25,59 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import os
 import pathlib
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 JOURNAL = ROOT / "autopilot" / "journal.jsonl"
+WORKER_FILE = ROOT / "autopilot" / "worker"
 
 
 def now() -> datetime.datetime:
     return datetime.datetime.now().astimezone()
 
 
-def read_events() -> list[dict]:
-    if not JOURNAL.exists():
+def resolve_worker() -> str | None:
+    """This machine's worker identity, or None for the unpartitioned default.
+
+    Order: ROSTER_WORKER env (escape hatch) → autopilot/worker file → None.
+    None = single-machine default: the committed journal, and ALL clones eligible
+    (so a machine that never opts in behaves exactly as before this feature).
+    """
+    env = os.environ.get("ROSTER_WORKER", "").strip()
+    if env:
+        return env
+    if WORKER_FILE.exists():
+        return WORKER_FILE.read_text(encoding="utf-8").strip() or None
+    return None
+
+
+def journal_path() -> pathlib.Path:
+    """Per-worker journal when an identity is set (gitignored, local — two machines
+    never collide on it); otherwise the committed default journal. The default path
+    is the module global so the test-suite can point it at a temp file."""
+    w = resolve_worker()
+    return ROOT / "autopilot" / f"journal-{w}.jsonl" if w else JOURNAL
+
+
+def owned_clones(worker: str | None, cfg: dict) -> list[str] | None:
+    """Clone slugs this worker may work. None = not partitioned = all clones.
+    A named worker missing from a NON-empty assignments map owns nothing — a safety
+    default so a mis-set identity can never silently duplicate another worker's clone.
+    """
+    assignments = cfg.get("workers", {}).get("assignments", {})
+    if not worker or not assignments:
+        return None
+    return assignments.get(worker, [])
+
+
+def read_events(path: pathlib.Path | None = None) -> list[dict]:
+    path = path or journal_path()
+    if not path.exists():
         return []
     events = []
-    for line in JOURNAL.read_text(encoding="utf-8").splitlines():
+    for line in path.read_text(encoding="utf-8").splitlines():
         line = line.strip()
         if not line:
             continue
@@ -52,7 +89,10 @@ def read_events() -> list[dict]:
 
 
 def cmd_append(event: str, pairs: list[str]) -> int:
+    worker = resolve_worker()
     entry = {"ts": now().isoformat(timespec="seconds"), "event": event}
+    if worker:
+        entry["worker"] = worker
     for p in pairs:
         if "=" not in p:
             print(f"ignoring malformed pair {p!r} (want key=value)", file=sys.stderr)
@@ -65,10 +105,12 @@ def cmd_append(event: str, pairs: list[str]) -> int:
                 entry[k] = float(v)
             except ValueError:
                 entry[k] = v
-    JOURNAL.parent.mkdir(parents=True, exist_ok=True)
-    with JOURNAL.open("a", encoding="utf-8") as f:
+    path = journal_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    print(f"journaled: {entry['event']} @ {entry['ts']}")
+    who = f" [{worker}]" if worker else ""
+    print(f"journaled{who}: {entry['event']} @ {entry['ts']}")
     return 0
 
 
@@ -84,9 +126,13 @@ def derive_status() -> dict:
     t_now = now()
     cfg_path = ROOT / "autopilot.config.json"
     cfg = json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {}
+    worker = resolve_worker()
 
     st = {
         "now": t_now.isoformat(timespec="seconds"),
+        "worker": worker,                            # this machine's identity (null = default)
+        "owned_clones": owned_clones(worker, cfg),   # slugs this worker may work (null = all)
+        "max_parallel_clones": cfg.get("scheduling", {}).get("max_parallel_clones", 1),
         "run": None,             # active run (started, no run-end after it)
         "last_discovery": None,  # ts + age_h
         "backoffs": [],          # active clone back-offs
@@ -151,15 +197,54 @@ def main(argv=None) -> int:
     p_append.add_argument("pairs", nargs="*", metavar="key=value")
     p_status = sub.add_parser("status", help="derived state for the loop")
     p_status.add_argument("--json", action="store_true")
+    sub.add_parser("whoami", help="show this machine's worker identity + owned clones")
+    p_set = sub.add_parser("set-worker", help="set this machine's worker identity (one-time)")
+    p_set.add_argument("name", help="worker name, e.g. sebastian or florian (empty string clears it)")
     a = ap.parse_args(argv)
 
     if a.cmd == "append":
         return cmd_append(a.event, a.pairs)
 
+    if a.cmd == "set-worker":
+        name = a.name.strip()
+        if name:
+            WORKER_FILE.parent.mkdir(parents=True, exist_ok=True)
+            WORKER_FILE.write_text(name + "\n", encoding="utf-8")
+            print(f"worker identity set to {name!r} (autopilot/worker). "
+                  f"Now just run /loop /roster-loop as usual.")
+        elif WORKER_FILE.exists():
+            WORKER_FILE.unlink()
+            print("worker identity cleared — this machine falls back to the default (all clones).")
+        else:
+            print("no worker identity was set.")
+        return 0
+
+    if a.cmd == "whoami":
+        cfg_path = ROOT / "autopilot.config.json"
+        cfg = json.loads(cfg_path.read_text(encoding="utf-8")) if cfg_path.exists() else {}
+        w = resolve_worker()
+        owned = owned_clones(w, cfg)
+        print(f"worker: {w or '(default — no identity set)'}")
+        if owned is None:
+            print("owned clones: all clones")
+        elif owned:
+            print(f"owned clones: {', '.join(owned)}")
+        else:
+            print(f"owned clones: NONE — '{w}' is not in autopilot.config.json workers.assignments; "
+                  "add it (or clear the identity) or this machine will do nothing")
+        print(f"journal: {journal_path().relative_to(ROOT)}")
+        return 0
+
     st = derive_status()
     if a.json:
         print(json.dumps(st, indent=2))
         return 0
+    if st["worker"]:
+        owned = st["owned_clones"]
+        owned_txt = ("all clones" if owned is None
+                     else ", ".join(owned) if owned
+                     else "NOTHING — not in workers.assignments")
+        print(f"worker: {st['worker']} (owns: {owned_txt})")
     if st["run"]:
         r = st["run"]
         flag = "  << TIMEBOX REACHED — stop the run" if r["over_timebox"] else ""

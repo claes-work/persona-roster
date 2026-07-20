@@ -4,15 +4,33 @@ description: Roster ingest autopilot — ONE nudge keeps the whole bench fresh a
 
 You are the roster AUTOPILOT DISPATCHER. Policy:
 `wiki/decisions/2026-07-19-ingest-scheduling-policy.md` (freshness first, then
-focus-until-active). One work unit per iteration, keep going across wakeups until the
-time-box is reached or the bench is drained. **Do not recommend stopping early.**
+focus-until-active) as amended by
+`wiki/decisions/2026-07-19-parallel-ingest-and-workers.md` (bounded parallelism +
+per-machine worker partition). Keep going across wakeups until the time-box is
+reached or the bench is drained. **Do not recommend stopping early.**
 `$ARGUMENTS`: first number = time-box in hours, second = batch size (defaults from
 `autopilot.config.json`).
+
+**Worker & parallelism (both invisible to the user — the command is still just
+`/loop /roster-loop`):**
+- **Eligible clones = this machine's `owned_clones`** from the status JSON. `null`
+  means "not partitioned → all clones" (a single machine that never set an identity —
+  unchanged behavior). A second machine (e.g. Florian's) sets its identity once with
+  `python tools/autopilot_journal.py set-worker <name>`; from then on it only ever
+  works its assigned clones, so two accounts on disjoint clones never duplicate or
+  git-conflict. **Never work a clone outside `owned_clones`.**
+- **Per iteration, work up to `max_parallel_clones` DISJOINT eligible clones at once**
+  (one subagent each, in parallel). This is the speed/throughput lever; the journal is
+  a single writer (the dispatcher), so no locking is needed. Two subagents on the SAME
+  clone is the one forbidden case (they'd collide on that clone's ledger) — always
+  pick distinct clones.
 
 ## 0. Orient (every iteration)
 
 1. `python tools/autopilot_journal.py status --json` — active run, elapsed vs
-   time-box, discovery staleness, active back-offs.
+   time-box, discovery staleness, active back-offs, **plus `worker`, `owned_clones`
+   (null = all), `max_parallel_clones`**. Everything below treats "eligible clones" as
+   `owned_clones` (or all clones when it is null).
 2. `python tools/roster_status.py --json` — backlog, fresh uploads, maturity per clone.
 3. Read `autopilot.config.json` (focus_order, freshness_first, batch/backoff defaults).
 4. **No active run in the journal?** This is a fresh run: append
@@ -31,38 +49,51 @@ another wakeup**. Same procedure with `reason=drained` when step 3 finds no work
 
 ## 2. Discovery refresh (when stale)
 
-If journal status shows discovery `stale: true`:
-`python tools/refresh_sources.py --commit --json`, then
-`append discovery new=<total new rows> fresh=<fresh promoted>`. If the refresh
+If journal status shows discovery `stale: true`: refresh discovery for the eligible
+clones only. If `owned_clones` is null, run the whole bench once:
+`python tools/refresh_sources.py --commit --json`. If partitioned, run it once per
+owned clone: `python tools/refresh_sources.py --clone <slug> --commit --json` for each
+(a worker must never refresh a clone it does not own — that clone's owner does it).
+Then `append discovery new=<total new rows> fresh=<fresh promoted>`. If the refresh
 reports enumeration-empty errors on several channels, treat it as throttling:
 `append backoff clone=discovery minutes=60` and continue with step 3 (ingest still
 works — captions come from different endpoints than enumeration).
 This counts as this iteration's work only if it found new rows AND took long;
 otherwise continue to step 3 in the same iteration.
 
-## 3. Pick ONE work unit (first matching rule wins)
+## 3. Pick the work units (up to `max_parallel_clones` DISTINCT clones)
 
-Eligibility: skip clones in active back-off (journal) and clones whose
-`maturity_target_reached` is true (their P3/shorts tail is optional — only worked
-when nothing else is eligible).
+Build a set of DISTINCT clones to work this iteration, at most `max_parallel_clones`.
+Restrict to eligible clones only: within `owned_clones` (or all clones when null),
+skip clones in active back-off (journal) and clones whose `maturity_target_reached`
+is true (their P3/shorts tail is optional — only worked when nothing else is
+eligible). Fill the set by applying these rules in order; each clone appears at most
+once (never two units on the same clone):
 
-1. **Freshness first** (config `freshness_first`): an `active`-status clone has
-   `fresh_open > 0` → ingest one batch there (the fresh rows are P1 on their
-   channel; tell the executor which channel holds them).
-2. **Focus build-out**: first clone in config `focus_order` that is eligible and has
-   work:
-   - `sources_total == 0` but channels are known (SUBJECT.md) → this iteration's
-     unit is targeted Stage A:
-     `python tools/refresh_sources.py --clone <slug> --full --commit` (long — one
-     unit; journal it as `cycle clone=<slug> stage=A`).
+1. **Freshness first** (config `freshness_first`): every eligible `active`-status
+   clone with `fresh_open > 0` → a batch there (its fresh rows are P1 on their
+   channel; tell each executor which channel holds them).
+2. **Focus build-out**: walk config `focus_order` and add each eligible clone with
+   work until the set is full:
+   - `sources_total == 0` but channels are known (SUBJECT.md) → that clone's unit is
+     targeted Stage A:
+     `python tools/refresh_sources.py --clone <slug> --full --commit` (long — counts
+     as one unit; journal it as `cycle clone=<slug> stage=A`).
    - open P1/P2 (or synthesis debt / persona staleness — the clone's own stage
      machine decides) → one clone-loop iteration (step 4).
-3. **Nothing eligible** → stop per step 1 with `reason=drained` (report WHICH clones
-   are blocked and why — e.g. "garyvee: bootstrap pending", "all at maturity target").
+3. **Set still empty → nothing eligible** → stop per step 1 with `reason=drained`
+   (report WHICH clones are blocked and why — e.g. "garyvee: not in this worker's
+   assignment", "all owned clones at maturity target").
 
-## 4. Execute the unit (one subagent, clone-side rules govern)
+If fewer than `max_parallel_clones` clones are eligible, just work the ones that are —
+do not pad the set or touch a clone twice.
 
-Spawn ONE general-purpose subagent. Brief (fill in the placeholders):
+## 4. Execute the units (one subagent PER picked clone, in parallel)
+
+Spawn one general-purpose subagent per clone in the set — **all in a single message
+(multiple tool calls) so they run concurrently**. Each works a DIFFERENT clone repo,
+so there is no shared-file contention between them. Same brief for each (fill in the
+placeholders):
 
 > Work inside the clone repo at `<absolute clone path>`. Read its CLAUDE.md /
 > AGENTS.md and `.claude/commands/ingest-loop.md`, then execute EXACTLY ONE
@@ -85,19 +116,23 @@ the clone's own rules).
 
 ## 5. Journal + reschedule (every iteration)
 
-1. `append cycle clone=<slug> stage=<S|P|A|B|C|D> n=<items> note=<one-liner>`.
-2. Subagent reported rate limiting → `append backoff clone=<slug> minutes=60`
-   (next iterations work another clone; the back-off expires on its own).
-   Subagent failed outright → same back-off + note; never retry the identical unit
-   in a tight loop.
-3. Report one line: what ran, counts, what the next iteration will do.
+1. After ALL subagents in the set return, `append cycle clone=<slug>
+   stage=<S|P|A|B|C|D> n=<items> note=<one-liner>` **once per clone worked** (the
+   journal is single-writer — you, the dispatcher — so these appends are safe and
+   never race).
+2. Any subagent that reported rate limiting → `append backoff clone=<slug> minutes=60`
+   for that clone (later iterations skip it; the back-off expires on its own).
+   A subagent that failed outright → same back-off + note; never retry the identical
+   unit in a tight loop. Other clones in the set are unaffected.
+3. Report one line: which clones ran, counts each, what the next iteration will do.
 4. Schedule the next wakeup (delaySeconds ~90) with this same `/loop /roster-loop`
    prompt — UNLESS step 1 stopped the run.
 
 ## Safety rails (non-negotiable)
 
 - Every clone-side change is committed+pushed by the executing subagent per the
-  clone's own rules; an interruption loses at most one unit.
+  clone's own rules; an interruption loses at most one unit per in-flight clone
+  (each clone commits independently).
 - The roster loop NEVER writes clone wiki/persona content — it dispatches; clones
   self-govern (their loop docs are harness-neutral by design).
 - An unexpectedly long gap between wakeups (API usage limit hit mid-run) needs no
