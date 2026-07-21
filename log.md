@@ -279,3 +279,47 @@ Schmerzgrenze (~15 %) und setzte Angebot-als-Schlussfolie durch (nie am Verkauf 
 Alle 10 Must-Fixes in v5 umgesetzt (16 Folien); zusaetzlich gruender-briefing.md (Begriffe/
 Zahlen/Ablauf/Einwaende) als Lernunterlage. Knowledge: Advisors auf ECHTEN Artefakten reviewen
 lassen (Read-Zugriff) schlaegt Prompt-Zusammenfassungen deutlich — als Muster uebernehmen.
+
+## [2026-07-20] setup | Fresh-machine install + neil-patel promoted to active
+Ran /setup on a clean checkout: pulled all 6 clones, generated 12 machine-local
+agents, installed user-global shims, validate clean. roster_status flagged neil-patel
+(compiled system-prompt v6, 6 synth passes) as status-mismatched; promoted created→active
+in roster.json (user-approved), re-ran gen_agents + install_global. Councils now have 3
+voices: hormozi, chris-do, neil-patel. Note: python missing on this machine — used
+python3 throughout. Knowledge: neil-patel active (config change recorded here + STATE.md).
+
+## [2026-07-21] work | Autopilot run 2: 22 cycles across 4 clones (timebox 6h)
+Roster-loop autopilot, time-boxed 6h (defaults), user-supervised via `/loop /roster-loop`.
+Machine unblock at start: installed `yt-dlp` (missing on fresh machine, needed by discovery
++ ingest) and resolved a `git push` 403 wall (user granted `ki-business-agenten` write
+access to `claes-work/*`). Then 22 clone-side cycles, all committed+pushed, zero rate limits:
+- **hormozi** B×7 + S×1 → synthesis pass 30, system-prompt **v37→v38**; L2 2262→2307, P2 216.
+- **neil-patel** B×3 + P×1 + S×1 → synthesis pass 7 + persona refresh, **v6→v8**; L2 533→557.
+- **mkbhd** B×4 + S×1 → synthesis pass 4, **v3→v4**; L2 274→301.
+- **chris-do** B×4 → L2 704→736, P2 358, debt 6.
+Discovery refresh once (50 new rows, 14 fresh-upload P1 promoted → all drained bench-wide).
+Focus-until-active exhausted: garyvee/networkchuck are `STATUS: UNINITIALIZED` (need the
+interactive `/clone-setup` bootstrap — not autopilot-eligible).
+Knowledge (open items for user):
+- **mkbhd earned `active`** (compiled system-prompt v4) but roster.json still says `created`
+  — a candidate 4th council voice; promotion deferred to user (governance decision).
+- Hygiene: hormozi youtube-index footer vs ledger-L2 count drift (~10, accumulating) → lint pass.
+  chris-do `ledger_set.py` writes CRLF vs LF history → add `.gitattributes`/LF-normalize.
+- Calibration: report observed usage via `python3 tools/autopilot_journal.py append usage observed_pct=<n>`
+  (evidence → wiki/learnings/roster-ingest-autopilot.md). Note: this machine has `python3` only, no `python`.
+
+## [2026-07-21] work | Autopilot run 3: 5 cycles — halted on subagent spawn cap
+Roster-loop autopilot, resumed morning of 2026-07-21 (timebox 6h). 5 deepening cycles,
+all Stage B, all committed+pushed, zero rate limits, before the run hit a hard session
+limit (not a timebox stop):
+- **neil-patel** B×2 → L2 565→573, P2 653.
+- **chris-do** B×1 → L2 744, P2 350, debt 7.
+- **mkbhd** B×1 → L2 309, P2 1369.
+- **hormozi** B×1 → L2 2315, P2 208.
+**Halt cause:** subagent spawn cap **200/200** reached for the session — the dispatcher
+spawns one general-purpose executor per cycle, and that budget (setup + run 2's 22 cycles
++ their nested per-file writers + run 3) is exhausted. Cannot spawn further executors.
+**Remedy:** raise `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION` or start a fresh session, then
+`/loop /roster-loop`. Everything is idempotent — the next run resumes exactly from the
+ledgers. Still-open items unchanged: mkbhd active-promotion (compiled v4) pending user
+decision; garyvee/networkchuck need interactive `/clone-setup` bootstrap.

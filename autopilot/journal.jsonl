@@ -127,3 +127,38 @@
 {"ts": "2026-07-20T09:12:21+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 7, "note": "RECOVERED after weekly-limit interruption (resumed post-6am-reset): @mkbhd P2 2009 (dual-production method origin; April FOO); L2 267->274; debt 10/10 Stage S next; committed a4a5084"}
 {"ts": "2026-07-20T09:13:09+02:00", "event": "run-end", "reason": "timebox"}
 {"ts": "2026-07-20T09:31:28+02:00", "event": "run-start", "timebox_h": 15, "batch": 8}
+{"ts": "2026-07-20T17:57:52+02:00", "event": "run-start", "timebox_h": 6, "batch": 8}
+{"ts": "2026-07-20T18:01:20+02:00", "event": "discovery", "new": 50, "fresh": 14}
+{"ts": "2026-07-20T18:16:47+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "8 fresh-upload P1 @MoreMozi to L2; commit 2d23501 LOCAL ONLY — push 403 read-only creds"}
+{"ts": "2026-07-20T18:16:47+02:00", "event": "limit", "note": "git push 403 to claes-work/alex-hormozi-clone; acct ki-business-agenten not a collaborator (push:false). Affects all clones. 2 commits pending on hormozi."}
+{"ts": "2026-07-20T19:13:31+02:00", "event": "limit", "note": "RESOLVED: user granted write access; ki-business-agenten now push:true on claes-work/*. Pushed hormozi fbeac8c + 2d23501. Loop resumes normally."}
+{"ts": "2026-07-20T19:28:33+02:00", "event": "cycle", "clone": "neil-patel", "stage": "S", "n": 10, "note": "synthesis pass 7: debt 10->0, ~30 frameworks to topics+persona, system-prompt v6->v7 (533 src); pushed 2b0eaee. fresh P1 correctly deferred."}
+{"ts": "2026-07-20T19:42:06+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 281 @MoreMozi: 5 fresh P1 + 3 P2 to L2; P1 now 0 (fresh drained), P2 256, debt 7; pushed 866415e"}
+{"ts": "2026-07-20T19:58:40+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "ingest: 1 fresh P1 + 7 P2 to L2; P1 now 0 (all bench fresh drained), P2 1416, debt 1; pushed 3c54d68. Stage-P now due on neil next iter."}
+{"ts": "2026-07-20T20:12:40+02:00", "event": "cycle", "clone": "mkbhd", "stage": "S", "n": 10, "note": "synthesis pass 4: debt 10->0, 5 topic hubs + 4 persona files, system-prompt v3->v4 (274 src); pushed 5921f0a"}
+{"ts": "2026-07-20T20:33:35+02:00", "event": "cycle", "clone": "chris-do", "stage": "B", "n": 8, "note": "batch 108 @thefutur: 8 to L2 (4 Chris-trained, 4 fenced); P2 382, debt 3; pushed 39c6268. Note: chris-do ledger_set.py CRLF-vs-LF recurring diff nit."}
+{"ts": "2026-07-20T20:43:42+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 282 @MoreMozi P2: 8 to L2; P2 248, debt 8/10 (Stage S nears); pushed c1ff9ef"}
+{"ts": "2026-07-20T20:59:43+02:00", "event": "cycle", "clone": "neil-patel", "stage": "P", "n": 1, "note": "persona refresh: beliefs 63->68, voice 49->50, system-prompt v7->v8 (541 src); pushed 7e78cde. debt still 1 (persona pass doesn't drain synth debt)."}
+{"ts": "2026-07-20T21:15:51+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 4, "note": "ingest @WaveformClips: 4 new L2 + 4 dup-of (dedup tier); P1 now 0, P2 2495, debt 1; pushed 3dd5050"}
+{"ts": "2026-07-20T21:30:32+02:00", "event": "cycle", "clone": "chris-do", "stage": "B", "n": 8, "note": "batch 109 @thefutur P2: 8 to L2 (1 solo, 2 interviews, 5 fenced); P2 374, debt 4, L2 720; pushed d270ea6"}
+{"ts": "2026-07-20T21:41:50+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 283 @MoreMozi P2: 8 to L2; P2 240, debt 9/10 (Stage S next); pushed 29fd77d"}
+{"ts": "2026-07-20T21:54:42+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 284 @MoreMozi P2: 8 to L2; P2 232, debt 10/10 SYNTHESIS DUE (Stage S definitively next); pushed eed3c5c"}
+{"ts": "2026-07-20T22:14:34+02:00", "event": "cycle", "clone": "hormozi", "stage": "S", "n": 10, "note": "synthesis pass 30: debt 10->0, 13 topic hubs + 3 persona files, ~40 net-new, system-prompt v37->v38; 6 contradictions carried, 1 fabrication refused; pushed e52b39c"}
+{"ts": "2026-07-20T22:23:41+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 7, "note": "ingest @mkbhd 2009 origin-era P2: 7 to L2 + 1 no-captions; P2 1393, debt 2, L2 285; pushed a5d591b"}
+{"ts": "2026-07-20T22:35:56+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "ingest @neilpatel 2019 solo-tactical P2: 8 to L2; P2 @neilpatel 677 + @MSP 731, debt 2, L2 549; pushed 5f5d6ff"}
+{"ts": "2026-07-20T22:49:23+02:00", "event": "cycle", "clone": "chris-do", "stage": "B", "n": 8, "note": "batch 110 @thefutur P2: 8 to L2 (5 Chris-eligible, 3 fenced); P2 366, debt 5, L2 728; pushed b48689e"}
+{"ts": "2026-07-20T22:59:16+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "ingest @mkbhd 2009 origin P2: 8 to L2; P2 1385, debt 3, L2 293; pushed 7c8595c"}
+{"ts": "2026-07-20T23:09:32+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "ingest @neilpatel 2019 P2 (batch 70): 8 to L2; P2 @neilpatel 669 + @MSP 731, debt 3, L2 557; pushed 0d968f6"}
+{"ts": "2026-07-20T23:21:31+02:00", "event": "cycle", "clone": "chris-do", "stage": "B", "n": 8, "note": "batch 111 @thefutur P2: 8 to L2 (6 solo, 1 interview, 1 fenced Voss); P2 358, debt 6, L2 736; pushed 9f5358d"}
+{"ts": "2026-07-20T23:32:46+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 285 @MoreMozi P2: 8 to L2; P2 224, debt 1; pushed 6887a1c. Minor footer/ledger +2 count drift (pre-existing, harmless)."}
+{"ts": "2026-07-20T23:45:06+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "ingest @mkbhd 2009 origin P2: 8 to L2; P2 1377, debt 4, L2 301; pushed baec3bf"}
+{"ts": "2026-07-20T23:56:14+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "batch 286 @MoreMozi P2: 8 to L2; P2 216, debt 2; pushed 8dc0e79. Flag: hormozi ~10-count youtube-index-footer vs ledger-L2 drift accumulating -> lint pass."}
+{"ts": "2026-07-21T00:00:12+02:00", "event": "run-end", "reason": "timebox"}
+{"ts": "2026-07-21T07:06:46+02:00", "event": "run-start", "timebox_h": 6, "batch": 8}
+{"ts": "2026-07-21T07:13:23+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "run3: batch 71 @neilpatel 2019 P2: 8 to L2; P2 661, debt 4, L2 565; pushed ef71dc9"}
+{"ts": "2026-07-21T07:26:57+02:00", "event": "cycle", "clone": "chris-do", "stage": "B", "n": 8, "note": "run3: batch 112 @thefutur P2: 8 to L2 (2 guest-fenced); P2 350, debt 7, L2 744; pushed 678a31f"}
+{"ts": "2026-07-21T07:40:06+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "run3: ingest @mkbhd 2009 origin P2: 8 to L2; P2 1369, debt 5, L2 309; pushed 4b4f098"}
+{"ts": "2026-07-21T07:51:53+02:00", "event": "cycle", "clone": "hormozi", "stage": "B", "n": 8, "note": "run3: batch 287 @MoreMozi P2: 8 to L2; P2 208, debt 3; pushed 3fa2b57"}
+{"ts": "2026-07-21T08:05:14+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "run3: batch 72 @neilpatel 2019 P2: 8 to L2; P2 653, debt 5, L2 573; pushed e697f16. (executor hit nested-subagent cap, wrote pages directly-ok)"}
+{"ts": "2026-07-21T08:08:05+02:00", "event": "limit", "note": "subagent spawn cap 200/200 reached; dispatcher cannot spawn cycle executors. Remedy: raise CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION or start a fresh session, then /loop /roster-loop."}
+{"ts": "2026-07-21T08:08:05+02:00", "event": "run-end", "reason": "subagent-cap"}

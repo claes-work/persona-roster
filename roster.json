@@ -35,8 +35,8 @@
       "strong_for": ["seo", "traffic", "funnel-context", "content-distribution", "conversion"],
       "weak_for": ["production-craft", "software-architecture"],
       "tier": 1,
-      "status": "created",
-      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+      "status": "active",
+      "note": "Promoted to active 2026-07-20: compiled system-prompt (v6, 6 synth passes). Council-ready; P2 backlog still deep."
     },
     {
       "slug": "mkbhd",
