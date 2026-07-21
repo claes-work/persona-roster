@@ -1,6 +1,6 @@
 ---
 type: state
-last_updated: 2026-07-19
+last_updated: 2026-07-20
 ---
 
 # Project state
@@ -16,9 +16,10 @@ persistence. See `AGENTS.md`.
 
 ## Current focus
 
-- Grow the clone bench: **Hormozi (v35) and Chris Do (v7) are `active`** — councils have
-  two real voices. Neil Patel & MKBHD are enumerated but not ingested (0 L2); GaryVee,
-  NetworkChuck only scaffolded. Check anytime: `python tools/roster_status.py`.
+- Grow the clone bench: **Hormozi (v37), Chris Do (v12), Neil Patel (v6) are `active`** —
+  councils have three real voices (neil-patel promoted 2026-07-20). MKBHD ingested but no
+  compiled prompt yet (274 L2, P2 deep); GaryVee & NetworkChuck only scaffolded (0 L2).
+  Check anytime: `python tools/roster_status.py`.
 - Exercise the new skill layer (`/work`, `/council`, `/plan`) on real problems and feed
   `wiki/learnings/`.
 
@@ -65,5 +66,5 @@ persistence. See `AGENTS.md`.
 
 ## Blocked
 
-- Councils beyond two voices blocked on clone ingestion (Neil Patel, MKBHD, GaryVee,
-  NetworkChuck not compiled yet).
+- Councils beyond three voices blocked on clone ingestion (MKBHD has L2 but no compiled
+  prompt yet; GaryVee, NetworkChuck not compiled yet).
