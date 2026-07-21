@@ -4,6 +4,13 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+Fresh run start immediately hit drained: all 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) are in active back-off (mkbhd/neil-patel until 11:45, hormozi/chris-do until
+11:52), leftover from the prior run's cadence. Discovery fresh (age 0.35h), no refresh
+needed. No executors dispatched this iteration. Next: retry after ~11:52 when back-offs
+clear.
+
 ## [2026-07-18] setup | Agent-OS upgrade: teams, router, pipelines, mandatory wiki persistence
 Analyzed roster/template/hormozi-clone/second-brain; built the orchestration layer per the
 2026-07-18 master brief: teams.json (+5 role prompts), tools/route.py + validate.py (+19 tests),
