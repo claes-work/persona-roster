@@ -350,3 +350,17 @@ Educate-Sequenz; Jahresabo nur als verdientes Founding-Angebot mit 30-Tage-Garan
 dokumentiert (Credit-Verfall, Auto-Renewal-Default). Record:
 wiki/decisions/2026-07-21-2key-pricing-conversion-funnel.md. Artefakt im Zielprojekt:
 2key-workforce wiki/konversions-strategie.md (per Feature-PR). Knowledge: decision.
+
+## [2026-07-21] work | Autopilot run (vps) — 4 cycles, drained by YouTube bot-check block
+Worker `vps` (owned: neil-patel, mkbhd, hormozi, chris-do). Discovery refreshed at run
+start: 32 new rows, 0 fresh-promoted. All 4 owned clones then hit yt-dlp caption-fetch
+failures (`8/8 caption fetches failed - YouTube bot-check block`) on their next cycle —
+0 items ingested, no ledger change — and were each put into a 60-min back-off
+(mkbhd/neil-patel until 11:45 UTC, hormozi/chris-do until 11:52 UTC). With all owned
+clones in back-off and none at their fresh/focus target, the eligible set was empty this
+iteration: stopped `reason=drained` per policy rather than spin. No new synthesis/persona
+debt work happened this iteration. Next `/loop /roster-loop` will retry once back-offs
+expire; if the bot-check block persists across workers/clones it may indicate a
+broader YouTube-side rate-limit rather than per-clone noise — worth a look if it recurs.
+Calibration: report observed usage via
+`python3 tools/autopilot_journal.py append usage observed_pct=<n>`.
