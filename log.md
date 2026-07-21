@@ -25,6 +25,12 @@ invocation should find work then.
 
 ## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 3)
 One-shot dispatch invocation, same back-off window as the three prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:27). Discovery still fresh (age 0.81h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 3)
+One-shot dispatch invocation, same back-off window as the three prior entries (mkbhd/neil-patel
 until 11:45, hormozi/chris-do until 11:52; now 11:20). Discovery still fresh (age 0.7h).
 No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
 invocation should find work then.
@@ -423,3 +429,10 @@ Worker vps, owned clones (neil-patel, mkbhd, hormozi, chris-do) all in active
 back-off (expiring 11:45–11:52 UTC); discovery fresh (0.55h); no fresh_open rows on
 any owned clone. Nothing eligible this iteration → stopped immediately with
 reason=drained. No wakeup scheduled (one-shot invocation).
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot dispatch at 11:30 UTC, same back-off window as the preceding entries
+(mkbhd/neil-patel until 11:45, hormozi/chris-do until 11:52). Discovery still fresh
+(age 0.86h). No eligible owned clones (neil-patel, mkbhd, hormozi, chris-do all
+back-off-blocked), no executors dispatched. Back-offs clear ~11:45–11:52; a later
+invocation should find work then.
