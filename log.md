@@ -461,3 +461,12 @@ entries in this streak (mkbhd/neil-patel until 11:45:48, hormozi/chris-do until
 no executors dispatched, no wakeup scheduled (one-shot). mkbhd/neil-patel's back-off
 clears in the next few minutes — the very next invocation after 11:46 UTC should find
 real work on at least those two.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting, 3)
+One-shot dispatch at 11:44 UTC, same YouTube-bot-check back-off window as the prior
+two entries in this streak (mkbhd/neil-patel until 11:45:48 — under 2 min out;
+hormozi/chris-do until 11:52:15 UTC — under 8 min out). Discovery fresh (age 1.1h),
+no fresh_open rows. All 4 owned clones still back-off-blocked → reason=drained, no
+executors dispatched, no wakeup scheduled (one-shot). These one-shot invocations keep
+landing inside the same ~1h back-off window (this is the third in a row with no new
+information); the next invocation after 11:46 UTC should finally clear mkbhd/neil-patel.
