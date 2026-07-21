@@ -442,3 +442,13 @@ One-shot dispatch at 11:33 UTC. Same back-off window persists (mkbhd/neil-patel
 until 11:45, hormozi/chris-do until 11:52); discovery still fresh (age 0.91h), no
 fresh_open rows. All 4 owned clones back-off-blocked → stopped immediately with
 reason=drained, no executors dispatched, no wakeup scheduled (one-shot).
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting)
+One-shot dispatch at 11:37 UTC, same YouTube-bot-check back-off window as the last
+several entries (mkbhd/neil-patel until 11:45, hormozi/chris-do until 11:52 UTC —
+now 8-15 min out). Discovery fresh (age 0.97h), no fresh_open rows. All 4 owned
+clones still back-off-blocked → reason=drained, no executors dispatched, no wakeup
+scheduled (one-shot). Process note: these one-shot invocations are firing roughly
+every 3 min, well inside the ~1h back-off window, so several have now landed on an
+unchanged state — next invocation should ideally wait until after 11:52 UTC to find
+real work instead of repeating this same drained cycle.
