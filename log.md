@@ -399,3 +399,9 @@ Decoy-Korridor, Ship-Gates) — alle im Merge eingearbeitet. Artefakt: konversio
 (Zielprojekt 2key-workforce, Einzug per Feature-PR sobald Codeberg wieder erreichbar).
 Orchestrierungs-Learning: Operator-Split nach Doktrin-Domaene + unabhaengiger Skeptiker
 fand materielle Fehler, die beide Autoren teilten. Knowledge: project-knowledge.
+
+## [2026-07-21] work | Autopilot run: 0 cycles — drained, all owned clones in back-off
+Worker vps, owned clones (neil-patel, mkbhd, hormozi, chris-do) all in active
+back-off (expiring 11:45–11:52 UTC); discovery fresh (0.55h); no fresh_open rows on
+any owned clone. Nothing eligible this iteration → stopped immediately with
+reason=drained. No wakeup scheduled (one-shot invocation).
