@@ -385,3 +385,11 @@ chris-do) remain in back-off from the earlier YouTube bot-check block (mkbhd/nei
 until 11:45, hormozi/chris-do until 11:52 UTC). Discovery fresh (age 0.45h), no refresh
 needed, no executors dispatched. This is a one-shot invocation (no wakeup scheduled);
 whoever runs `/loop /roster-loop` next should retry after ~11:52 UTC.
+## [2026-07-21] work | 2Key Konversions-Texte (Hormozi x Chris Do Operatoren + Skeptiker-Review)
+Copy-Pakete fuer Popup/In-App (50/90/100 %), Kontingent-Mails, Top-up-Dialog und die
+Starter-Sequenz (Willkommen bis Ask) ausgearbeitet; Skeptiker-Review ship-with-changes mit
+8 Must-Fixes (Datenschutz-Passage, Gratis-Plan-Zusage, Trigger-Kollisionen, PAngV/MwSt,
+Decoy-Korridor, Ship-Gates) — alle im Merge eingearbeitet. Artefakt: konversions-texte.md
+(Zielprojekt 2key-workforce, Einzug per Feature-PR sobald Codeberg wieder erreichbar).
+Orchestrierungs-Learning: Operator-Split nach Doktrin-Domaene + unabhaengiger Skeptiker
+fand materielle Fehler, die beide Autoren teilten. Knowledge: project-knowledge.
