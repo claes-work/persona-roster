@@ -49,12 +49,26 @@ def ledger_metrics(rows):
     m = {
         "sources_total": len(rows),
         "sources_l2plus": 0,
+        # Per-type ingest counts (long-form vs shorts) for accurate progress bars:
+        "lf_l2": 0, "lf_total": 0, "sh_l2": 0, "sh_dedup": 0, "sh_total": 0,
         "open_p1": 0, "open_p2": 0, "open_p3": 0, "open_shorts": 0,
         "fresh_open": 0,
         "last_discovered": None,
     }
     for r in rows:
         status = r.get("status", "")
+        typ = r.get("type", "")
+        notes = r.get("notes") or ""
+        if typ == "short":
+            m["sh_total"] += 1
+            if status in ("L2", "L3"):
+                m["sh_l2"] += 1
+            elif "dup-of" in notes:
+                m["sh_dedup"] += 1
+        elif typ == "video":
+            m["lf_total"] += 1
+            if status in ("L2", "L3"):
+                m["lf_l2"] += 1
         if status in ("L2", "L3"):
             m["sources_l2plus"] += 1
         disc = (r.get("discovered") or "").strip()
