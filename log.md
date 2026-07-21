@@ -342,3 +342,11 @@ the clone itself (`6f67315`, `bab2cb1`, `8f5a75b`, `741f5b8`, `24ff166`, `78a84c
 networkchuck still need interactive `/clone-setup` bootstrap (0 sources, status `created`).
 Calibration: report observed usage via
 `python3 tools/autopilot_journal.py append usage observed_pct=<n>`.
+
+## [2026-07-21] council | 2Key Pricing & Conversion-Funnel (Hormozi x Chris Do, standard)
+Keine Preissenkung trotz fehlendem Agent; Agent-Phantom raus aus Max; Kaufstrecke an den
+Peak-Pain-Moment (Top-up + Ein-Klick im Popup); Gespart-Zeit-Zaehler; Verbrauchs-Trigger als
+Educate-Sequenz; Jahresabo nur als verdientes Founding-Angebot mit 30-Tage-Garantie. Dissens
+dokumentiert (Credit-Verfall, Auto-Renewal-Default). Record:
+wiki/decisions/2026-07-21-2key-pricing-conversion-funnel.md. Artefakt im Zielprojekt:
+2key-workforce wiki/konversions-strategie.md (per Feature-PR). Knowledge: decision.
