@@ -17,8 +17,9 @@
   "workers": {
     "_comment": "Two-machine load-sharing. Each machine sets its identity ONCE (python tools/autopilot_journal.py set-worker <name>), then just runs /loop /roster-loop — a worker only ever ingests the clones assigned to it, so two accounts on disjoint clones never duplicate or git-conflict (each clone is its own repo). A machine with NO identity set ignores this map and works ALL clones (unchanged single-machine behavior). Every clone in focus_order should appear under exactly one worker. Rebalance by editing the lists. Policy: wiki/decisions/2026-07-19-parallel-ingest-and-workers.md.",
     "assignments": {
-      "sebastian": ["neil-patel", "networkchuck", "hormozi"],
-      "florian": ["mkbhd", "chris-do"]
+      "vps": ["neil-patel", "mkbhd", "hormozi", "chris-do"],
+      "sebastian": ["networkchuck"],
+      "florian": []
     }
   }
 }
