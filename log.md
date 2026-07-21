@@ -371,3 +371,17 @@ expire; if the bot-check block persists across workers/clones it may indicate a
 broader YouTube-side rate-limit rather than per-clone noise — worth a look if it recurs.
 Calibration: report observed usage via
 `python3 tools/autopilot_journal.py append usage observed_pct=<n>`.
+
+## [2026-07-21] work | Autopilot run (vps) — 0 cycles, drained by all-clones-backoff (recheck)
+Fresh run immediately hit drained again: all 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still in the active back-off from the prior run (mkbhd/neil-patel until 11:45,
+hormozi/chris-do until 11:52 UTC), triggered by the earlier YouTube bot-check block.
+Discovery fresh (age 0.39h), no refresh needed, no executors dispatched. Next
+`/loop /roster-loop` after ~11:52 UTC should find work again once back-offs clear.
+
+## [2026-07-21] work | Autopilot run (vps) — 0 cycles, drained by all-clones-backoff (third check)
+Same story a third time at 11:05 UTC: all 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) remain in back-off from the earlier YouTube bot-check block (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52 UTC). Discovery fresh (age 0.45h), no refresh
+needed, no executors dispatched. This is a one-shot invocation (no wakeup scheduled);
+whoever runs `/loop /roster-loop` next should retry after ~11:52 UTC.
