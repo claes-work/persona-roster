@@ -436,3 +436,9 @@ One-shot dispatch at 11:30 UTC, same back-off window as the preceding entries
 (age 0.86h). No eligible owned clones (neil-patel, mkbhd, hormozi, chris-do all
 back-off-blocked), no executors dispatched. Back-offs clear ~11:45–11:52; a later
 invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot dispatch at 11:33 UTC. Same back-off window persists (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52); discovery still fresh (age 0.91h), no
+fresh_open rows. All 4 owned clones back-off-blocked → stopped immediately with
+reason=drained, no executors dispatched, no wakeup scheduled (one-shot).
