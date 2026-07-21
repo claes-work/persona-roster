@@ -452,3 +452,12 @@ scheduled (one-shot). Process note: these one-shot invocations are firing roughl
 every 3 min, well inside the ~1h back-off window, so several have now landed on an
 unchanged state — next invocation should ideally wait until after 11:52 UTC to find
 real work instead of repeating this same drained cycle.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting, 2)
+One-shot dispatch at 11:41 UTC, same YouTube-bot-check back-off window as all prior
+entries in this streak (mkbhd/neil-patel until 11:45:48, hormozi/chris-do until
+11:52:15 UTC — now under 5 and under 11 min out respectively). Discovery fresh (age
+1.04h), no fresh_open rows. All 4 owned clones still back-off-blocked → reason=drained,
+no executors dispatched, no wakeup scheduled (one-shot). mkbhd/neil-patel's back-off
+clears in the next few minutes — the very next invocation after 11:46 UTC should find
+real work on at least those two.
