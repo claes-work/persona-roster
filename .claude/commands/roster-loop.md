@@ -92,8 +92,9 @@ do not pad the set or touch a clone twice.
 
 Spawn one general-purpose subagent per clone in the set — **all in a single message
 (multiple tool calls) so they run concurrently**. Each works a DIFFERENT clone repo,
-so there is no shared-file contention between them. Same brief for each (fill in the
-placeholders):
+so there is no shared-file contention between them. This is ONE level of nesting; the
+executor must not add a second one (see the write-directly rule in the brief). Same
+brief for each (fill in the placeholders):
 
 > Work inside the clone repo at `<absolute clone path>`. Read its CLAUDE.md /
 > AGENTS.md and `.claude/commands/ingest-loop.md`, then execute EXACTLY ONE
@@ -101,6 +102,13 @@ placeholders):
 > including Stage S synthesis or Stage P persona refresh when they are due), batch
 > size <N>. <If freshness routing chose this clone: "Prefer channel <handle> — it
 > has open fresh-upload P1 rows.">
+> **Write every source page YOURSELF, sequentially — do NOT spawn a subagent per
+> video.** You are already a subagent under a session-wide spawn budget
+> (`CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION`, default 200); a second nesting level
+> multiplies as batch × clones × iterations and is exactly what exhausted that budget
+> mid-run before. The clone's Stage B describes per-video subagents for STANDALONE
+> runs — collapse that one level when dispatched here and read/write each transcript
+> one after another.
 > Complete ALL of the clone's own bookkeeping for the stage (ledger, source pages,
 > youtube-index, log entry with Synthesis notes, commit, push) exactly per its
 > rules. Do NOT schedule wakeups, do NOT start loops, do NOT touch the roster repo.
@@ -142,3 +150,14 @@ the clone's own rules).
   so calibration data accumulates.
 - Discovery full-enumeration (`--full`) only ever targeted (step 3.2), never for
   the whole bench in one iteration.
+- **Subagent spawn budget is CUMULATIVE per session, not concurrent.**
+  `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION` (default 200; recommended to raise to ~1000
+  for overnight runs via `.claude/settings.json` `env`, or an exported shell var)
+  counts every subagent ever spawned across ALL wakeups of a single `/loop` run and
+  never decrements — terminated agents do not free a slot. With
+  the write-directly rule above the growth is ~`max_parallel_clones` per iteration, so a
+  long night stays well under budget. If a run still ends with `run-end
+  reason=subagent-cap`, don't treat it as an error: everything is idempotent — start a
+  fresh session and `/loop /roster-loop` resumes exactly from the ledgers (a new session
+  resets the counter). `append limit note=<what it said>` first so calibration data
+  accumulates.
