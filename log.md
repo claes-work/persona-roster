@@ -323,3 +323,22 @@ spawns one general-purpose executor per cycle, and that budget (setup + run 2's 
 `/loop /roster-loop`. Everything is idempotent — the next run resumes exactly from the
 ledgers. Still-open items unchanged: mkbhd active-promotion (compiled v4) pending user
 decision; garyvee/networkchuck need interactive `/clone-setup` bootstrap.
+
+## [2026-07-21] work | Autopilot run 4: 6 cycles — user-stopped
+Roster-loop autopilot, fresh session (timebox 6h, batch 8, `max_parallel_clones` 2),
+started 10:12, stopped 10:49 on user request (`reason=user-stop`) — well inside the box.
+Discovery was 16h old (not stale), so no refresh; worker identity unset → all clones
+eligible; focus order picked the same disjoint pair every iteration.
+- **neil-patel** B×3 → L2 581 → 589 → **597**; `@neilpatel` 2019-12 → 2020-01 solo-tactical
+  drain. Open P1 0, P2 629. Synthesis debt 5 → **8/10**.
+- **mkbhd** B×3 → L2 317 → 325 → **333**; `@mkbhd` 2009 origin tail (May 14 → Jun 17).
+  Open P1 0, P2 1345. Synthesis debt 5 → **8/10**.
+Zero rate limits, zero yt-dlp failures, zero back-offs; every batch committed+pushed by
+the clone itself (`6f67315`, `bab2cb1`, `8f5a75b`, `741f5b8`, `24ff166`, `78a84c3`).
+**Validated fix:** the collapse-nested-spawning rule held — 6 executors total for 6 cycles
+(vs. the ~200 that capped run 3). Spawn budget is a non-issue at this rate.
+**Next run picks up at:** both clones 2 batches from their Stage S checkpoint — the next
+`/loop /roster-loop` will trigger synthesis on each. Unchanged open items: garyvee /
+networkchuck still need interactive `/clone-setup` bootstrap (0 sources, status `created`).
+Calibration: report observed usage via
+`python3 tools/autopilot_journal.py append usage observed_pct=<n>`.

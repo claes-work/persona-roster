@@ -162,3 +162,11 @@
 {"ts": "2026-07-21T08:05:14+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "run3: batch 72 @neilpatel 2019 P2: 8 to L2; P2 653, debt 5, L2 573; pushed e697f16. (executor hit nested-subagent cap, wrote pages directly-ok)"}
 {"ts": "2026-07-21T08:08:05+02:00", "event": "limit", "note": "subagent spawn cap 200/200 reached; dispatcher cannot spawn cycle executors. Remedy: raise CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION or start a fresh session, then /loop /roster-loop."}
 {"ts": "2026-07-21T08:08:05+02:00", "event": "run-end", "reason": "subagent-cap"}
+{"ts": "2026-07-21T10:12:10+02:00", "event": "run-start", "timebox_h": 6, "batch": 8}
+{"ts": "2026-07-21T10:21:43+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "@neilpatel 2019-12 solo-tactical, 8 L2, no P1 left, debt 6/10"}
+{"ts": "2026-07-21T10:21:43+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "@mkbhd 2009 origin tail, 8 L2, no P1 left, debt 6/10"}
+{"ts": "2026-07-21T10:35:03+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "@neilpatel 2019-12/2020-01 cluster, 8 L2 (589), debt 7/10"}
+{"ts": "2026-07-21T10:35:03+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "@mkbhd 2009 origin May29-Jun5, 8 L2 (325), debt 7/10"}
+{"ts": "2026-07-21T10:48:23+02:00", "event": "cycle", "clone": "neil-patel", "stage": "B", "n": 8, "note": "@neilpatel 2020-01 batch, 8 L2 (597), debt 8/10"}
+{"ts": "2026-07-21T10:48:23+02:00", "event": "cycle", "clone": "mkbhd", "stage": "B", "n": 8, "note": "@mkbhd 2009 Jun8-17, 8 L2 (333), debt 8/10"}
+{"ts": "2026-07-21T10:48:56+02:00", "event": "run-end", "reason": "user-stop"}
