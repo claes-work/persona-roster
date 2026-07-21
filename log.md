@@ -17,6 +17,18 @@ until 11:45, hormozi/chris-do until 11:52; now 11:08). Discovery still fresh (ag
 No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
 invocation should find work then.
 
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 2)
+One-shot dispatch invocation, same back-off window as the two prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:17). Discovery still fresh (age 0.65h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 3)
+One-shot dispatch invocation, same back-off window as the three prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:20). Discovery still fresh (age 0.7h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
 ## [2026-07-18] setup | Agent-OS upgrade: teams, router, pipelines, mandatory wiki persistence
 Analyzed roster/template/hormozi-clone/second-brain; built the orchestration layer per the
 2026-07-18 master brief: teams.json (+5 role prompts), tools/route.py + validate.py (+19 tests),
