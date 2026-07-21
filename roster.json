@@ -47,8 +47,8 @@
       "strong_for": ["audience-perspective", "credibility-check", "video-packaging", "production-quality", "product-review"],
       "weak_for": ["seo", "email-marketing", "enterprise-sales"],
       "tier": 1,
-      "status": "created",
-      "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+      "status": "active",
+      "note": "Active since 2026-07-21: system-prompt v4 compiled from 4 synthesis passes (~309 L2 sources); promoted created→active (user-approved). Ingest continues."
     },
     {
       "slug": "garyvee",
