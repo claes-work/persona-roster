@@ -470,3 +470,17 @@ no fresh_open rows. All 4 owned clones still back-off-blocked → reason=drained
 executors dispatched, no wakeup scheduled (one-shot). These one-shot invocations keep
 landing inside the same ~1h back-off window (this is the third in a row with no new
 information); the next invocation after 11:46 UTC should finally clear mkbhd/neil-patel.
+
+## [2026-07-21] work | Autopilot run (vps): 55 cycles — timebox reached
+Run started 11:47 UTC, ended 17:51 UTC (6.06h, over the 6h timebox). 55 cycles across
+owned clones: neil-patel 30 (234 items, P2 drain, synthesis debt climbed to 7/10),
+mkbhd 16 (78 items, then hit a systemic yt-dlp PO-token caption-fetch block —
+confirmed on 4+ consecutive iterations, environment lacks pip/node so no PO-token
+provider can be installed; back-off applied, standing infra fix still needed),
+hormozi 3 (0 items — repeatedly back-off-blocked by the same caption-fetch issue),
+chris-do 6 (70 items, also hit the caption block on @thefutur mid-run; back-off
+applied). Discovery stayed fresh throughout (no refresh needed). Final iteration
+dispatched neil-patel (+8, P2 batch cont.82) and mkbhd (0, PO-token block reconfirmed,
+60min back-off applied) in parallel; both are the only two of the four owned clones
+not already in back-off at orient time. run-end reason=timebox journaled; no wakeup
+scheduled (one-shot, per policy).
