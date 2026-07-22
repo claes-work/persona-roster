@@ -840,3 +840,15 @@ followed by run-end reason=drained; no wakeup scheduled (one-shot). Escalating:
 this recurring block still has no wiki decision/learning capturing it despite
 10+ repeat occurrences — worth a `wiki/learnings/` entry so future runs stop
 re-describing the same root cause from scratch.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:22 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch throttle (12th+ consecutive drained
+one-shot). Discovery fresh (age 19.73h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot invocation, per operator instruction). Confirmed
+`wiki/learnings/` still has no entry for this recurring block despite 12+
+repeat occurrences — still worth capturing so future runs stop re-deriving the
+same root cause; deferred here as out of scope for a one-shot dispatch
+iteration.
