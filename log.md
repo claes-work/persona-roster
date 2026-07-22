@@ -13,6 +13,14 @@ block. No work was eligible; nothing new happened. Discovery still fresh (age
 a cookies file) — until that lands, every invocation in this window will drain
 immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
 
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:41 UTC, 12 min after the prior check: still all 4 owned
+clones (neil-patel, mkbhd, hormozi, chris-do) sit inside back-off windows expiring
+03:14-03:35 UTC, same systemic yt-dlp caption-fetch block, unchanged since the
+last run. Discovery still fresh (age 16.0h), no refresh needed. No work eligible;
+nothing new happened. run-end reason=drained journaled; no wakeup scheduled
+(one-shot).
+
 ## [2026-07-22] work | Autopilot run (vps): 17 cycles, drained by all-clones-backoff
 Run 00:15:48→02:22 UTC. neil-patel carried the run again: ~67 items ingested (Stage B)
 plus one synthesis checkpoint (debt 10→0, prompt v14→v15) — until it too hit the
@@ -541,3 +549,19 @@ throttling), with expiries between 02:32 and 03:20 UTC; none had fresh_open rows
 No eligible clone this iteration — no executor dispatched. Discovery fresh (age
 15.8h), no refresh needed. run-end reason=drained journaled; no wakeup scheduled
 (one-shot invocation, per operator instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+Run started 02:32 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) were
+already in active back-off at orient time (from the prior run's caption-fetch
+throttling), with expiries between 03:14 and 03:35 UTC; none had fresh_open rows.
+No eligible clone this iteration — no executor dispatched. Discovery fresh (age
+16.0h), no refresh needed. run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 02:44 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior two checks. Discovery
+fresh (age 16.09h), no refresh needed. No work eligible; nothing new happened.
+run-end reason=drained journaled; no wakeup scheduled (one-shot invocation, per
+operator instruction).
