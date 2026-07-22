@@ -5,6 +5,13 @@ Append-only chronological record. Entry format:
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
 ## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 06:27 UTC: all 4 owned clones still in back-off (mkbhd until
+06:38, neil-patel/chris-do until 06:45, hormozi until 07:08) — same unresolved
+systemic yt-dlp PO-token caption-fetch block carried over from prior runs.
+Discovery still fresh (age 19.8h). No work eligible; nothing new happened.
+run-start then run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
 One-shot check at 02:29 UTC: all 4 owned clones remain in the back-off windows set
 by the previous run (mkbhd/neil-patel until 03:14, hormozi until 02:32, chris-do
 until 03:19), all from the same unresolved systemic yt-dlp PO-token caption-fetch
