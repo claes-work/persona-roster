@@ -4,6 +4,19 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-22] work | Autopilot run (vps): 17 cycles, drained by all-clones-backoff
+Run 00:15:48→02:22 UTC. neil-patel carried the run again: ~67 items ingested (Stage B)
+plus one synthesis checkpoint (debt 10→0, prompt v14→v15) — until it too hit the
+systemic yt-dlp PO-token caption-fetch block at 02:14, the same infra issue already
+flagged for hormozi/mkbhd/chris-do (10th–13th consecutive confirmations this run).
+All 4 owned clones are now in active back-off (mkbhd/neil-patel until 03:14, hormozi
+until 02:32, chris-do until 03:19) — first time ingestion has been fully blocked
+across the whole owned set, not just three of four. Discovery stayed fresh (age
+15.7h), no refresh needed. **Action still needed from repo owner**: install
+`bgutil-ytdlp-pot-provider` (needs pip/pipx/venv, absent from this VPS env) or supply
+a YouTube cookies file — every recent run has hit this wall. run-end reason=drained
+journaled; no wakeup scheduled (one-shot invocation).
+
 ## [2026-07-22] work | Autopilot run (vps): 51 cycles, timebox reached
 Run 17:55:50→23:55 UTC (6h). neil-patel carried the run: 332 items ingested across ~35
 iterations (Stage B) plus 2 synthesis passes (debt cleared twice, persona v13→v14).
