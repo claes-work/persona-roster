@@ -14,6 +14,14 @@ a cookies file) — until that lands, every invocation in this window will drain
 immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
 
 ## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 04:41 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
+until 05:26, hormozi until 04:56, chris-do until 05:31) — same unresolved systemic
+yt-dlp PO-token caption-fetch block persisting across consecutive one-shot
+invocations. No work eligible. Discovery still fresh (age 18.0h). Still waiting on
+repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies file). run-end
+reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
 One-shot check at 02:55 UTC: same story — all 4 owned clones still inside the
 back-off windows (mkbhd/neil-patel until 03:14, hormozi until 03:35, chris-do
 until 03:19), unchanged systemic yt-dlp caption-fetch block. Discovery still fresh
