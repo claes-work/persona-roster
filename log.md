@@ -648,3 +648,13 @@ reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
 instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
 install or a cookies file) to clear the block permanently instead of cycling
 through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 04:37 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 04:56-05:32 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 17.99h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
+install or a cookies file) to clear the block permanently instead of cycling
+through hour-long back-offs.
