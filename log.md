@@ -720,3 +720,14 @@ invocation, per operator instruction). Root cause unchanged — still waiting on
 repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies file) to clear
 the block permanently instead of cycling through hour-long back-offs that yield
 nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:09 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 05:26-06:00 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior two runs.
+Discovery fresh (age 18.53h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 3+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
