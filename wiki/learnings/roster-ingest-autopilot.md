@@ -69,3 +69,18 @@ n/a — this is infrastructure; no persona claims ingest-scheduling expertise.
 - Time-box default 6h until ≥3 calibration data points exist; then set the time-box
   from the observed hours→usage curve to land at ~80% weekly usage.
 - Treat rate-limit stalls as back-off (60 min), never as run failure.
+- **2026-07-22 (vps, environment-wide yt-dlp PO-token block, 20+ consecutive
+  drained one-shots ~02:26–06:36 UTC):** all 4 owned clones (neil-patel, mkbhd,
+  hormozi, chris-do) independently hit the same caption-fetch failure — YouTube's
+  PO-token requirement blocking yt-dlp caption downloads — and cycle through
+  60-min back-offs in lockstep, so every one-shot dispatch landing inside that
+  window correctly finds nothing eligible and drains. This is expected
+  mechanical behavior given the back-off math, **not a new failure per
+  invocation** — don't re-diagnose it fresh each run; check `backoff` events in
+  `autopilot/journal-<worker>.jsonl` for the shared root cause first. The actual
+  fix is infra-level and outside this agent's reach on this box (no pip/root):
+  install a POT provider (`bgutil-ytdlp-pot-provider`) or supply a YouTube
+  cookies file to yt-dlp. Until a human applies one of those, back-to-back
+  one-shot invocations on this worker will keep draining — that's a dispatch-
+  cadence question (how often the outer scheduler fires this command), not
+  something `/roster-loop` itself can resolve.

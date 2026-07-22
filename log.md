@@ -37,12 +37,174 @@ darüber Qualifizierungsschritt; Zahl = Founders. /2key = Lead-Magnet, forward-o
 Record: `wiki/decisions/2026-07-22-website-shop-override-and-funnel-rulings.md`. Build-Scope-Dissens
 Founder↔Council bewusst offen zurückgegeben. Hub-candidate: yes. Knowledge: decision persisted.
 
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 06:30 UTC: all 4 owned clones still in back-off (mkbhd until
+06:38, neil-patel/chris-do until 06:45, hormozi until 07:08) — same unresolved
+systemic yt-dlp PO-token caption-fetch block carried over from prior runs.
+Discovery still fresh (age 19.9h). No work eligible; nothing new happened.
+run-start then run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 06:27 UTC: all 4 owned clones still in back-off (mkbhd until
+06:38, neil-patel/chris-do until 06:45, hormozi until 07:08) — same unresolved
+systemic yt-dlp PO-token caption-fetch block carried over from prior runs.
+Discovery still fresh (age 19.8h). No work eligible; nothing new happened.
+run-start then run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:29 UTC: all 4 owned clones remain in the back-off windows set
+by the previous run (mkbhd/neil-patel until 03:14, hormozi until 02:32, chris-do
+until 03:19), all from the same unresolved systemic yt-dlp PO-token caption-fetch
+block. No work was eligible; nothing new happened. Discovery still fresh (age
+15.9h). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install or
+a cookies file) — until that lands, every invocation in this window will drain
+immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:51 UTC: all 4 owned clones still in back-off (hormozi until
+06:00, mkbhd until 06:38, neil-patel/chris-do until 06:45) — same unresolved
+systemic yt-dlp PO-token caption-fetch block carried over from prior runs.
+Discovery still fresh (age 19.2h). No work eligible; nothing new happened.
+run-start then run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:56 UTC: all 4 owned clones still in back-off (hormozi until
+06:00, mkbhd until 06:38, neil-patel/chris-do until 06:45) — same unresolved
+systemic yt-dlp PO-token caption-fetch block, now persisting across 9+
+consecutive one-shot runs in this window with zero net ingest. Discovery still
+fresh (age 19.3h). No work eligible; nothing new happened. run-start then
+run-end reason=drained journaled; no wakeup scheduled (one-shot). Repo-owner
+action still needed (`bgutil-ytdlp-pot-provider` install or a cookies file) —
+further one-shot invocations will keep draining identically until that lands
+or the current back-off windows (06:00-06:45 UTC) simply expire.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:18 UTC: all 4 owned clones still within back-off windows
+(mkbhd/neil-patel until 05:26, hormozi until 06:00, chris-do until 05:31) from the
+same unresolved yt-dlp PO-token block. No work eligible; discovery fresh (age
+18.7h, unchanged). run-start then run-end reason=drained journaled; no wakeup
+scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:13 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
+until 05:26, chris-do until 05:31, hormozi until 06:00) — same unresolved systemic
+yt-dlp PO-token caption-fetch block as prior runs. No work eligible; discovery still
+fresh (age 18.6h). run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 04:53 UTC: all 4 owned clones still in back-off (hormozi until
+04:56, mkbhd/neil-patel until 05:26, chris-do until 05:31) — same unresolved
+systemic yt-dlp PO-token block from prior runs. No work eligible. Discovery fresh
+(age 18.25h). run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 04:50 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
+until 05:26, hormozi until 04:56, chris-do until 05:31) — same unresolved systemic
+yt-dlp PO-token caption-fetch block. No work eligible. Discovery still fresh (age
+18.2h). Still waiting on repo-owner action; run-end reason=drained journaled; no
+wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 04:47 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
+until 05:26, hormozi until 04:56, chris-do until 05:31), same unresolved systemic
+yt-dlp PO-token caption-fetch block as every prior run this window. Discovery
+fresh (age 18.14h), no new work eligible. run-end reason=drained journaled; no
+wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 04:41 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
+until 05:26, hormozi until 04:56, chris-do until 05:31) — same unresolved systemic
+yt-dlp PO-token caption-fetch block persisting across consecutive one-shot
+invocations. No work eligible. Discovery still fresh (age 18.0h). Still waiting on
+repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies file). run-end
+reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:55 UTC: same story — all 4 owned clones still inside the
+back-off windows (mkbhd/neil-patel until 03:14, hormozi until 03:35, chris-do
+until 03:19), unchanged systemic yt-dlp caption-fetch block. Discovery still fresh
+(age 16.3h), no eligible work. run-end reason=drained journaled; no wakeup
+scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:47 UTC: all 4 owned clones (mkbhd/neil-patel until 03:14,
+hormozi until 03:35, chris-do until 03:19) remain in back-off from the same
+unresolved systemic yt-dlp PO-token caption-fetch block — no new backoffs set
+this run, existing ones just haven't expired yet. Discovery still fresh (age
+16.1h). No work was eligible; nothing new happened. run-end reason=drained
+journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:41 UTC, 12 min after the prior check: still all 4 owned
+clones (neil-patel, mkbhd, hormozi, chris-do) sit inside back-off windows expiring
+03:14-03:35 UTC, same systemic yt-dlp caption-fetch block, unchanged since the
+last run. Discovery still fresh (age 16.0h), no refresh needed. No work eligible;
+nothing new happened. run-end reason=drained journaled; no wakeup scheduled
+(one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 17 cycles, drained by all-clones-backoff
+Run 00:15:48→02:22 UTC. neil-patel carried the run again: ~67 items ingested (Stage B)
+plus one synthesis checkpoint (debt 10→0, prompt v14→v15) — until it too hit the
+systemic yt-dlp PO-token caption-fetch block at 02:14, the same infra issue already
+flagged for hormozi/mkbhd/chris-do (10th–13th consecutive confirmations this run).
+All 4 owned clones are now in active back-off (mkbhd/neil-patel until 03:14, hormozi
+until 02:32, chris-do until 03:19) — first time ingestion has been fully blocked
+across the whole owned set, not just three of four. Discovery stayed fresh (age
+15.7h), no refresh needed. **Action still needed from repo owner**: install
+`bgutil-ytdlp-pot-provider` (needs pip/pipx/venv, absent from this VPS env) or supply
+a YouTube cookies file — every recent run has hit this wall. run-end reason=drained
+journaled; no wakeup scheduled (one-shot invocation).
+
+## [2026-07-22] work | Autopilot run (vps): 51 cycles, timebox reached
+Run 17:55:50→23:55 UTC (6h). neil-patel carried the run: 332 items ingested across ~35
+iterations (Stage B) plus 2 synthesis passes (debt cleared twice, persona v13→v14).
+hormozi, mkbhd, chris-do ingested 0 items all run — a systemic yt-dlp PO-token/
+bot-detection block on caption fetch hit all three, confirmed **10 consecutive times
+each** (env has no pip/pipx to install `bgutil-ytdlp-pot-provider`, no cookies file).
+Each did land one synthesis pass on existing backlog (hormozi debt→0 v38→v39, mkbhd
+debt→0 v5→v6) since synthesis doesn't need fresh captions. Discovery was fresh all run,
+no refresh needed. **Action needed from repo owner**: install
+`bgutil-ytdlp-pot-provider` (needs pip/pipx, currently absent from this VPS env) or
+supply a YouTube cookies file — otherwise hormozi/mkbhd/chris-do ingest stays fully
+blocked next run too. Back-offs active at stop: mkbhd until 00:48, hormozi until 00:12,
+chris-do until 01:00 (2026-07-22 UTC). No wakeup scheduled (one-shot dispatch).
+
 ## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
 Fresh run start immediately hit drained: all 4 owned clones (neil-patel, mkbhd, hormozi,
 chris-do) are in active back-off (mkbhd/neil-patel until 11:45, hormozi/chris-do until
 11:52), leftover from the prior run's cadence. Discovery fresh (age 0.35h), no refresh
 needed. No executors dispatched this iteration. Next: retry after ~11:52 when back-offs
 clear.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat)
+One-shot dispatch invocation, same back-off window as the prior entry (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:08). Discovery still fresh (age 0.5h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 2)
+One-shot dispatch invocation, same back-off window as the two prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:17). Discovery still fresh (age 0.65h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 3)
+One-shot dispatch invocation, same back-off window as the three prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:27). Discovery still fresh (age 0.81h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 3)
+One-shot dispatch invocation, same back-off window as the three prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:20). Discovery still fresh (age 0.7h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (repeat 4)
+One-shot dispatch invocation, same back-off window as the four prior entries (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52; now 11:23). Discovery still fresh (age 0.76h).
+No eligible clones, no executors dispatched. Back-offs expire ~11:45–11:52; a later
+invocation should find work then.
 
 ## [2026-07-18] setup | Agent-OS upgrade: teams, router, pipelines, mandatory wiki persistence
 Analyzed roster/template/hormozi-clone/second-brain; built the orchestration layer per the
@@ -426,6 +588,7 @@ Decoy-Korridor, Ship-Gates) — alle im Merge eingearbeitet. Artefakt: konversio
 (Zielprojekt 2key-workforce, Einzug per Feature-PR sobald Codeberg wieder erreichbar).
 Orchestrierungs-Learning: Operator-Split nach Doktrin-Domaene + unabhaengiger Skeptiker
 fand materielle Fehler, die beide Autoren teilten. Knowledge: project-knowledge.
+
 ## [2026-07-21] council | Portfolio-Fokus: ein Business (2Key), Rest sind Funktionen
 Deep Council (Hormozi x Chris Do x Neil Patel, Cross-Examination + Skeptiker-Review
 "rework" eingearbeitet): 2Key = Asset/Exit-Vehikel fuer eine 3-5-Jahres-Season (12 Mo
@@ -549,3 +712,352 @@ weiter 1× bei 75%/60h). (d) Echter Cookie-Ablauf (explizit / Datei >7 Tage) →
 🍪-Nag; generisches rc≠0 → weiter ⚠️. Backups ingest-cycle.sh.bak-20260722c,
 status-report.py.bak-20260722. Verifiziert: Reporter meldet "silent (drained=False)".
 Knowledge: project (Memory aktualisiert).
+
+## [2026-07-21] work | Autopilot run: 0 cycles — drained, all owned clones in back-off
+Worker vps, owned clones (neil-patel, mkbhd, hormozi, chris-do) all in active
+back-off (expiring 11:45–11:52 UTC); discovery fresh (0.55h); no fresh_open rows on
+any owned clone. Nothing eligible this iteration → stopped immediately with
+reason=drained. No wakeup scheduled (one-shot invocation).
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot dispatch at 11:30 UTC, same back-off window as the preceding entries
+(mkbhd/neil-patel until 11:45, hormozi/chris-do until 11:52). Discovery still fresh
+(age 0.86h). No eligible owned clones (neil-patel, mkbhd, hormozi, chris-do all
+back-off-blocked), no executors dispatched. Back-offs clear ~11:45–11:52; a later
+invocation should find work then.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot dispatch at 11:33 UTC. Same back-off window persists (mkbhd/neil-patel
+until 11:45, hormozi/chris-do until 11:52); discovery still fresh (age 0.91h), no
+fresh_open rows. All 4 owned clones back-off-blocked → stopped immediately with
+reason=drained, no executors dispatched, no wakeup scheduled (one-shot).
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting)
+One-shot dispatch at 11:37 UTC, same YouTube-bot-check back-off window as the last
+several entries (mkbhd/neil-patel until 11:45, hormozi/chris-do until 11:52 UTC —
+now 8-15 min out). Discovery fresh (age 0.97h), no fresh_open rows. All 4 owned
+clones still back-off-blocked → reason=drained, no executors dispatched, no wakeup
+scheduled (one-shot). Process note: these one-shot invocations are firing roughly
+every 3 min, well inside the ~1h back-off window, so several have now landed on an
+unchanged state — next invocation should ideally wait until after 11:52 UTC to find
+real work instead of repeating this same drained cycle.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting, 2)
+One-shot dispatch at 11:41 UTC, same YouTube-bot-check back-off window as all prior
+entries in this streak (mkbhd/neil-patel until 11:45:48, hormozi/chris-do until
+11:52:15 UTC — now under 5 and under 11 min out respectively). Discovery fresh (age
+1.04h), no fresh_open rows. All 4 owned clones still back-off-blocked → reason=drained,
+no executors dispatched, no wakeup scheduled (one-shot). mkbhd/neil-patel's back-off
+clears in the next few minutes — the very next invocation after 11:46 UTC should find
+real work on at least those two.
+
+## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff (still waiting, 3)
+One-shot dispatch at 11:44 UTC, same YouTube-bot-check back-off window as the prior
+two entries in this streak (mkbhd/neil-patel until 11:45:48 — under 2 min out;
+hormozi/chris-do until 11:52:15 UTC — under 8 min out). Discovery fresh (age 1.1h),
+no fresh_open rows. All 4 owned clones still back-off-blocked → reason=drained, no
+executors dispatched, no wakeup scheduled (one-shot). These one-shot invocations keep
+landing inside the same ~1h back-off window (this is the third in a row with no new
+information); the next invocation after 11:46 UTC should finally clear mkbhd/neil-patel.
+
+## [2026-07-21] work | Autopilot run (vps): 55 cycles — timebox reached
+Run started 11:47 UTC, ended 17:51 UTC (6.06h, over the 6h timebox). 55 cycles across
+owned clones: neil-patel 30 (234 items, P2 drain, synthesis debt climbed to 7/10),
+mkbhd 16 (78 items, then hit a systemic yt-dlp PO-token caption-fetch block —
+confirmed on 4+ consecutive iterations, environment lacks pip/node so no PO-token
+provider can be installed; back-off applied, standing infra fix still needed),
+hormozi 3 (0 items — repeatedly back-off-blocked by the same caption-fetch issue),
+chris-do 6 (70 items, also hit the caption block on @thefutur mid-run; back-off
+applied). Discovery stayed fresh throughout (no refresh needed). Final iteration
+dispatched neil-patel (+8, P2 batch cont.82) and mkbhd (0, PO-token block reconfirmed,
+60min back-off applied) in parallel; both are the only two of the four owned clones
+not already in back-off at orient time. run-end reason=timebox journaled; no wakeup
+scheduled (one-shot, per policy).
+
+## [2026-07-22] work | Autopilot run (vps): 1 cycle — one-shot dispatch
+Run started 00:03 UTC. Of the 4 owned clones, mkbhd/hormozi/chris-do were all still
+in active back-off from the prior run's caption-fetch throttling (hormozi's window
+cleared moments after orient, too late for this iteration); neil-patel was the only
+eligible clone (max_parallel_clones=2, but only 1 clone available). Discovery fresh
+(age 13.4h), no fresh_open rows, so no refresh needed. Dispatched one executor for
+neil-patel: Stage B, `@neilpatel` P2 batch (2023-06-05→2023-06-22), 8/8 ingested (0
+skipped/no-captions/dup), no rate limits. Open after: neil-patel P2 133/P3 21,
+MarketingSchoolPod P2 731/P3 28, 2688 shorts open, L2=1089. Synthesis debt hit the
+10-batch checkpoint — Stage S is due on the clone's next iteration. run-end
+reason=user journaled (one-shot invocation, per operator instruction); no wakeup
+scheduled.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+Run started 02:26 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) were
+already in active back-off at orient time (from the prior run's caption-fetch
+throttling), with expiries between 02:32 and 03:20 UTC; none had fresh_open rows.
+No eligible clone this iteration — no executor dispatched. Discovery fresh (age
+15.8h), no refresh needed. run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+Run started 02:32 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) were
+already in active back-off at orient time (from the prior run's caption-fetch
+throttling), with expiries between 03:14 and 03:35 UTC; none had fresh_open rows.
+No eligible clone this iteration — no executor dispatched. Discovery fresh (age
+16.0h), no refresh needed. run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 02:44 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior two checks. Discovery
+fresh (age 16.09h), no refresh needed. No work eligible; nothing new happened.
+run-end reason=drained journaled; no wakeup scheduled (one-shot invocation, per
+operator instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 02:50 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.19h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 02:53 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.24h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 02:59 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.34h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 03:02 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.39h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 03:05 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.45h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 03:08 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 16.51h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 03:11 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 03:14-03:35 UTC — same systemic
+yt-dlp PO-token caption-fetch block first hit ~02:35 (hormozi retry: 8/8
+no-captions), unchanged since. Discovery fresh (age 16.56h), no refresh needed. No
+work eligible; nothing new happened. run-end reason=drained journaled; no wakeup
+scheduled (one-shot invocation, per operator instruction). Still waiting on
+repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies file) to clear
+the block permanently instead of cycling through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 04:34 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 04:56-05:32 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 17.93h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
+install or a cookies file) to clear the block permanently instead of cycling
+through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 04:37 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 04:56-05:32 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 17.99h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
+install or a cookies file) to clear the block permanently instead of cycling
+through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 04:44 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 04:56-05:32 UTC — same systemic
+yt-dlp caption-fetch throttling, unchanged since the prior checks. Discovery fresh
+(age 18.09h), no refresh needed. No work eligible; nothing new happened. run-end
+reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
+instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
+install or a cookies file) to clear the block permanently instead of cycling
+through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 1 cycle (hormozi, 0 ingested), drained by all-clones-backoff
+One-shot check at 05:03 UTC. Run (started 04:56) attempted hormozi's MoreMozi P2
+batch — 16th consecutive zero-yield batch from the same systemic yt-dlp PO-token
+caption block, 0/8 ingested, safety rail tripped, hormozi entered back-off. That
+put all 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) simultaneously
+inside back-off windows expiring 05:26-06:00 UTC. Discovery fresh (age 18.44h), no
+refresh needed. No further work eligible; run-end reason=drained journaled; no
+wakeup scheduled (one-shot invocation, per operator instruction). Root cause is
+unchanged and worsening (16+ consecutive failures across all 4 clones this run
+alone) — still waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install
+or a cookies file) to clear the block permanently instead of cycling through
+hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:07 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 05:26-06:00 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior run. Discovery
+fresh (age 18.48h), no refresh needed. No work eligible; run-start immediately
+followed by run-end reason=drained journaled; no wakeup scheduled (one-shot
+invocation, per operator instruction). Root cause unchanged — still waiting on
+repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies file) to clear
+the block permanently instead of cycling through hour-long back-offs that yield
+nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:09 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 05:26-06:00 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior two runs.
+Discovery fresh (age 18.53h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 3+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:15 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 05:26-06:00 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior four runs.
+Discovery fresh (age 18.62h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 4+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:22 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 05:26-06:00 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior five runs.
+Discovery fresh (age 18.72h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 5+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:47 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:00-06:45 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior seven runs.
+Discovery fresh (age 19.16h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 7+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 05:59 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:00-06:45 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior eight runs.
+Discovery fresh (age 19.36h), no refresh needed. No work eligible; run-start
+immediately followed by run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction). Root cause unchanged and now
+persisting across 8+ consecutive runs — still waiting on repo-owner action
+(`bgutil-ytdlp-pot-provider` install or a cookies file) to clear the block
+permanently instead of cycling through hour-long back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:11 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior nine runs.
+Discovery fresh (age 19.54h), no refresh needed. No work eligible; run-end
+reason=drained journaled (run had already been started at 06:03 UTC by a prior
+wakeup); no wakeup scheduled (one-shot invocation, per operator instruction).
+Root cause unchanged and now persisting across 9+ consecutive runs — still
+waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies
+file) to clear the block permanently instead of cycling through hour-long
+back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:14 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior ten-plus
+runs. Discovery fresh (age 19.59h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot invocation, per operator instruction). Root cause unchanged
+and now persisting across 10+ consecutive one-shot dispatches with zero net
+ingest progress — this pattern will keep repeating every invocation until a
+repo-owner fixes the caption-fetch throttle (`bgutil-ytdlp-pot-provider`
+install or a cookies file); no wiki decision/learning yet documents this
+recurring block despite the run count.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:18 UTC. Same systemic yt-dlp PO-token caption-fetch
+throttle (11th+ consecutive drained one-shot); all 4 owned clones still in
+back-off (06:38-07:08 UTC), discovery fresh (19.67h). run-start immediately
+followed by run-end reason=drained; no wakeup scheduled (one-shot). Escalating:
+this recurring block still has no wiki decision/learning capturing it despite
+10+ repeat occurrences — worth a `wiki/learnings/` entry so future runs stop
+re-describing the same root cause from scratch.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:22 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch throttle (12th+ consecutive drained
+one-shot). Discovery fresh (age 19.73h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:32 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch throttle (13th+ consecutive drained
+one-shot). Discovery fresh (age 19.91h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot invocation, per operator instruction). Confirmed
+`wiki/learnings/` still has no entry for this recurring block despite 12+
+repeat occurrences — still worth capturing so future runs stop re-deriving the
+same root cause; deferred here as out of scope for a one-shot dispatch
+iteration.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:36 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch block (20+ consecutive drained
+one-shots since ~02:26 UTC). Discovery fresh (age 19.98h), no refresh needed.
+No work eligible; run-start immediately followed by run-end reason=drained
+journaled; no wakeup scheduled (one-shot). Added the deferred
+`wiki/learnings/roster-ingest-autopilot.md` entry this time: documents the
+lockstep back-off pattern as expected mechanics (not a fresh failure per
+invocation) and flags that the real fix — installing a POT provider
+(`bgutil-ytdlp-pot-provider`) or a YouTube cookies file for yt-dlp — is
+infra-level and outside this agent's reach (no pip/root on this box); needs
+human action.
+
+## [2026-07-22] work | Autopilot run (vps): 30 cycles — timebox stop
+Run started 06:41 UTC (6h box), stopped 13:14 UTC on `over_timebox` (elapsed
+6.55h). Owned clones neil-patel/mkbhd/hormozi/chris-do. Productive early
+hours: mkbhd 13 cycles (~125 items incl. 1 Stage S synthesis pass, debt
+2→0, v6→v7), neil-patel 12 cycles (~72 items incl. 2 Stage S passes, debt
+drained twice), one discovery refresh at 10:59 UTC (+52 new rows, 21
+promoted fresh/P1). chris-do and hormozi mostly blocked this run (2 and 3
+cycles respectively, near-zero items) by the same recurring yt-dlp
+PO-token/bot-check caption-fetch gate seen in prior one-shots. From ~11:05
+UTC onward all four owned clones cycled into repeated 1h back-offs
+(hormozi, chris-do at 11:05; neil-patel, mkbhd at 12:13) as the block spread
+bench-wide — consistent with the systemic, infra-level issue already flagged
+in `wiki/learnings/roster-ingest-autopilot.md` (needs a POT provider or
+cookies file; outside this agent's reach). run-end reason=timebox journaled;
+no wakeup scheduled (one-shot dispatch).
