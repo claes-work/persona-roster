@@ -4,6 +4,15 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 02:29 UTC: all 4 owned clones remain in the back-off windows set
+by the previous run (mkbhd/neil-patel until 03:14, hormozi until 02:32, chris-do
+until 03:19), all from the same unresolved systemic yt-dlp PO-token caption-fetch
+block. No work was eligible; nothing new happened. Discovery still fresh (age
+15.9h). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install or
+a cookies file) — until that lands, every invocation in this window will drain
+immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
 ## [2026-07-22] work | Autopilot run (vps): 17 cycles, drained by all-clones-backoff
 Run 00:15:48→02:22 UTC. neil-patel carried the run again: ~67 items ingested (Stage B)
 plus one synthesis checkpoint (debt 10→0, prompt v14→v15) — until it too hit the
