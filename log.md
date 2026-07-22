@@ -524,3 +524,11 @@ MarketingSchoolPod P2 731/P3 28, 2688 shorts open, L2=1089. Synthesis debt hit t
 10-batch checkpoint — Stage S is due on the clone's next iteration. run-end
 reason=user journaled (one-shot invocation, per operator instruction); no wakeup
 scheduled.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+Run started 02:26 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) were
+already in active back-off at orient time (from the prior run's caption-fetch
+throttling), with expiries between 02:32 and 03:20 UTC; none had fresh_open rows.
+No eligible clone this iteration — no executor dispatched. Discovery fresh (age
+15.8h), no refresh needed. run-end reason=drained journaled; no wakeup scheduled
+(one-shot invocation, per operator instruction).
