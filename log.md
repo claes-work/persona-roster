@@ -14,6 +14,13 @@ a cookies file) — until that lands, every invocation in this window will drain
 immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
 
 ## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:18 UTC: all 4 owned clones still within back-off windows
+(mkbhd/neil-patel until 05:26, hormozi until 06:00, chris-do until 05:31) from the
+same unresolved yt-dlp PO-token block. No work eligible; discovery fresh (age
+18.7h, unchanged). run-start then run-end reason=drained journaled; no wakeup
+scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
 One-shot check at 05:13 UTC: all 4 owned clones still in back-off (mkbhd/neil-patel
 until 05:26, chris-do until 05:31, hormozi until 06:00) — same unresolved systemic
 yt-dlp PO-token caption-fetch block as prior runs. No work eligible; discovery still
