@@ -696,3 +696,16 @@ reason=drained journaled; no wakeup scheduled (one-shot invocation, per operator
 instruction). Still waiting on repo-owner action (`bgutil-ytdlp-pot-provider`
 install or a cookies file) to clear the block permanently instead of cycling
 through hour-long back-offs.
+
+## [2026-07-22] work | Autopilot run (vps): 1 cycle (hormozi, 0 ingested), drained by all-clones-backoff
+One-shot check at 05:03 UTC. Run (started 04:56) attempted hormozi's MoreMozi P2
+batch — 16th consecutive zero-yield batch from the same systemic yt-dlp PO-token
+caption block, 0/8 ingested, safety rail tripped, hormozi entered back-off. That
+put all 4 owned clones (neil-patel, mkbhd, hormozi, chris-do) simultaneously
+inside back-off windows expiring 05:26-06:00 UTC. Discovery fresh (age 18.44h), no
+refresh needed. No further work eligible; run-end reason=drained journaled; no
+wakeup scheduled (one-shot invocation, per operator instruction). Root cause is
+unchanged and worsening (16+ consecutive failures across all 4 clones this run
+alone) — still waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install
+or a cookies file) to clear the block permanently instead of cycling through
+hour-long back-offs that yield nothing.
