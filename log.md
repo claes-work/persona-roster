@@ -888,3 +888,19 @@ invocation) and flags that the real fix — installing a POT provider
 (`bgutil-ytdlp-pot-provider`) or a YouTube cookies file for yt-dlp — is
 infra-level and outside this agent's reach (no pip/root on this box); needs
 human action.
+
+## [2026-07-22] work | Autopilot run (vps): 30 cycles — timebox stop
+Run started 06:41 UTC (6h box), stopped 13:14 UTC on `over_timebox` (elapsed
+6.55h). Owned clones neil-patel/mkbhd/hormozi/chris-do. Productive early
+hours: mkbhd 13 cycles (~125 items incl. 1 Stage S synthesis pass, debt
+2→0, v6→v7), neil-patel 12 cycles (~72 items incl. 2 Stage S passes, debt
+drained twice), one discovery refresh at 10:59 UTC (+52 new rows, 21
+promoted fresh/P1). chris-do and hormozi mostly blocked this run (2 and 3
+cycles respectively, near-zero items) by the same recurring yt-dlp
+PO-token/bot-check caption-fetch gate seen in prior one-shots. From ~11:05
+UTC onward all four owned clones cycled into repeated 1h back-offs
+(hormozi, chris-do at 11:05; neil-patel, mkbhd at 12:13) as the block spread
+bench-wide — consistent with the systemic, infra-level issue already flagged
+in `wiki/learnings/roster-ingest-autopilot.md` (needs a POT provider or
+cookies file; outside this agent's reach). run-end reason=timebox journaled;
+no wakeup scheduled (one-shot dispatch).
