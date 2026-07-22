@@ -818,3 +818,25 @@ Root cause unchanged and now persisting across 9+ consecutive runs — still
 waiting on repo-owner action (`bgutil-ytdlp-pot-provider` install or a cookies
 file) to clear the block permanently instead of cycling through hour-long
 back-offs that yield nothing.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:14 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same systemic
+yt-dlp PO-token caption-fetch throttling, unchanged since the prior ten-plus
+runs. Discovery fresh (age 19.59h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot invocation, per operator instruction). Root cause unchanged
+and now persisting across 10+ consecutive one-shot dispatches with zero net
+ingest progress — this pattern will keep repeating every invocation until a
+repo-owner fixes the caption-fetch throttle (`bgutil-ytdlp-pot-provider`
+install or a cookies file); no wiki decision/learning yet documents this
+recurring block despite the run count.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:18 UTC. Same systemic yt-dlp PO-token caption-fetch
+throttle (11th+ consecutive drained one-shot); all 4 owned clones still in
+back-off (06:38-07:08 UTC), discovery fresh (19.67h). run-start immediately
+followed by run-end reason=drained; no wakeup scheduled (one-shot). Escalating:
+this recurring block still has no wiki decision/learning capturing it despite
+10+ repeat occurrences — worth a `wiki/learnings/` entry so future runs stop
+re-describing the same root cause from scratch.
