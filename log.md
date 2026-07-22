@@ -4,6 +4,20 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-22] work | Autopilot run (vps): 51 cycles, timebox reached
+Run 17:55:50→23:55 UTC (6h). neil-patel carried the run: 332 items ingested across ~35
+iterations (Stage B) plus 2 synthesis passes (debt cleared twice, persona v13→v14).
+hormozi, mkbhd, chris-do ingested 0 items all run — a systemic yt-dlp PO-token/
+bot-detection block on caption fetch hit all three, confirmed **10 consecutive times
+each** (env has no pip/pipx to install `bgutil-ytdlp-pot-provider`, no cookies file).
+Each did land one synthesis pass on existing backlog (hormozi debt→0 v38→v39, mkbhd
+debt→0 v5→v6) since synthesis doesn't need fresh captions. Discovery was fresh all run,
+no refresh needed. **Action needed from repo owner**: install
+`bgutil-ytdlp-pot-provider` (needs pip/pipx, currently absent from this VPS env) or
+supply a YouTube cookies file — otherwise hormozi/mkbhd/chris-do ingest stays fully
+blocked next run too. Back-offs active at stop: mkbhd until 00:48, hormozi until 00:12,
+chris-do until 01:00 (2026-07-22 UTC). No wakeup scheduled (one-shot dispatch).
+
 ## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
 Fresh run start immediately hit drained: all 4 owned clones (neil-patel, mkbhd, hormozi,
 chris-do) are in active back-off (mkbhd/neil-patel until 11:45, hormozi/chris-do until
