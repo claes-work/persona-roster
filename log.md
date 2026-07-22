@@ -14,6 +14,24 @@ a cookies file) — until that lands, every invocation in this window will drain
 immediately. run-end reason=drained journaled; no wakeup scheduled (one-shot).
 
 ## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:51 UTC: all 4 owned clones still in back-off (hormozi until
+06:00, mkbhd until 06:38, neil-patel/chris-do until 06:45) — same unresolved
+systemic yt-dlp PO-token caption-fetch block carried over from prior runs.
+Discovery still fresh (age 19.2h). No work eligible; nothing new happened.
+run-start then run-end reason=drained journaled; no wakeup scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
+One-shot check at 05:56 UTC: all 4 owned clones still in back-off (hormozi until
+06:00, mkbhd until 06:38, neil-patel/chris-do until 06:45) — same unresolved
+systemic yt-dlp PO-token caption-fetch block, now persisting across 9+
+consecutive one-shot runs in this window with zero net ingest. Discovery still
+fresh (age 19.3h). No work eligible; nothing new happened. run-start then
+run-end reason=drained journaled; no wakeup scheduled (one-shot). Repo-owner
+action still needed (`bgutil-ytdlp-pot-provider` install or a cookies file) —
+further one-shot invocations will keep draining identically until that lands
+or the current back-off windows (06:00-06:45 UTC) simply expire.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained (backoffs still active)
 One-shot check at 05:18 UTC: all 4 owned clones still within back-off windows
 (mkbhd/neil-patel until 05:26, hormozi until 06:00, chris-do until 05:31) from the
 same unresolved yt-dlp PO-token block. No work eligible; discovery fresh (age
