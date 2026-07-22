@@ -4,6 +4,39 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-22] council | R3: Homepage-Fokus (2Key Tor→Streifen) + Proof-Stack
+Growth Council (hormozi, chris-do, neil-patel). Einstimmig (b): 2Key von der Tür zum ehrlichen
+Streifen ("noch nicht kaufbar", Warteliste bleibt); Chris-Do-Verfeinerung übernommen: Gate
+bleibt, Owner-Operator-Tür → /workshop (kaufbar). Proof-Stack: Zahlen unterm Hero, Testimonials
+am Entscheidungspunkt, Fakten-Cases, Florian-Origin als Community-Proof. Während der Runde:
+Alt-Website-Zitate + 6 Video-Testimonials gefunden (Prämisse "keine Zitate" überholt).
+Record: `wiki/decisions/2026-07-22-homepage-focus-and-proof-stack.md`. Umgesetzt in gleicher
+Session. Hormozi-Dissens (kein Split above fold) als A/B vorgemerkt. Hub-candidate: yes.
+
+## [2026-07-22] council | Konvertierungs-Blueprints: Kaufseiten, Onboarding, /2key-Warteliste, Homepage-Gate
+Growth Council (hormozi, neil-patel, chris-do; standard, Kreuzbefragung zu 3 Gabelungen).
+Erste Runde unter Founder-Scope-Direktive (Infra geschlossen, nur Konvertierung). Konvergent:
+eine Kaufseite kalt+warm (Proof-first, Accusation-Audit-FAQ, konditionale Garantie), Onboarding
+trigger-basiert (KPI: Login+Lektion-1 ≤7d, 72h Stretch; Upsell am Deprivation-Punkt nach
+Milestone 2/3), /2key = Tipp-Kosten-Rechner + ehrliches Erwartungsmanagement. Kreuzbefragt:
+Gate = Ich-Form-Headline + Outcome-Subline (Neils Outcome als A/B); Quiz als Newsletter-Hook
+einstimmig (Ergebnis VOR E-Mail-Frage, ehrliches Bleib-gratis-Outcome); Zwei-Tier zurückgezogen
+(F4), Workshop-Anker nur mit echter Zahl. Claim-Zeile neu: „Wir bringen dir bei, wie du deine
+Arbeit an KI abgibst — mit Claude Code." Record:
+`wiki/decisions/2026-07-22-website-conversion-blueprints.md`. Hub-candidate: yes.
+
+## [2026-07-22] council | Website-Shop-Override ratifiziert (Kanal ja, Custom-Build nein) + Funnel-Rulings
+Growth Council (hormozi, chris-do, neil-patel; standard, Kreuzbefragung zu Frage 1). Verdict:
+Founder-Override BEDINGT ratifiziert — Shopify-Direktkauf/YouTube-Shopping-Kanal freigegeben
+(Round-5-Prämisse „YouTube unterstützt nur zugelassene Provider" widerlegt: Shopify IST
+zugelassen; Chris Do widerruft sein Round-5-Veto), aber self-built Next.js+Supabase+Bunny-LMS
+NICHT ratifiziert (Round-3-Wrong-Lever bestätigt, einstimmig; off-the-shelf-Delivery, Custom
+erst nach Umsatzbeweis). Event-Mechanik: (a) Karte-hinterlegen via Shopify-App falls machbar,
+sonst (c) übertragbares Deposit; (d)/(b) verworfen. Workshop-Preis: $1k–~$3k Self-Serve-Korridor,
+darüber Qualifizierungsschritt; Zahl = Founders. /2key = Lead-Magnet, forward-only, Value-vor-Karte.
+Record: `wiki/decisions/2026-07-22-website-shop-override-and-funnel-rulings.md`. Build-Scope-Dissens
+Founder↔Council bewusst offen zurückgegeben. Hub-candidate: yes. Knowledge: decision persisted.
+
 ## [2026-07-21] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
 Fresh run start immediately hit drained: all 4 owned clones (neil-patel, mkbhd, hormozi,
 chris-do) are in active back-off (mkbhd/neil-patel until 11:45, hormozi/chris-do until
@@ -393,3 +426,126 @@ Decoy-Korridor, Ship-Gates) — alle im Merge eingearbeitet. Artefakt: konversio
 (Zielprojekt 2key-workforce, Einzug per Feature-PR sobald Codeberg wieder erreichbar).
 Orchestrierungs-Learning: Operator-Split nach Doktrin-Domaene + unabhaengiger Skeptiker
 fand materielle Fehler, die beide Autoren teilten. Knowledge: project-knowledge.
+## [2026-07-21] council | Portfolio-Fokus: ein Business (2Key), Rest sind Funktionen
+Deep Council (Hormozi x Chris Do x Neil Patel, Cross-Examination + Skeptiker-Review
+"rework" eingearbeitet): 2Key = Asset/Exit-Vehikel fuer eine 3-5-Jahres-Season (12 Mo
+Season of No); YouTube = Marketing-Abteilung (KPI qualifizierte Leads, 1 Search-Video/Wo,
+3:1-Ratio, E-Mail-Capture); Trainings = gedeckelte Cash-Bruecke + Listening-Post, Webinar
+nur gated; Sales-Projekt freeze/kill; Enno-Track sequenziert (Pre-Order-Test VOR Pitch,
+ein kanonisches Use-of-Proceeds-Memo, Solvenz-Rechnung mit Owner/Threshold, Skool-
+Liability + StB als Pitch-Preconditions). Dissens bewahrt: Premium-Tier-Timing, 80/20-
+Kreativ-Outlet, Memo-vs-Belief. Status proposed - Florians Input erforderlich. Record:
+wiki/decisions/2026-07-21-portfolio-focus-2key.md. Knowledge: decision. hub-candidate.
+## [2026-07-21] council | Runde 2: Creator-Business operiert, 2Key ist der einzige Build
+Follow-up-Council (gleiche Seats, echte Zahlen: 20k/Mo Kosten, Break-even-Mix, Enno
+wahrscheinlich raus): Verdikt amendiert - Creator/Education-Business IST das Operating
+Business, 2Key der gebundene Build; YouTube NICHT 2Keys Marketingabteilung (Neil-Retraction,
+Cash-Engine + Trust-Bank, 70/20/10, Search-Videos im Bestandsthema); freie Skool-10k +
+E-Mail-Liste = 2Key-Kanal, Woche-1-Avatar-Zensus als Gate; Tripwire korrigiert auf bezahlte
+Pre-Orders (>=50/30d, Reviewer fand Neils 100/Monat ~10x inflationiert); Workshops =
+Sales-Channel (pro Kopf, 2x Reprice, KPI aktivierte Accounts); Hostinger-Klumpenrisiko +
+Monat-12-Exit-These-Gate neu adressiert; Memo committet Inputs, nicht Outcomes; Signatur
+hart auf Florian gegated. Skeptiker: ship-with-changes, alle 4 Blocker eingearbeitet.
+Record: wiki/decisions/2026-07-21-operating-business-vs-2key-build.md. Knowledge: decision.
+hub-candidate.
+## [2026-07-21] council | Runde 3: Funnel- & Offer-Rulings (einstimmig)
+Operative Schicht unter dem Runde-2-Record, alle Seats einstimmig, Skeptiker
+ship-with-changes (F1-F5 eingearbeitet): reine E-Mail-Liste statt zweiter Community
+(Quiz = Zensus + Segmentierung, dead = keine Klicks/Monat); Content 9:1 General-Value
+mit Soft-CTA; EIN Workshop (nur Claude Code), 2Key als Uebungsumgebung + sichtbares
+Menu-Add-on (Bundle und Fee-Credit verworfen - "bundled money is mute", Rabattverbot);
+Website-Komplett-Neubau ABGELEHNT (Build-Verstoss) -> MVP-Funnel auf Fertig-Tooling,
+2Key-Pfad ohne Agent-Phantom formuliert; Sequenz als Offer-Hierarchie: Tage 1-45
+Transfer+Masterclass, Tage 45-90 Pre-Order-Fenster (Founding Annual -> monthly ->
+Trial-mit-Karte), Free-Trial-Maximierung verworfen; Kurs-Katalog-Einigung + Lifetime-
+Kohorten-Fence (F4). Record: wiki/decisions/2026-07-21-funnel-operational-rulings.md.
+Knowledge: decision. hub-candidate.
+## [2026-07-21] council | Runde 4: Free-Tier bleibt, Karte folgt dem Wert; eine Domain, Funnel zuerst
+Enge Follow-up-Fragen (gleiche Seats, standard): 75-Credit-Starter wird NICHT entfernt
+und NICHT durch Karten-vorab-Trial ersetzt (einstimmig) - Usage-Peak-Pain schlaegt
+Kalender-Cliff, Karte-vor-Wert = Vertrauensbruch fuer eine Datensouveraenitaets-Marke,
+Matchmaker-Versprechen bleibt; Signup e-mail-only, Karte erst am 100%-Popup (charge at
+desire); Kartenschluss != Funnel-Ende (Ende = retained/ascended/referring user);
+Website-Konsolidierung der Begleitartikel auf EINE Domain genehmigt als phasierte
+Migration in die MVP-Shell (Funnel-Seiten zuerst, /artikel danach, 301-Cautions).
+Mini-Dissens bewahrt: Restrolle des Karten-Trials (Chris Do keine / Hormozi nur
+Pre-Order-Downsell / Neil warme Pfade). Record:
+wiki/decisions/2026-07-21-2key-free-tier-and-website-consolidation.md.
+Knowledge: decision. hub-candidate.
+## [2026-07-21] council | Runde 5: Website-IA, Funnel-Reihenfolge, YouTube-Placement
+Neuer Fakt: kein On-Site-Commerce (YouTube-Shop nur mit zugelassenen Providern; Kurse
+nur im Skool-Classroom). Chris Do x Neil Patel: 5-Seiten-Sitemap (Home mit Claim +
+Zwei-Wege-Gate, /workshop mit Preis-Bracket + Booking-Inquiry, /2key Waitlist,
+/community mit Kursen als Classroom-Inhalt, E-Mail-Capture als Rueckgrat); Funnel als
+nummerierte 10-Stufen-Leiter (Builder enden bei Kursen, Owner-Operators laufen bis
+2Key); Pinned Comment = EIN Kampagnen-Link phasenabhaengig (Default Community,
+Tage 1-45 Masterclass-Hook, 45-90 Pre-Order, danach evergreen); Messung via
+Unique-Links/Placement + Onboarding-Attribution + monatliche Bank-Rekonziliation.
+Moderator-Korrektur: Fee-Credit-Wiedereinschleusung (Chris Do) bleibt tot per Runde-3-F1.
+Dissens bewahrt: Kursseiten (keine vs. SEO-Surfaces, Phase-2-Entscheid) + Pin im
+Pre-Order-Fenster. Record: wiki/decisions/2026-07-21-website-funnel-structure.md.
+Knowledge: decision. hub-candidate.
+## [2026-07-21] council | Runde 6: Promotion-Map + E-Mail-Consent - Struktur GESCHLOSSEN
+Chris Do x Neil Patel einstimmig: Bulk-Mail an ~11k ohne Marketing-Consent VERBOTEN
+(Marken-Selbstwiderspruch einer Datensouveraenitaets-Firma + Deliverability-Gift +
+Junk-Liste; die 300-400-EUR-Abmahnung preist die falschen Kosten); Consent-Segment =
+Rueckgrat (erst zaehlen!), Skool-72h-Post-Mail = Bruecke und Asset (jeder Post als
+E-Mail geschrieben, treibt einen Consent-Moment: Quiz/Masterclass/Magnet);
+Frequenz-Tabelle fixiert (Community-CTA jedes Video, 1 Self-Ad-Segment max wegen
+Hostinger-Ask, Kurse nie direkt auf YouTube); Website routet Skool statt es zu
+bewerben; keine Rueckwaertskanten im Funnel. Architektur fuer GESCHLOSSEN erklaert -
+Wiedereroeffnung nur bei falsifizierter Tripwire. Record:
+wiki/decisions/2026-07-21-promotion-map-email-consent.md. Knowledge: decision.
+hub-candidate.
+## [2026-07-21] council | Klaerung: Kanal-Inhaltskarte + Website-Blueprint (aus Records)
+Keine neue Deliberation - Sebastian brauchte die konkrete "wo erzaehlen wir was"-Sicht;
+Moderator-Synthese aus den Runde-5/6-Records (website-funnel-structure,
+promotion-map-email-consent) als Kanal-Karte + seitenweiser Website-Blueprint.
+Knowledge: none (nichts Neues entschieden).
+## [2026-07-21] work | Website- + Funnel-Bauplan ausgefuehrt (Artefakt im Zielprojekt)
+Executive-Schritt nach 6 Council-Runden: Bauplan geschrieben nach
+2key-workforce/wiki/website-und-funnel.md (5-Seiten-Struktur, Funnel A Workshop /
+Funnel B 2Key, Messung, Bau-Reihenfolge mit Vorarbeiten); Skeptiker-Review
+ship-with-changes, 5 Funde eingearbeitet - wichtigster: /2key-CTA-Phasenaufloesung
+(Runde-4-vs-5-Record-Kollision explizit aufgeloest: Warteliste 1-45, Pre-Order 45-90,
+Gratis-Test erst evergreen nach bestandenem Test) + Drei-Spalten-Preisanker
+wiederhergestellt + LinkedIn-Quelle gestrichen (unbeschlossen). Zielprojekt-Wiki
+(index+log) aktualisiert. Orchestrierungs-Learning: Artefakt-Review gegen die
+Decision-Records faengt stille Record-Kollisionen, die die Einzelrunden nicht sahen.
+Knowledge: project-knowledge (Artefakt im Zielprojekt).
+## [2026-07-21] wiki | Bauplan-Artefakt umgezogen: 2key-workforce -> company-website
+Sebastians Korrektur: Website-/Funnel-Bauplan gehoert nicht in die 2Key-Produkt-Wiki.
+Neues Projekt D:/Dev/company-website nach Familien-Schema aufgesetzt (CLAUDE.md/AGENTS-
+Stub, index, log, wiki/) mit vier destillierten Seiten: positionierung, produkte,
+akquise-und-kanaele, website-und-funnel (verschoben + Links adaptiert). 2key-workforce
+bereinigt (Datei raus, Index-Verweis, Log-Korrektureintrag). Quelle der Wahrheit bleibt
+persona-roster/wiki/decisions/; company-website ist die baufaehige Destillation.
+Hub-Onboarding des neuen Projekts steht aus (beim naechsten second-brain-Sync anmelden;
+Federation-Register flaggt neue Verzeichnisse ohnehin). Knowledge: project-knowledge.
+
+## [2026-07-22] work | VPS-Ingest: "Cookies prüfen"-Dauerschleife war fehlzugeordneter IP-Bot-Check
+Diagnose am Server: POT-Provider (127.0.0.1:4416) läuft, Cookies heute 14:19 frisch, ein
+Referenzvideo zog Captions einwandfrei — Cookies waren nie die Ursache. Der echte Block
+ist YouTubes "sign in to confirm you're not a bot" auf der Hostinger-Datacenter-IP
+(72.61.20.102); ein Cookie-Tausch behebt das nie. Der Wrapper-Regex warf Bot-Check und
+Cookie-Ablauf in einen Topf → 2×/Tag "🍪 Cookies prüfen" für ein IP-Problem. Kostenlose
+Fixes (kein Proxy): yt-dlp-Throttle in beiden Configs (--sleep-requests/-subtitles/
+-interval), Timer-Kadenz 2min→10min, exponentieller Caption-Backoff (60→120→240, Cap 360;
+Reset bei sauberem Run) und korrigierte Alarm-Zuordnung (IP-Bot-Check bei frischen Cookies
+→ max. 1×/24h "keine Aktion nötig"; 🍪-Nag nur bei echtem Cookie-Ablauf/>7 Tage). Ops-
+Dateien leben auf dem VPS (nicht im Git-Repo); Backup ingest-cycle.sh.bak-20260722b.
+Durabler kostenloser Hebel bei erneutem Nerven: Caption-Loop von Residential-IP (Sebastians
+PC ist bereits Secondary-Worker). Knowledge: project (Memory vps-ingest-autopilot-ops
+aktualisiert). hub-candidate.
+
+## [2026-07-22] work | VPS-Benachrichtigungen auf "nur handlungsrelevant" reduziert
+Sebastians Regel: pingen nur, wenn er wirklich etwas tun muss. Umgesetzt am Server:
+(a) IP-Bot-Check auf frischen Cookies → keine Telegram mehr (still selbstheilend, nur
+Log). (b) 3-stündlicher Status-Digest ABGESCHALTET — status-report.py sendet nur noch
+beim Übergang aktiv→durch (alle owned Clones open_p1==0 && fresh_open==0): "✅ Prioritäts-
+Backlog durch — du kannst den Loop stoppen"; State state/drain-state; sonst silent.
+(c) Account-Schwelle umformuliert auf "🔄 Account durch — stoppen oder wechseln" (feuert
+weiter 1× bei 75%/60h). (d) Echter Cookie-Ablauf (explizit / Datei >7 Tage) → weiter
+🍪-Nag; generisches rc≠0 → weiter ⚠️. Backups ingest-cycle.sh.bak-20260722c,
+status-report.py.bak-20260722. Verifiziert: Reporter meldet "silent (drained=False)".
+Knowledge: project (Memory aktualisiert).
