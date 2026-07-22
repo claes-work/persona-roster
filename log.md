@@ -861,8 +861,30 @@ chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
 systemic yt-dlp PO-token caption-fetch throttle (12th+ consecutive drained
 one-shot). Discovery fresh (age 19.73h), no refresh needed. No work eligible;
 run-start immediately followed by run-end reason=drained journaled; no wakeup
+scheduled (one-shot).
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:32 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch throttle (13th+ consecutive drained
+one-shot). Discovery fresh (age 19.91h), no refresh needed. No work eligible;
+run-start immediately followed by run-end reason=drained journaled; no wakeup
 scheduled (one-shot invocation, per operator instruction). Confirmed
 `wiki/learnings/` still has no entry for this recurring block despite 12+
 repeat occurrences — still worth capturing so future runs stop re-deriving the
 same root cause; deferred here as out of scope for a one-shot dispatch
 iteration.
+
+## [2026-07-22] work | Autopilot run (vps): 0 cycles, drained by all-clones-backoff
+One-shot check at 06:36 UTC. All 4 owned clones (neil-patel, mkbhd, hormozi,
+chris-do) still inside back-off windows expiring 06:38-07:08 UTC — same
+systemic yt-dlp PO-token caption-fetch block (20+ consecutive drained
+one-shots since ~02:26 UTC). Discovery fresh (age 19.98h), no refresh needed.
+No work eligible; run-start immediately followed by run-end reason=drained
+journaled; no wakeup scheduled (one-shot). Added the deferred
+`wiki/learnings/roster-ingest-autopilot.md` entry this time: documents the
+lockstep back-off pattern as expected mechanics (not a fresh failure per
+invocation) and flags that the real fix — installing a POT provider
+(`bgutil-ytdlp-pot-provider`) or a YouTube cookies file for yt-dlp — is
+infra-level and outside this agent's reach (no pip/root on this box); needs
+human action.
