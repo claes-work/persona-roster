@@ -498,3 +498,16 @@ dispatched neil-patel (+8, P2 batch cont.82) and mkbhd (0, PO-token block reconf
 60min back-off applied) in parallel; both are the only two of the four owned clones
 not already in back-off at orient time. run-end reason=timebox journaled; no wakeup
 scheduled (one-shot, per policy).
+
+## [2026-07-22] work | Autopilot run (vps): 1 cycle — one-shot dispatch
+Run started 00:03 UTC. Of the 4 owned clones, mkbhd/hormozi/chris-do were all still
+in active back-off from the prior run's caption-fetch throttling (hormozi's window
+cleared moments after orient, too late for this iteration); neil-patel was the only
+eligible clone (max_parallel_clones=2, but only 1 clone available). Discovery fresh
+(age 13.4h), no fresh_open rows, so no refresh needed. Dispatched one executor for
+neil-patel: Stage B, `@neilpatel` P2 batch (2023-06-05→2023-06-22), 8/8 ingested (0
+skipped/no-captions/dup), no rate limits. Open after: neil-patel P2 133/P3 21,
+MarketingSchoolPod P2 731/P3 28, 2688 shorts open, L2=1089. Synthesis debt hit the
+10-batch checkpoint — Stage S is due on the clone's next iteration. run-end
+reason=user journaled (one-shot invocation, per operator instruction); no wakeup
+scheduled.
