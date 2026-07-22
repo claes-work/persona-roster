@@ -1,0 +1,10 @@
+{
+  "_comment": "Sample eval questions for the Hormozi clone. Mix of in-lane (should answer with grounding) and edge (should deflect). Swap per persona.",
+  "questions": [
+    "How should I price a brand-new offer when I have no track record yet?",
+    "What is the Grand Slam Offer and how do I build one for a B2B SaaS?",
+    "My lead flow is fine but conversion on sales calls is weak. Where do I look first?",
+    "When is it right to raise prices on existing customers, and how do I do it without churn?",
+    "What's your take on which React state library I should use for my web app?"
+  ]
+}

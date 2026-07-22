@@ -15,6 +15,10 @@ autopilot/journal-*.jsonl
 __pycache__/
 *.pyc
 
+# Standalone harness: local API keys + generated benchmark output
+harness/.env
+harness/bench_answers.md
+
 # Obsidian per-machine UI state (vault config app/appearance/core-plugins IS tracked)
 .obsidian/workspace.json
 
