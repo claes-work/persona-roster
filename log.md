@@ -4,6 +4,18 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-24] council | Studio-Workshop-Flywheel = OPERATE-Amendment, kein Portfolio-Re-Decide
+Executive deep council (hormozi, chris-do, neil-patel; Kreuzbefragung mit 2 formalen
+Retractions beim Pricing-Framing). Einstimmig: Sebastians „Workshops als DAS eine Ding,
+2Key auf Eis" abgelehnt als Re-Decide, angenommen als Amendment der R2-OPERATE-Schicht;
+Vorbedingung: R1/R2 + Amendment ENDLICH unterschreiben. 3-Stufen-Preisliste ohne
+Rabatt-Vokabular (Studio on-camera ~€5k Anker inkl. Film / privat ~€7,5k / vor-Ort ~€12k+
+unbeworben), Tripwire 5 zahlende Fremde/60 Tage, Langformat als E-Mail-Gate statt Paywall
+(3:0 gegen Sebastians Premium-Idee), 2Key = erster „Sponsor" im Workshop mit gestarteter
+90-Tage-Uhr. Record: `wiki/decisions/2026-07-24-studio-workshop-flywheel-amendment.md`.
+Dissens erhalten (Ads/Retargeting, Checkpoint-Variante, Asset-Wert der Aufnahmen).
+Hub-candidate: yes (Persistenz in second-brain + company-website in gleicher Session).
+
 ## [2026-07-22] council | R3: Homepage-Fokus (2Key Tor→Streifen) + Proof-Stack
 Growth Council (hormozi, chris-do, neil-patel). Einstimmig (b): 2Key von der Tür zum ehrlichen
 Streifen ("noch nicht kaufbar", Warteliste bleibt); Chris-Do-Verfeinerung übernommen: Gate
@@ -1061,3 +1073,63 @@ bench-wide — consistent with the systemic, infra-level issue already flagged
 in `wiki/learnings/roster-ingest-autopilot.md` (needs a POT provider or
 cookies file; outside this agent's reach). run-end reason=timebox journaled;
 no wakeup scheduled (one-shot dispatch).
+
+## [2026-07-24]
+
+council | growth (hormozi × chris-do × neil-patel, cross-examined, standard) on
+youtube-engine Furkan-collab packaging → decision
+`wiki/decisions/2026-07-24-furkan-video-packaging.md`. Verdict: package the universal
+reframe ("ein Entwickler wie ein ganzes Team"), deliver depth as PROOF not jargon.
+Title = outcome front, "Claude Code" keyword woven into front half — Neil retracted his
+keyword-position-1 rule (Google-web, not YouTube; his own headline formula puts keyword
+mid, promise front), collapsing the one real dispute. A/B = outcome-reframe vs contrarian
+"Prompt überbewertet". Thumbnail = reframe-as-hook, Sebastian dominant + Furkan as
+credential badge (guest-authority guard), Furkan's name out of the title. Slice tension
+(Hormozi sofa-buyer vs Neil launch-window poisoning) dissolved by Chris: both are the same
+event (base bounces in first 2 min) → cold open must honor the broad promise or it's a
+casting problem. Hub-candidate: generic rule "outcome front, keyword woven; package broad /
+deliver deep as proof" → youtube-engine docs/concepts/titel-formeln.md. Artifacts land in
+the target project per its conventions (packaging chain next).
+
+council | youtube (mkbhd × hormozi × chris-do, cross-examined, standard) on
+youtube-engine thumbnail-process redesign → decision
+`wiki/decisions/2026-07-24-thumbnail-system-redesign.md`. Anlass: Sebastian verwarf die
+KI-generierten Thumbnails grundsätzlich; empirische Basis 76 Thumbnails (Top-12 von
+Julian Ivanov/Hormozi/NateHerk/TheFutur/MKBHD einzeln visuell analysiert + 16 eigene mit
+Performance-Abgleich). Verdict einstimmig: Komposition statt Ein-Schritt-Generierung
+(echtes Expression-Foto, echter Beweis, deterministische HTML-Typo; KI nie für
+Gesicht/Logo/Text/Beweis), Feld hell ("keep the ink, flip the field", 3/3 konditioniert:
+High-Key-Fotos, A/B-Validierung, Ablaufdatum-Klausel), Signature = Typo-Stimme statt
+Ornament (Hormozis "geliehener Anzug"-Einspruch übernommen), Konzept bei Video-Planung,
+binäres QA-Gate, 70-20-10, Nordstern Workshop-Anfragen. MKBHD saß erstmals in einem
+Council (kein STUB-Verhalten beobachtet; zitierte production-filmmaking/creator-business
+sauber). Umgesetzt im Zielprojekt: research-Doc + packaging-prinzipien §2 v2 +
+thumbnail-Skill v2. Offen: Expression-Foto-Session (Blocker), thumbnail-compose.mjs.
+
+## [2026-07-26] council | Intro-Format Workshop-Serie (youtube-engine)
+MKBHD × Hormozi × Chris Do (cross-examined, evidence+skeptical review) → reproduzierbares 20–25-s-Intro-Template für Sebastians Studio-Workshop-Serie („Ein Tag, ein System", A/B vs „8 Stunden Vorsprung"). 2 SWAP-Slots (Name + eine Zeile) + Foto; Cold Open = Gast-in-Reaktion (Existenz, nicht Outcome); Gast = Held / Sebastian = Guide; kein Fail-Frame; „Fremder"-Zeile verworfen (Werte-Test). Cross-exam löste beide Forks durch Konzession statt Kompromiss (Chris zog Ergebnis-Open zurück, Hormozi verwarf seine stärkste Zeile). Decision: wiki/decisions/2026-07-26-workshop-serie-intro-format.md.
+Knowledge: decision. Artefakt liegt im Zielprojekt (youtube-engine/docs/concepts/workshop-serie-intro-format.md) + dortiger log/index/drehplan aktualisiert. Orchestrierungs-Learning: 3-Sitz-YouTube-Team mit cross-exam produzierte echten Konsens ohne Restdissens; Router-Domains youtube/intro/packaging/hook → team youtube korrekt.
+
+## [2026-07-26] council | Hostinger-Werbeblock: fix vs. personalisiert (youtube-engine)
+Growth Council (Hormozi × Chris Do × Neil Patel, cross-examined) → **Hybrid mit VO-Default**: ~95 % fixer Evergreen-Kern (kein Gesicht in der Konserve), variabel nur EIN Brückensatz als Voice-over über der Animation (<5 Min Grenzkosten, kein Teleprompter); Disclosure+Exklusivität wandern IN den fixen Block (selbsttragend); Hook-Swipe-File 10–15 evergreen-wahre Sätze; Kapitelmarke „Sponsor" ab Tag 1; sequenzieller Kohorten-Test (fix vs. VO-Brücke, dann Gewinner vs. On-Camera) mit Retention-Delta als Primärmetrik; Refresh per Kurven-Trigger + 6–8-Wochen-Backstop; Sponsor-Report (freiwillige Watch-Through) als Verlängerungs-Hebel, Whitelisting als Stufe 2. Alle drei Forks durch Konzession aufgelöst (Hormozi: On-Camera→Testarm; Chris: On-Camera ok unter Audio-Brücken-Bedingung; Neil: Codes→Retention als Primärmetrik). Decision: wiki/decisions/2026-07-26-hostinger-werbeblock-hybrid.md.
+Knowledge: decision. Artefakt-Updates im Zielprojekt (sponsor-hostinger.md + docs/log.md). Orchestrierungs-Learning: SendMessage-Resume der Advisor-Agents fürs Cross-Exam funktioniert kontexterhaltend und billig; Growth-Router-Team passte, chris-do via --include war nötig und wertvoll (2 der 3 Konzessionen liefen über ihn).
+
+## [2026-07-26] council | Intro Runde 2: Frames + Vorproduktions-Architektur (youtube-engine)
+MKBHD × Hormozi × Chris Do (cross-examined, evidence+skeptical review) → erweitert Runde 1. EINE Position / 3 Castings (Unternehmer / Aufbauender / Professional), Anker = der Aufbauende (Starter); geweiteter Spine „Ein echter Mensch mit einem echten Problem baut an einem Tag ein KI-System, das am Ende wirklich läuft"; Feind RAUS aus dem Spine (eigene Warn-Frame-Evidenz schlägt Chris' Villain-Doktrin, er konzedierte) → optionaler 10%-A/B-Beat. Modulare Architektur: frozen head+tail-Caches + Batch-Alpha-Overlays (Name/Rolle) + Reveal im Mittelfenster + Musik-Stem; HyperFrames-Projekt+Batch = source of truth. VO: 1 Spine-Read + 3 Casting-Zeilen, Name nie gesprochen. Adam=Folge 1=Starter, Ziel in €/Stunden denominiert (Geld-das-floss als Gold-Standard). Decision: wiki/decisions/2026-07-26-workshop-serie-intro-frames-und-architektur.md (extends round 1).
+Knowledge: decision. Artefakt im Zielprojekt aktualisiert (docs/concepts/workshop-serie-intro-format.md §0b/§5b/§6/§11). Orchestrierungs-Learning: zweite Runde mit demselben 3-Sitz-Team baute sauber auf Runde-1-Record auf (kein Re-Litigieren), Forks erneut per Konzession an eigene Evidenz gelöst; „own evidence > persona" funktionierte als expliziter Tie-breaker (Feind-im-Spine).
+
+## [2026-07-27] council | Studio- vs. Vor-Ort-Workshops: Bewerbung, öffentlicher Preis, Anker (second-brain)
+Growth Council (Hormozi × Neil Patel × Chris Do, cross-examined, evidence-reviewer) auf Sebastians /council-Frage (aus second-brain-Vault). Kein neuer Beschluss — Re-Decide des 2026-07-24-Amendments; Vorschlag (Studio 2.500 / Vor-Ort 5.000, „Hälfte des Preises") driftete zurück in die verworfene Rabatt-Falle. Einstimmig 3:0: extern nur Studio bewerben; Studio-Preis öffentlich als EINE fixe Zahl ~5.000 € (Neil zieht „Bracket" zurück; 2.500 = stiller Discount, Hormozi-„don't copy the moron"); „Hälfte des Preises" gestrichen (Chris: zwei Produkte, nicht eine Achse); Vor-Ort NICHT ins Schaufenster (Hormozi revidiert Solo-Position: fake anchor); On-site-Zahl in den Quiz-Ergebnis-Step (Neil, messbar) statt aufs statische /workshop; echter High-Anker = gesprochener Bespoke-Decoy 25–50k oberhalb Vor-Ort (Hormozi same-core-function-Regel + Chris anchor-really-high); Kannibalisierung über Funnel-Architektur (nur Studio hat Funnel+Preis), nicht über Preis-Drohung. Decision: wiki/decisions/2026-07-27-studio-vs-onsite-bewerbung-und-anker.md (REFINES 2026-07-24-studio-workshop-flywheel-amendment).
+Knowledge: decision (hub-candidate). Kern-Handlung ist nicht mehr Deliberation, sondern UNTERSCHRIFT beider Gründer — vierte Behandlung desselben Themas, Record ist Exhibit. Zweite Dissens-Achse offen: Ort der On-site-Zahl (Chris rein mündlich vs. Neil Quiz-Step) → A/B bei Volumen. Orchestrierungs-Learning: Kreuzbefragung erzeugte echten Fortschritt (Hormozi + Neil je eine Solo-Position revidiert), obwohl die Solo-Takes schon 3:0 konvergierten — Cross-Exam lohnt auch bei Konvergenz, wenn es genau auf die Rest-Tensionen zielt. Artefakt-Update im Zielprojekt (second-brain-Hub): Synthese verkauf-und-verhandlung.md + Source-Page + Hub-Log.
+
+## [2026-07-27] council | Workshop-Serie Runde 3: Aufhänger + Titel-Familie (youtube-engine)
+YouTube-Team (MKBHD × Hormozi × Chris Do), cross-examined, 3:0: wiederholbare Titel-Formel
+(Held+Startpunkt / €-Std-Ergebnis / kollabierte Zeit / Suffix), Tool = Verschreibung nicht Position,
+GF-Verbreiterung nur als Casting, Intake = Hook-Casting mit Titel-Gate, keine Challenge-Gamification.
+Chris' erneuter Ergebnis-Cold-Open-Vorstoß zurückgezogen; Hormozis Preis-Titel selbst eingeschränkt
+(Dissens-Gradient dokumentiert). Record: wiki/decisions/2026-07-27-workshop-serie-aufhaenger-und-titel-familie.md;
+Artefakt: youtube-engine/docs/concepts/workshop-serie-aufhaenger-und-titel.md. Knowledge: decision.
+
+## [2026-07-27] council | Workshop-Fokus: Commitment + Preis-Realismus-Check + 2 Deliverables (second-brain)
+Executive Council deep (Hormozi × Chris Do × Neil Patel, evidence+skeptical review) auf Sebastians Frage vor der Unterschrift: ist 5.000 € / 12–50k auf dem DEUTSCHEN Markt realistisch oder US-Bias? Einstimmig 3:0, evidenzgewichtet (eigenes Ledger > US-Priors): 5.000 € Studio FEST unterschreiben (eher zu vorsichtig — durch eigene realisierte Preise gedeckt: 5k/2-Tage, 7k/3-Tage, 12× 7,5k Schulung; Boden 4,5k, nie aus Angst darunter); 12k vor Ort quasi validiert (Barrierefreiheit 12,1k), 25k nur ROI-gekoppelt inquiry-only; einzige Abwärts-Justierung: reine Einmal-50k-Decoy zu dünn für DE-Einkauf → als Retainer rahmen / 35–40k. US-Bias-Korrektur: DE kauft ROI/DSGVO/kein-Ärger, nicht Prestige/Film → Film = interne 2×-Begründung, im Pitch Ergebnis verkaufen, Preis nie rechtfertigen. Test: nur 5k öffentlich, Rest inquiry-only (keine Preis-Wand), Concession-Ladder 12k→7,5k→5k, Close-Rate-Diagnostik ~33 %, Three-Yeses-Ratsche. Quiz berechnet Tier (nicht wählen) → löst Selbstselektions-Angst; Studio=Default, Vor-Ort nur bei hartem Trigger. Tag-21-30-Read trennt Preis-Nein von Hook-Nein. Founder-Entscheidung dokumentiert: 2Key ruht (dated, nicht getötet) — amendiert 2Key-Rolle aus dem 24.-Beschluss; Community nicht als Produkt beworben. Decision: wiki/decisions/2026-07-27-workshop-fokus-commitment-und-preis-realismus.md.
+Knowledge: decision (hub-candidate). Deliverables im Zielprojekt second-brain erstellt: commitment-workshop-fokus-2026-07-27.md (Vertrag) + fahrplan-workshop-fokus-q3-2026.md (90-Tage). Orchestrierungs-Learning: „own evidence > persona" als expliziter Brief-Header funktionierte hervorragend — alle drei Sitze rahmten ihre US-Doktrin selbst als US-kalibriert und korrigierten gegen Sebastians reales Ledger; Executive-deep-Routing + neil-patel via --include war korrekt (Neils Funnel-Mathematik + Quiz-Logik trug die Hälfte der Antwort). Konvergenz so stark, dass die Deep-Debatte-Runde auf die eine Rest-Justierung (Decoy-Spitze) zusammenschrumpfte.
