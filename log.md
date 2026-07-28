@@ -4,6 +4,70 @@ Append-only chronological record. Entry format:
 `## [YYYY-MM-DD] <type> | <title>` with `<type>` ∈ `council | work | plan | review | wiki | setup`,
 followed by 1–3 lines. Recent history: `grep "^## \[" log.md | tail -5`.
 
+## [2026-07-27] council | CTA: Fit-Check klarer/prominenter, NICHT „buchen" (ki-business-agenten)
+Team growth (hormozi + neil-patel + chris-do), einstimmig. Florian: Quiz klarer + „Du willst
+buchen?"-Button. Verdikt: **Prominenz ja, „buchen" nein** — Message-Mismatch (kein Direktkauf;
+Quiz→Call), falsche Beziehungsstufe (5k). „Ein CTA = eine Handlung, nicht ein Vorkommen" →
+wiederholen erlaubt (nach jedem Block + Sticky), Label überall identisch. Fit-Frame behalten,
+aber imperativ schärfen + „2-Min-Check"/End-Value. Sekundär „Ich will das bauen" vereinheitlicht.
+Upgrade „Bewirb dich um deinen Platz" = stärkste Rahmung, aber nur mit ehrlicher Knappheit →
+Founder-Input. Messen: Quiz-Start/Completion + qualifizierte Anfragen, nicht Klicks. Record:
+`wiki/decisions/2026-07-27-cta-fit-check-nicht-buchen.md`. Knowledge: decision. GEBAUT im Target
+(CTA-Copy + Sticky) direkt im Anschluss.
+
+## [2026-07-27] council | Aufzeichnungs-Bibliothek als Lead-Magnet (ki-business-agenten)
+Team growth (hormozi + neil-patel + chris-do), 2 Runden (Takes + Cross-Examine). Florians
+Frage: Eingetragene immer ALLE Wochen-Videos geben + Inhaltsverzeichnis aller Wochen? Verdikt
+**einstimmig: JA volle Bibliothek, aber KURATIERT** — Hero-Flagship + nach Problem sortiert
+(kein Chrono-Dump) + Volltext-Suche (schon gebaut). Bibliothek = Proof-/Autoritäts-/Retention-
+Motor; Verkauf am CTA, nicht pro Video → messen an Anfrage-Rate/Lead (Hormozi) + 30-Tage-
+Rückkehr (Neil), nicht Signups. „Repurpose, don't manufacture" (öffentliche Highlights ernten,
+rohe Voll-Aufnahmen als Reward). Value-Linie (Chris Do): Wissen gratis / Raum+Umsetzung bezahlt
+→ entwertet 5k nicht. **Dissens erhalten + eskaliert:** Gate-Platzierung — Chris Do „Voll-
+Bibliothek hinter E-Mail-Wall = Trojan Horse", Neil revidiert „Videos ungated, nur Upgrade
+(Quiz/Action-Plan) gaten" — berührt bindenden Funnel (2026-07-21-website-funnel-structure) +
+Commitment §3/§4 → nicht hier entschieden (harte Regel 3), Founder-Sache. Offene Prämisse:
+Content-Quelle „von jeder Woche" undefiniert. Record:
+`wiki/decisions/2026-07-27-aufzeichnungs-bibliothek-lead-magnet.md`. Knowledge: decision.
+hub-candidate: „give knowledge free / sell the room" + Kuratierung-schlägt-Volumen als
+projektübergreifende Lead-Magnet-Doktrin.
+
+## [2026-07-27] council | Workshop-Versprechen: Bauplan statt „laufendem System"
+Team growth (hormozi + chris-do + neil), Advisor-Sitze via SendMessage resumed (agentId, mit
+Kontext). Florians Sorge: „an einem Tag fertig laufende Automatisierungen" über-verspricht.
+Verdikt **einstimmig: ändern — der ehrliche Deliverable ist der STÄRKERE Verkauf.** Hormozi:
+Über-Claim senkt Perceived Likelihood beim gestandenen Unternehmer (Value Equation); „promise
+nothing, deliver a ton"; o-vegas selbst verspricht einen Plan. Chris Do: Plan = Premium („paid
+to think, sell outputs not inputs"); Ehrlichkeit hebt Trust+Conversion. Neil: honest-spezifisch
+konvertiert ≥, Über-Claim killt Refunds/Referrals; Message-Match zum „so baust du"-Cut besser.
+Deliverable = 01 fertiger Bauplan · 02 erster Baustein läuft (live gebaut) · 03 selbst
+weiterbauen (Claude Code als De-Risker, nicht Headline) + Damaging Admission. Record:
+`wiki/decisions/2026-07-27-workshop-versprechen-bauplan-statt-laufendem-system.md`. Im Zielprojekt
+umgesetzt (Hero, valueBlocks, VSL). Ratifizierung Offer-Mechanik = Florian. Orchestrierung:
+Resume abgeschlossener Advisor per agentId funktioniert (Name nicht). hub-candidate: nein.
+
+## [2026-07-27] council | Landing-Page nach o-vegas-Vorbild (ki-business-agenten-website)
+Team growth (chris-do + hormozi + neil-patel). Frage: Seite nach Hormozis acquisition.com/o-vegas
+bauen? Verdikt einstimmig: **Skelett übernehmen, Kostüm ablehnen** — DR-Struktur (ein CTA ×N,
+VSL unter Hero, Frage-Headline auf Selbstinteresse, 3 nummerierte Value-Blöcke, Testimonials am
+Entscheidungspunkt, narrative FAQ + öffentlicher FIT-Filter + Preis klar) in DE-Mittelstand-
+Zurückhaltung + eigener CI + Chris-Do-Kontrast. Kur gegen „flat": Kontrast (ein Hero/Screen,
+Typo 2–4×, Weight überspringen, eine dunkle Bande, Indigo sparsam). Buildbare Assets im Record
+(Headline-Kandidaten, Preis/Filter-Copy, VSL-Skript). Record:
+`wiki/decisions/2026-07-27-landing-page-nach-hormozi-o-vegas-vorbild.md`. Dependency: VSL-Video
+fehlt (Florian). Orchestrierung: Advisor-Sitze nach Abschluss nicht per Name resumebar →
+frisch gespawnt mit selbsttragendem Brief (funktioniert verlässlich). hub-candidate: nein.
+
+## [2026-07-27] council | Growth Council → Landing-Page-Redesign (ki-business-agenten-website)
+Team growth (chris-do + hormozi + neil-patel), depth standard, auto-routed. Konvergenz: **Proof
+rauf** — echte Video-Testimonials + Logos vor Preis; Hero = Ergebnis + „ein Tag"; ein CTA; Preis
+stolz zeigen/nie rechtfertigen; nur Belegbares. Record:
+`wiki/decisions/2026-07-27-website-landing-page-redesign-growth-council.md`. Orchestrierungs-
+Learning: reine Design-Anfrage routet trotzdem sinnvoll das volle Growth-Trio — Hormozi (Offer/
+Conversion) + Neil (Landing/SEO) ergänzen Chris Do ohne Reibung, weil alle drei dieselbe
+Proof-first-Diagnose teilen. Umsetzung + Asset-/Rechtsdaten-Details im Zielprojekt-Log/-Wiki.
+Knowledge: decision persistiert; hub-candidate: nein.
+
 ## [2026-07-22] council | R3: Homepage-Fokus (2Key Tor→Streifen) + Proof-Stack
 Growth Council (hormozi, chris-do, neil-patel). Einstimmig (b): 2Key von der Tür zum ehrlichen
 Streifen ("noch nicht kaufbar", Warteliste bleibt); Chris-Do-Verfeinerung übernommen: Gate
@@ -1061,3 +1125,231 @@ bench-wide — consistent with the systemic, infra-level issue already flagged
 in `wiki/learnings/roster-ingest-autopilot.md` (needs a POT provider or
 cookies file; outside this agent's reach). run-end reason=timebox journaled;
 no wakeup scheduled (one-shot dispatch).
+
+## [2026-07-21] work | 2Key Kaltakquise-Anschreiben — Copy fertig, Kanal `do-not-ship`
+Growth-Team (Hormozi- + Chris-Do-Operator, unabhängige Entwürfe → Merge → Skeptical Review;
+neil-patel als redundant für 1:1-Outbound-Copy ausgelassen, evidence-reviewer durch skeptical
+ersetzt wegen Claim-/Rechtsrisiko — beides dokumentierte Routing-Abweichungen). Artefakt im
+Zielprojekt: `2key-workforce/wiki/kaltakquise-anschreiben.md` (+ dortiger Log-/Index-Eintrag).
+**Copy steht** (3 Betreffzeilen, 118 Wörter, Sie-/Du-Fassung); **Versand als Kaltmail nicht** —
+drei Blocker: (1) „Ihre Daten bleiben bei Ihnen" ist beim heutigen Cloud-gepinnten Produkt
+sachlich falsch (Claim aus der Copy entfernt; betrifft ALLE Marketing-Flächen), (2) § 7 Abs. 2
+Nr. 2 UWG kennt keine B2B-Ausnahme für E-Mail-Werbung, (3) Kaltversand über `info@2key.ai`
+gefährdet die Zustellbarkeit der Funnel-Mails. Beschluss-Einordnung: kein Bruch von
+2026-07-20 (self-serve-CTA, kein Founder-Sales-Zyklus), aber ein **unbeschlossener Kanal**
+außer der Reihe — der beschlossene Avatar-Beweis ist der Pre-Order-Test, nicht Kaltmail.
+Orchestrierungs-Learning in `wiki/learnings/work-pipeline-standard.md` (n=3): Persona-Seats
+prüfen gegen Doktrin, nie gegen die IST-Architektur des Zielprodukts — der Reviewer muss
+dafür explizit gebrieft werden. Knowledge: project-knowledge + operative-learning.
+
+## [2026-07-22] council | IWP-Landingpage (Kunde) — Funnel-Integrität vor Copy
+Growth-Team, Sitze Hormozi + Neil Patel + Chris Do (`--include`), Moderator; GaryVee
+reserviert (`created`). Vorlage: Desktop-Screenshot von
+`iwp-training.de/potenzialgespraech-engpaesse-vertrieb`. Ablauf: Fan-out → Kreuzbefragung
+→ **zweite Fan-out-Runde**, nachdem der Moderator die Trafficquelle im Schwesterprojekt
+`sales-team` fand (Brief per Post mit QR-Code → LP → Gespräch → Kompetenzcheck →
+Training). Record: `wiki/decisions/2026-07-22-iwp-landingpage-conversion.md`.
+**Verdikt:** kein Copy-Problem als Hauptproblem, sondern ein Bruch zum vorgelagerten
+Kanal. P0 vor jeder Textarbeit: (1) Brief sagt „Strategiegespräch"/`/strategiegespraech`,
+die Seite sagt „Potenzial-Gespräch" unter anderer URL — im `sales-team`-Repo steht die
+Brief-URL noch als unbestätigte Annahme = Kampagnen-Stopper; (2) QR auf Papier heißt ~100 %
+Mobiltraffic, bewertet wurde Desktop; (3) ohne utm+Empfänger-ID am QR ist der Print-Traffic
+„Direct" = 100 % Messverlust. P1: KI-Video raus (einstimmig, alle Runden), Beweis-Hero,
+Briefsprache übernehmen, Bielinski nach oben, Klotz nicht als Hero-Beweis (steht schon im
+Brief). P2: die vier Schritte benennen und nur die Diagnose zurückhalten, „Bonus"
+benennen oder streichen, **Kompetenzcheck offenlegen statt dreimal „kein Verkaufsgespräch"
+zu dementieren**, kostenlos bleiben ohne zweite Filterstufe. Dissens bewahrt (Hero-Großfläche
+Kunde vs. Bielinski, Deposit-Varianten, H1-Wortlaut). Orchestrierungs-Learning in
+`wiki/learnings/work-pipeline-standard.md` (n=4): vor dem Fan-out die vorgelagerte
+Funnel-Stufe beschaffen; im echten Viewport prüfen. Knowledge: decision + operative-learning.
+
+## [2026-07-22] work | IWP-Landingpage: Sektion-für-Sektion-Umbauanleitung
+Folgeauftrag zum Council vom selben Tag: nicht mehr Befunde, sondern fertige Copy je
+Sektion. Growth-Team, Hormozi- + Chris-Do-**Operator** schreiben unabhängige Vollentwürfe
+gegen dieselbe vorgegebene Sektionsstruktur (S0–S11), Merge durch den Orchestrator,
+danach unabhängiger Skeptical Reviewer. Artefakt im Zielprojekt:
+`sales-team/docs/outreach/iwp-landingpage-umbau.md` (+ Zeile in dessen `docs/README.md`).
+**Review-Verdikt `ship-with-changes` mit 10 Must-Fixes — alle eingearbeitet.** Die
+schwersten: ein **umgeschriebenes Kundenzitat unter Klarnamen** in der Hero-Beweiskarte
+(Loibl hat den Satz so nie gesagt; jetzt ohne Anführungszeichen als IWP-Aussage mit
+Quelle); ein **Formular ohne E-Mail-Feld** bei gleichzeitig versprochener
+Bestätigungsmail; **erfundene Prozess-Tatsachen** („per Video oder Telefon", „Zwei
+Minuten", Zugangslink), die das Dokument an anderer Stelle selbst als offene Frage
+führte; eine **Vertraulichkeitszusage** („bleibt zwischen uns") ohne definierten Umfang,
+die durch Kompetenzcheck und CRM-Speicherung schon gebrochen wäre; und der Verweis auf
+die **vier Schritte** in drei Sektionen, obwohl die Sektion selbst blockiert ist —
+jetzt mit harter Sperrregel und Fallback-Zeilen. Dazu: fünf **stille
+Beschluss-Abweichungen** (Vorzeile ohne „Vertriebsleiter", Testimonial-Fotos gestrichen,
+zwei geschützte FAQ-Fragen entfernt, CTA-Reduktion vor der Instrumentierung) sind jetzt
+als einzeln zurückdrehbare Abweichungstabelle am Dokumentanfang benannt.
+Neu eingeführt: `[IWP: …]`-Markierung, `[FREIGABE BIELINSKI]` für Sätze, die der Seite
+in Bielinskis Mund gelegt werden, und eine **Platzhalter-Regel** (fehlt eine Angabe zum
+Livegang, wird der ganze Satz gestrichen — nie geschätzt). Die vier Schritte der
+IWP-Systematik sind in keiner Quelle dokumentiert und bleiben bewusst leer.
+Orchestrierungs-Learning in `wiki/learnings/work-pipeline-standard.md` (n=5).
+Knowledge: project-knowledge + operative-learning.
+
+## [2026-07-22] work | IWP: neue Briefversion — Umbauanleitung revidiert, P0 gekippt
+Nachgereichte zweite Briefversion (Betreff „…an den Wettbewerb verloren werden") weicht
+erheblich von `sales-team/docs/outreach/iwp-brief.md` ab, auf der beide Council-Runden
+beruhten. **P0-Punkt 1 kehrt sich um:** Der neue Brief nennt das Angebot
+„Potenzial-Gespräch" — wie die Seite. Der Namensbruch existiert nicht, die Umbenennung
+auf „Strategiegespräch" wäre jetzt der Fehler; die Regel („der Name, den der Käufer
+zuerst liest, gewinnt") trägt unverändert. Der Brief druckt zudem keine URL mehr, nur den
+QR-Code → Scan-Ziel frei wählbar, Dauerregel (Weiterleitung statt finaler URL) bleibt.
+Weiter geändert: Leitmotiv, Dauer 45–60 Min, „über 40 Jahren" vs. 46 auf der Seite,
+„Aus der Praxis für die Praxis" jetzt Wiedererkennungsanker statt Floskel,
+„Vertriebs-Systematik" als Begriff bestätigt. Zwei Council-Fragen sind durch den Brief
+beantwortet (Bielinski führt persönlich; Zugangsknappheit steht schon drin). Stärkster
+Fund: die drei Diagnose-Sätze des Briefes sind wörtlich das, was die vier Fragekarten der
+Seite fragen — richtiger Inhalt, falscher Platz. Artefakt revidiert
+(`sales-team/docs/outreach/iwp-landingpage-umbau.md`, Revisionsblock + betroffene
+Sektionen), Decision Record um Nachtrag 2 ergänzt, veralteter Task-Chip zurückgezogen und
+ersetzt. Knowledge: project-knowledge + operative-learning.
+
+## [2026-07-22] work | IWP: Phasenmodell erhalten — S4 entsperrt, Raster-vs-Lieferung getrennt
+Folie „Verkaufs-Phasen-Modell nach IWP" nachgereicht: **0 Kontaktaufnahme (ausgegraut) ·
+1 Bedarfsanalyse · 2 KONA (KundenOrientierte NutzenArgumentation) · 3 Abschluss**, dazu
+„Einwände" zwischen 2 und 3 und eine Kurve „Hauptkommunikationsebene" (emotional vs.
+sachlich). Damit ist S4 der Umbauanleitung entsperrt (Namen belegt; offen bleiben nur die
+Ein-Satz-Erklärungen je Phase).
+**Der vom Nutzer bemerkte Bruch ist real und aufgelöst:** Das Phasenmodell ist NICHT das,
+was der Kunde mitnimmt — es ist das **Raster**, mit dem diagnostiziert wird. Zwei Achsen,
+die bisher vermischt waren. Konsequenz: S4 zeigt die Landkarte (das WAS, verschenkt),
+S5 liefert den Befund „in welcher Phase verlieren SIE" (das WIE, verkauft). Damit löst
+die Seite den Brief-Teaser ein, ohne die Methode preiszugeben.
+**Zweiter Gewinn:** Die vier Fragekarten der Bestandsseite sind keine leeren Fragen,
+sondern die Phasen in Frageform — sie werden nicht gestrichen (Korrektur der ersten
+Fassung), sondern den Phasen zugeordnet. Zuordnung ist als Vorschlag markiert, nicht als
+IWP-Doktrin.
+Neue offene Punkte an IWP: **drei Namen für eine Sache** („vier Schritte"/
+„Vertriebs-Systematik" im Brief vs. „Verkaufs-Phasen-Modell"/„Phasen" auf der Folie) ·
+warum Phase 0 ausgegraut ist · KONA als Akronym auf einer Kaltakquise-Seite (jetzt
+ausgeschrieben, Kürzel in Klammern) · Bestätigung der abgelesenen emotional/sachlich-Kurve.
+Knowledge: project-knowledge.
+
+## [2026-07-22] review | IWP-Akquisebrief vor dem Druck (3 Sitze, getrennte Blickwinkel)
+Growth-Team, Tiefe `deep` per route.py (risk=high — Druck ist irreversibel). Abweichung:
+statt Council+Plan drei Advisor-Sitze mit **getrennten Blickwinkeln** auf einen einseitigen
+Brief — Hormozi (Hook/Angebot/Beweis/Ökonomie), Chris Do (Sprache/Haltung/Vertrauen),
+Neil Patel (Message-Match/QR/Messbarkeit/Follow-up). Artefakt:
+`sales-team/docs/outreach/iwp-brief-review.md` (+ Index in dessen docs/README.md).
+**Konvergenter Hauptbefund gegen das bestehende Briefkonzept:** Alle drei fordern
+unabhängig, das **Zurückhalten der vier Schritte aufzugeben**. Chris Do am schärfsten:
+Kontaktaufnahme/Bedarfsanalyse/Nutzenargumentation/Abschluss ist die Grundform jedes
+Vertriebsprozesses — dahinter wird nichts geschützt; „Sie kündigen an, dass es vier sind,
+und sagen nicht, vier was. Das ist ein Teaser, kein Hook." Auflage: nur in Kundensprache,
+KONA-Akronym raus. Folge: Der LP-Payoff verschiebt sich auf „in welcher der vier verlieren
+SIE" — deckt sich mit der Raster-vs-Befund-Trennung im Umbaudokument.
+Weitere Konvergenzen: **kein P.S.** (zweitmeistgelesene Fläche leer), **Referenzlogos
+fehlen im Brief**, **QR als einziger Weg** (Vanity-URL + Kampagnendurchwahl dazu), **kein
+Follow-up** (Touch 1 von ~7), **„über 40 Jahren" → 46**, Wellen statt Vollauflage,
+Kalender-Verfügbarkeit als stärkster Hebel. Vier Floskelsätze zur Streichung; ein
+Claim ohne Deckung gefunden („Auf Umsatz und Marge" — das Testimonial belegt nur Umsatz).
+Offener Konflikt: **Headline** — Hormozi und Chris Do wollen sie schärfen, Neil verteidigt
+sie als einzige bestehende Message-Match-Achse zur LP. Moderator-Einordnung: kein Veto,
+sondern Kopplungsbedingung (LP-H1 muss mitwandern).
+**Rechtliche Abgrenzung als Moderator ergänzt:** adressierte Postwerbung an Unternehmen
+ist NICHT wie Kalt-E-Mail zu bewerten — § 7 Abs. 2 UWG zielt auf E-Mail/Fax/automatisierte
+Anrufe; Briefwerbung stützt sich auf Art. 6 Abs. 1 lit. f DSGVO mit Art.-14-Info-/
+Art.-21-Widerspruchspflichten. Ausdrücklich als „kein anwaltlicher Rat" markiert, damit
+die frühere E-Mail-Bewertung nicht falsch übertragen wird. Knowledge: project-knowledge.
+
+## [2026-07-24] council | Lang LifeScience / Tierarzt — Scrape-to-Personalize-Briefkonzept
+Growth-Team (Hormozi × Neil Patel × Chris Do), standard + Kreuzbefragung. Geprüft: der
+KI-personalisierte Postbrief (AMAMUS Vet coldPlasma an Tierarztpraxen) im Legacy-n8n-
+Workflow — Brief-Aufbau, Enrichment-Feld-Beschreibungen, Gesamtkonzept, 3-Zeilen-Hook.
+Record: wiki/decisions/2026-07-22-lang-lifescience-tierarzt-brief-konzept.md. Artefakt im
+Zielprojekt: sales-team/docs/outreach/tierarzt-brief-council-review.md (+ docs/README.md).
+**Konvergenter Kern (alle drei):** (1) Die KI soll GENAUIGKEIT statt Nähe erzeugen — eine
+wahre, überprüfbare Beobachtung; gibt das JSON nichts her, ehrlich generisch senden
+(falsch spezifisch schlimmer als ehrlich generisch). 3-Beat-Hook: Accusation Audit + eine
+wahre Tatsache + Schmerzfrage; drei Zeilen sind nicht zu kurz, es geht um Präzision.
+(2) Getestet wird auf der SCAN-RATE gegen einen ehrlich-generischen Kontroll-Arm (Buchungen
+bei kleiner Auflage nicht signifikant testbar), entschieden gegen eine ökonomische
+Break-even-Schwelle. (3) Kleine Batches (~5-10 %), weil der Markt endlich/vernetzt ist —
+Hormozi revidierte im Kreuzverhör seine eigene Aussage „miserable Response-Rate ist okay".
+Weitere: „kleines Geschenk" streichen → benannte Lieferung; ein CTA-Ziel; P.S. mit
+Risikoumkehr; zweiter Weg neben QR. Enrichment: tierwohl zu breit (wörtliche Belege statt
+Zusammenfassung), tierarztleitung höchstes Halluzinationsrisiko (strukturiert, Konstruktion
+verbieten), zielgruppe-Achse klassifiziert den Website-Texter (alle Scores speichern),
+fehlendes Tierart-Fit-Gate (wichtigste Einzellücke), Daten-Tier-Gate A/B/C/D. Message-Match:
+3 LP-Varianten spiegeln die Hook-Achse. Zwei Sofort-Bugs: Copy-Paste-Rest „das Museum" in
+allen Hook-Prompts; CT/MRT-Hook-Variante konzeptionell kaputt (Diagnostik ≠ Behandlung).
+Dissens bewahrt (Chris Do: Scan-Test misst nicht den Vertrauensschaden bei den ~98 %
+Nicht-Buchern; Kalt-Kanal-Prognose warm vs. Beweis). Knowledge: decision.
+
+## [2026-07-27] council | Welches Ziel treibt „Claude Code lernen"? — Jobs-to-be-done
+Growth Council (Hormozi × Neil Patel × Chris Do, konvergent). Verdikt: niemand will das Tool lernen — „lernen" ist der Nenner; 3 Jobs darunter (A Zeit zurück/Markus, B selbst bauen/Mastery = höchste Zahlungsbereitschaft, C nicht-abgehängt/Status). Einstimmig: der Lern-Stamm (B/C) ≠ der ertrinkende-Markus-Stamm (A) — schärft die 2026-07-20-Avatar-These auf der Mastery-vs-Convenience-Achse. Evidence-Gate prominent: alle drei Wikis leer zu Claude Code/DACH/den 300 → Council ist Methodik über ungetestetem Substrat; Avatar messen (Survey 300 / 300€ Paid-Search / 15–25 Interviews) VOR Workshop-Bau. Positionierung: Ergebnis statt Tool. Decision: wiki/decisions/2026-07-27-claude-code-lernen-ziel-jobs.md
+Knowledge: decision
+
+## [2026-07-27] council | TAKTILo-Landing vs. Kunden-PDF: was übernehmen
+Growth Council (Hormozi × Neil Patel × Chris Do, konvergent; GaryVee reserviert/Stub). Ziel-Projekt sales-team. Verdikt einstimmig: Kunden-PDF „TAKTILo® Core" ist Sales-Collateral/Datenblatt, KEINE Conversion-Seite → Leave-behind im Musterpaket, nicht Ersatz der Live-Landing (`/m/<token>`, ein Ziel = Musterbestellung). Botschaften ernten, Layout NICHT. HERO: Positionszeile „einfach, sauber und normgerecht nachrüsten" (Swap jetzt, dann Positions-Varianten testen) · Schmerz-Verkauf „keine Baustelle/laufender Betrieb/planbare Festkosten" · Message-Match per Personalisierung (Gebäudetyp zeigen statt abfragen). UNTER FALZ: maßstäbliches Produktfoto (Tabelle raus) · Ton-in-Ton-vs-Kontrast-Einwand-Killer · 13 Jahre + benannte GF · EIN echtes Testimonial am CTA · Lieferversprechen. RAUS: Modultabelle, 2. CTA/„Projektlösung"-Frame, Mehrschritt, Produkt-als-Held, „Core"-Sub-Brand. Dissense erhalten: Headline Swap(Chris/Hormozi) vs. Test(Neil)→Swap+Varianten-Test; Produktfoto Hero(Hormozi) vs. below-fold(Neil/Chris)→below-fold; Gebäudetyp-Feld Neil-add vs. Hormozi-Kostenqualifier vs. Chris-Veto/personalisieren→keine neue Reibung. Behalten: Single-CTA + Founder-Note „Ihr Brief kam von mir" (Brief→Seite-Brücke, unfairer Vorteil). Decision: wiki/decisions/2026-07-27-taktilo-landing-kunden-pdf-uebernahme.md · Artefakt: sales-team/docs/outreach/taktilo-landing-council.md
+Knowledge: decision
+
+## [2026-07-27] council | Landing-Page-Kritik „was passt noch nicht" (ki-business-agenten-website)
+Growth Council prüft gebauten Stand. Konsens Top-Leaks: (1) echter VSL fehlt, (2) Headline macht
+kein Versprechen + Bandwurm-Subline + Message-Match zu YouTube, (3) „So läuft dein Tag" + STAR-
+Fit-Filter fehlen, (4) FAQ zu dünn/falsche 3 + Schema, (5) Proof an Entscheidungspunkt + Ergebnis-
+Zahlen, (6) CTA-Ehrlichkeit + Owned-Audience-Pfad (E-Mail-Gate) reaktivieren, (7) Design-Politur
+(Kontrast/Typo, 6→3 Testimonials, Preis-Zahl als Hero, statisches Logo-Grid, Marke oben-links),
+(8) SEO+Analytics fehlen komplett (kein ld+json, Potsdam nicht im Title, kein UTM). Record:
+wiki/decisions/2026-07-27-landing-page-critique-was-fehlt.md. hub-candidate: nein.
+
+## [2026-07-27] council | Claude Code prominent? + Fit-Filter behalten? (ki-business-agenten-website)
+Growth Council, einstimmig. (1) Claude Code NICHT in die Headline (Jargon senkt Perceived
+Likelihood beim nicht-technischen Owner) — aber als eigene „Womit du baust"-Sektion prominent:
+Damaging-Admission-Reframe („klingt nach Code — aber keine Zeile") + Future-Proof („beste
+Werkzeuge, aktuell Claude Code") + Insider-Call-out; plus Segmentierung/SEO-Supporting-Asset
+(später). (2) „Für dich/Nicht für dich" BEHALTEN aber SCHÄRFEN (echte Damaging Admissions, vor
+dem Quiz-CTA; als A/B-Test messen) — Florians Bauch erkannte „weich geschrieben", nicht „unnötig".
+Umgesetzt im Zielprojekt. Record: wiki/decisions/2026-07-27-claude-code-prominenz-und-fit-filter.md.
+hub-candidate: nein.
+
+## [2026-07-27] council | Amendment: „Womit du baust"-Block gestrichen (ki-business-agenten-website)
+Florian: eigener Claude-Code-Block überflüssig, seit das Claude-Logo über dem Hero-Video sitzt.
+Moderator (council-fundiert, ohne neue Runde): zustimmen — Insider-Signal = Logo, Reassurance
+bereits in Block 03 + FAQ. Block gestrichen, Claude Code bleibt via Logo/03/FAQ/VSL. Record-
+Amendment ergänzt. hub-candidate: nein.
+
+## [2026-07-27] council | Cold-letter hook closing question (A vs B vs B′)
+- Growth Council (hormozi, neil-patel, chris-do) on sales-team vet cold letter.
+- Verdict UNANIMOUS: B′ (non-doubling question in hook, body widens it) > A (statement hook, body asks) > B (old doubling). Reject B.
+- Tensions: tone risk feel-understood-vs-judged (Hormozi+ChrisDo); decide-by-split-test optimizing reply quality (Neil+Hormozi); evidence is digital-only, no direct-mail data.
+- Decision: wiki/decisions/2026-07-27-hook-closing-question.md
+- Knowledge: durable (reusable copy principle: keep the question in the personalized zone, point it at their world, body answers not echoes).
+- hub-candidate: cold-outreach hook = personalized open-loop, never doubled by the body.
+
+## [2026-07-27] council | Critique of concrete B′ hooks (real leads)
+- Growth Council (hormozi, neil-patel, chris-do) judged 4 rendered hooks.
+- Verdict UNANIMOUS: FIXABLE not ship-ready. Dietz=gold standard; holistic=mis-targeted (physio, no prescribing); "auf Ihrer Seite gesehen"=mail-merge tell; questions too long + deficiency undertone.
+- Disagreement: Chris Do challenges self-answer mechanic (setup/scream); Hormozi+Neil keep it. Resolution: keep self-answer + Chris Do guardrails.
+- Decision: wiki/decisions/2026-07-27-hook-copy-critique.md
+- Knowledge: durable (cold-mail hook craft: lead with O-Ton, no meta-tell, short noun-landing question, no deficiency undertone, fix targeting before copy).
+- hub-candidate: "no sentence saves a wrong list" — targeting precedes copy.
+
+## [2026-07-28] council | Workshop-Upsells: Continuity-Retainer + Ascension-Mechanismus (target second-brain)
+Executive Council (Hormozi × Chris Do, deep) auf Florians Frage „Upsells an einen frischen
+Workshop-Kunden, damit wir nicht neu akquirieren müssen". Verdikt: die echte Lücke ist ein
+WIEDERKEHRENDES Vehikel (kein weiteres Projekt) → monatlicher Retainer („Agenten am Laufen
+halten"), auf Ergebnis bepreist, 4-Wochen-Takt, Einmal-Build über dem Monatspreis. Upsells über
+BAM-FAM-Ergebnis-Check-in statt Sales-Termin; Film sauber ohne Bedingungen übergeben. Dissens:
+Hormozi (Anker 50k + Deprivations-Timing) vs. Chris Do (reine Antizipation, kein Anker, Goodwill-
+Konto) — aufgelöst: Antizipation zuerst am Check-in, Anker-als-Erleichterung bei frischen Kunden
+gestrichen. Record: wiki/decisions/2026-07-28-workshop-upsell-ascension.md (status recommended,
+Ratifizierung Founder). Hub-Persistenz in second-brain separat. Nächster Schritt: /work
+(Retainer-Angebot: Scope + Preis + Check-in-Skript).
+
+## [2026-07-28] council | Website-Konversions-Review ki-business-agenten.de (Growth: Hormozi × Neil × Chris Do)
+Review-Council (Chris Do per --include; Founder-Direktive 2026-07-22: Councils nur für
+Konvertierung). Drei Sitze konvergent auf P1: **Community-Leak raus** (Stat „11k Community" +
+Skool-Footer = gratis Off-Ramp + Fame≠Käufer-Proof), **„- Florian"-Testimonial** fixen/raus,
+**Founder-VSL** (Platzhalter → echter Studio-Cut, 5-Teiler-Belief-Breaking, rough-Hook jetzt),
+**Funnel instrumentieren** (GA4/Consent/Events Quiz→Call, gegen Bank rekonziliieren — Neils #1),
+**ein CTA identisch+wiederholt**, Proof über die Falz, FAQPage/LocalBusiness-Schema. Dissens
+VSL-first (Hormozi/Chris Do) vs. Measure-first (Neil) → parallel aufgelöst (Messung billig+
+unblockend sofort; VSL = Founder-kritischer-Pfad). Garantie (abschluss-kontingent) + Studio-Tag-
+Verknappung = Offer-Mechanik → an Founder zurückgegeben (harte Regel 3), NICHT council-lokal
+entschieden. Record: wiki/decisions/2026-07-28-website-conversion-review-growth-council.md.
+Ziel-Projekt-Doku (log/STATE) separat in ki-business-agenten-website. Orchestrierung: Growth-Team
++ Chris-Do-Include bewährt sich für Website/Brand-Reviews. Knowledge: none (projekt-lokal).
