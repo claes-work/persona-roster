@@ -7,9 +7,27 @@
       "name": "Alex Hormozi",
       "repo": "clones/alex-hormozi-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["acquisition", "offers", "sales", "pricing", "scaling", "money-models"],
-      "strong_for": ["offer-design", "value-proposition", "bottleneck-analysis", "lead-generation", "pricing-review", "monetization"],
-      "weak_for": ["software-architecture", "visual-design", "legal"],
+      "domains": [
+        "acquisition",
+        "offers",
+        "sales",
+        "pricing",
+        "scaling",
+        "money-models"
+      ],
+      "strong_for": [
+        "offer-design",
+        "value-proposition",
+        "bottleneck-analysis",
+        "lead-generation",
+        "pricing-review",
+        "monetization"
+      ],
+      "weak_for": [
+        "software-architecture",
+        "visual-design",
+        "legal"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Mature: system-prompt v35, ~1,760 videos + $100M library."
@@ -19,9 +37,24 @@
       "name": "Chris Do",
       "repo": "clones/chris-do-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["branding", "positioning", "pricing-creative", "design-business", "client-relationships"],
-      "strong_for": ["positioning", "brand-language", "value-based-pricing", "client-conversations"],
-      "weak_for": ["seo", "software-architecture", "performance-marketing"],
+      "domains": [
+        "branding",
+        "positioning",
+        "pricing-creative",
+        "design-business",
+        "client-relationships"
+      ],
+      "strong_for": [
+        "positioning",
+        "brand-language",
+        "value-based-pricing",
+        "client-conversations"
+      ],
+      "weak_for": [
+        "seo",
+        "software-architecture",
+        "performance-marketing"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Active since 2026-07-18: system-prompt v7 compiled from 378 L2 sources (detected by tools/roster_status.py; ingest continues)."
@@ -31,9 +64,22 @@
       "name": "Neil Patel",
       "repo": "clones/neil-patel-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["seo", "digital-marketing", "content"],
-      "strong_for": ["seo", "traffic", "funnel-context", "content-distribution", "conversion"],
-      "weak_for": ["production-craft", "software-architecture"],
+      "domains": [
+        "seo",
+        "digital-marketing",
+        "content"
+      ],
+      "strong_for": [
+        "seo",
+        "traffic",
+        "funnel-context",
+        "content-distribution",
+        "conversion"
+      ],
+      "weak_for": [
+        "production-craft",
+        "software-architecture"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Promoted to active 2026-07-20: compiled system-prompt (v6, 6 synth passes). Council-ready; P2 backlog still deep."
@@ -43,9 +89,23 @@
       "name": "Marques Brownlee",
       "repo": "clones/mkbhd-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["tech-review", "production-quality", "creator-business"],
-      "strong_for": ["audience-perspective", "credibility-check", "video-packaging", "production-quality", "product-review"],
-      "weak_for": ["seo", "email-marketing", "enterprise-sales"],
+      "domains": [
+        "tech-review",
+        "production-quality",
+        "creator-business"
+      ],
+      "strong_for": [
+        "audience-perspective",
+        "credibility-check",
+        "video-packaging",
+        "production-quality",
+        "product-review"
+      ],
+      "weak_for": [
+        "seo",
+        "email-marketing",
+        "enterprise-sales"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Active since 2026-07-21: system-prompt v4 compiled from 4 synthesis passes (~309 L2 sources); promoted created→active (user-approved). Ingest continues."
@@ -55,9 +115,23 @@
       "name": "Gary Vaynerchuk",
       "repo": "clones/garyvee-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["marketing", "brand", "attention"],
-      "strong_for": ["attention", "distribution", "repurposing", "personal-brand", "social-platforms"],
-      "weak_for": ["software-architecture", "seo-technical", "detailed-funnel-math"],
+      "domains": [
+        "marketing",
+        "brand",
+        "attention"
+      ],
+      "strong_for": [
+        "attention",
+        "distribution",
+        "repurposing",
+        "personal-brand",
+        "social-platforms"
+      ],
+      "weak_for": [
+        "software-architecture",
+        "seo-technical",
+        "detailed-funnel-math"
+      ],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
@@ -67,9 +141,23 @@
       "name": "Chuck Keith",
       "repo": "clones/networkchuck-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["it", "networking", "homelab"],
-      "strong_for": ["tech-education", "beginner-clarity", "curiosity-hooks", "infrastructure", "self-hosting"],
-      "weak_for": ["business-strategy", "pricing", "brand-positioning"],
+      "domains": [
+        "it",
+        "networking",
+        "homelab"
+      ],
+      "strong_for": [
+        "tech-education",
+        "beginner-clarity",
+        "curiosity-hooks",
+        "infrastructure",
+        "self-hosting"
+      ],
+      "weak_for": [
+        "business-strategy",
+        "pricing",
+        "brand-positioning"
+      ],
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
@@ -80,24 +168,158 @@
       "repo": "clones/agency-scaler-clone",
       "github": "ki-business-agenten/agency-scaler-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["agency-scaling", "high-ticket-sales", "cold-calling", "offer-creation", "fulfillment-ops", "recruiting", "sales-automation", "linkedin-outbound"],
-      "strong_for": ["high-ticket-sales", "sales-closing", "cold-calling", "appointment-setting", "offer-creation", "agency-scaling", "fulfillment-ops", "sales-team-building", "objection-handling", "founder-mindset"],
-      "weak_for": ["ecommerce-ops", "seo", "creative-production", "software-architecture", "consumer-branding", "enterprise-sales"],
+      "domains": [
+        "agency-scaling",
+        "high-ticket-sales",
+        "cold-calling",
+        "offer-creation",
+        "fulfillment-ops",
+        "recruiting",
+        "sales-automation",
+        "linkedin-outbound"
+      ],
+      "strong_for": [
+        "high-ticket-sales",
+        "sales-closing",
+        "cold-calling",
+        "appointment-setting",
+        "offer-creation",
+        "agency-scaling",
+        "fulfillment-ops",
+        "sales-team-building",
+        "objection-handling",
+        "founder-mindset"
+      ],
+      "weak_for": [
+        "ecommerce-ops",
+        "seo",
+        "creative-production",
+        "software-architecture",
+        "consumer-branding",
+        "enterprise-sales"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Active since 2026-07-31: system-prompt v1 compiled from 248 DXR transcripts (private paid course), sources placed in wiki/sources/dxr-course/. One persona (DACH agency-scaling + principle-based-selling). PRIVATE clone. v2 enrichment pending (5 dense doctrine digests in the add-clone session's tasks/*.output — fold in for verbatim depth)."
+    },
+    {
+      "slug": "tim-growth",
+      "name": "Matthew Pollard",
+      "repo": "clones/tim-growth-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": [
+        "rapid-growth-system",
+        "sales",
+        "networking",
+        "storytelling",
+        "introvert-advantage",
+        "mindset",
+        "content-marketing"
+      ],
+      "strong_for": [
+        "message-positioning",
+        "niche-selection",
+        "story-selling",
+        "sales-scripting",
+        "objection-handling",
+        "value-based-pricing",
+        "networking-strategy",
+        "introvert-sales",
+        "content-repurposing",
+        "testimonial-systems"
+      ],
+      "weak_for": [
+        "paid-advertising",
+        "software-architecture",
+        "financial-modeling",
+        "visual-design"
+      ],
+      "tier": 2,
+      "status": "active",
+      "note": "Codename tim-growth = Matthew Pollard ('The Rapid Growth Guy'). Corpus: 141 paid-course lessons (Introvert's Edge Networking, No Small Talk Meetings, Rapid Growth Academy). LOCAL-ONLY repo (paid content, not pushed to GitHub). Flip to active after system-prompt synthesis."
     }
   ],
   "planned": [
-    {"name": "Simon Sinek", "domains": ["leadership", "culture"], "tier": 2},
-    {"name": "Seth Godin", "domains": ["marketing", "positioning"], "tier": 2, "note": "book/blog/podcast-first — text ingest, not YouTube"},
-    {"name": "Ali Abdaal", "domains": ["productivity", "creator-business"], "tier": 2},
-    {"name": "Cal Newport", "domains": ["deep-work", "knowledge-work"], "tier": 2, "note": "book/blog/podcast-first — text ingest, not YouTube"},
-    {"name": "Derek Muller (Veritasium)", "domains": ["science-storytelling"], "tier": 2},
-    {"name": "Cleo Abram", "domains": ["future-tech", "storytelling"], "tier": 2},
-    {"name": "Linus Sebastian (LTT)", "domains": ["consumer-tech", "media-business"], "tier": 2},
-    {"name": "Jeff Geerling", "domains": ["infrastructure", "open-source"], "tier": 2},
-    {"name": "Theo Browne (t3.gg)", "domains": ["web-dev", "developer-tools"], "tier": 2},
-    {"name": "Tim Ferriss", "domains": ["learning", "expert-interviews"], "tier": 2}
+    {
+      "name": "Simon Sinek",
+      "domains": [
+        "leadership",
+        "culture"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Seth Godin",
+      "domains": [
+        "marketing",
+        "positioning"
+      ],
+      "tier": 2,
+      "note": "book/blog/podcast-first — text ingest, not YouTube"
+    },
+    {
+      "name": "Ali Abdaal",
+      "domains": [
+        "productivity",
+        "creator-business"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Cal Newport",
+      "domains": [
+        "deep-work",
+        "knowledge-work"
+      ],
+      "tier": 2,
+      "note": "book/blog/podcast-first — text ingest, not YouTube"
+    },
+    {
+      "name": "Derek Muller (Veritasium)",
+      "domains": [
+        "science-storytelling"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Cleo Abram",
+      "domains": [
+        "future-tech",
+        "storytelling"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Linus Sebastian (LTT)",
+      "domains": [
+        "consumer-tech",
+        "media-business"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Jeff Geerling",
+      "domains": [
+        "infrastructure",
+        "open-source"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Theo Browne (t3.gg)",
+      "domains": [
+        "web-dev",
+        "developer-tools"
+      ],
+      "tier": 2
+    },
+    {
+      "name": "Tim Ferriss",
+      "domains": [
+        "learning",
+        "expert-interviews"
+      ],
+      "tier": 2
+    }
   ]
 }

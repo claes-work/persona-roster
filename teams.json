@@ -35,128 +35,337 @@
   "teams": {
     "executive": {
       "display_name": "Executive Council",
-      "domains": ["business-strategy", "business-model", "pricing", "offers", "monetization", "strategic-decision"],
-      "default_members": ["hormozi", "chris-do"],
+      "domains": [
+        "business-strategy",
+        "business-model",
+        "pricing",
+        "offers",
+        "monetization",
+        "strategic-decision"
+      ],
+      "default_members": [
+        "hormozi",
+        "chris-do"
+      ],
       "conditional_members": {
-        "seo": ["neil-patel"],
-        "traffic": ["neil-patel"],
-        "attention": ["garyvee"],
-        "personal-brand": ["garyvee"],
-        "product": ["mkbhd"],
-        "credibility": ["mkbhd"],
-        "high-ticket-sales": ["agency-scaler"],
-        "agency-scaling": ["agency-scaler"],
-        "offer-creation": ["agency-scaler"],
-        "fulfillment-ops": ["agency-scaler"]
+        "seo": [
+          "neil-patel"
+        ],
+        "traffic": [
+          "neil-patel"
+        ],
+        "attention": [
+          "garyvee"
+        ],
+        "personal-brand": [
+          "garyvee"
+        ],
+        "product": [
+          "mkbhd"
+        ],
+        "credibility": [
+          "mkbhd"
+        ],
+        "high-ticket-sales": [
+          "agency-scaler",
+          "tim-growth"
+        ],
+        "agency-scaling": [
+          "agency-scaler"
+        ],
+        "offer-creation": [
+          "agency-scaler",
+          "tim-growth"
+        ],
+        "fulfillment-ops": [
+          "agency-scaler"
+        ]
       },
-      "roles": ["moderator", "skeptical-reviewer"],
-      "review": ["evidence-reviewer", "skeptical-reviewer"],
+      "roles": [
+        "moderator",
+        "skeptical-reviewer"
+      ],
+      "review": [
+        "evidence-reviewer",
+        "skeptical-reviewer"
+      ],
       "default_depth": "deep",
       "notes": "For big, hard-to-reverse business/project decisions."
     },
     "growth": {
       "display_name": "Growth Council",
-      "domains": ["marketing", "acquisition", "growth", "funnel", "conversion", "traffic", "seo", "leadgen"],
-      "default_members": ["hormozi", "neil-patel", "garyvee"],
+      "domains": [
+        "marketing",
+        "acquisition",
+        "growth",
+        "funnel",
+        "conversion",
+        "traffic",
+        "seo",
+        "leadgen"
+      ],
+      "default_members": [
+        "hormozi",
+        "neil-patel",
+        "garyvee"
+      ],
       "conditional_members": {
-        "positioning": ["chris-do"],
-        "branding": ["chris-do"],
-        "high-ticket-sales": ["agency-scaler"],
-        "cold-calling": ["agency-scaler"],
-        "agency-scaling": ["agency-scaler"],
-        "leadgen": ["agency-scaler"]
+        "positioning": [
+          "chris-do",
+          "tim-growth"
+        ],
+        "branding": [
+          "chris-do"
+        ],
+        "high-ticket-sales": [
+          "agency-scaler"
+        ],
+        "cold-calling": [
+          "agency-scaler",
+          "tim-growth"
+        ],
+        "agency-scaling": [
+          "agency-scaler"
+        ],
+        "leadgen": [
+          "agency-scaler",
+          "tim-growth"
+        ],
+        "networking": [
+          "tim-growth"
+        ],
+        "storytelling": [
+          "tim-growth"
+        ]
       },
-      "roles": ["moderator"],
-      "review": ["evidence-reviewer"],
+      "roles": [
+        "moderator"
+      ],
+      "review": [
+        "evidence-reviewer"
+      ],
       "default_depth": "standard"
     },
     "content": {
       "display_name": "Content Council",
-      "domains": ["content", "storytelling", "editorial", "social-media", "repurposing"],
-      "default_members": ["mkbhd", "garyvee"],
+      "domains": [
+        "content",
+        "storytelling",
+        "editorial",
+        "social-media",
+        "repurposing"
+      ],
+      "default_members": [
+        "mkbhd",
+        "garyvee"
+      ],
       "conditional_members": {
-        "tech-education": ["networkchuck"],
-        "positioning": ["chris-do"],
-        "seo": ["neil-patel"]
+        "tech-education": [
+          "networkchuck"
+        ],
+        "positioning": [
+          "chris-do",
+          "tim-growth"
+        ],
+        "seo": [
+          "neil-patel"
+        ]
       },
-      "roles": ["moderator"],
-      "review": ["editorial-reviewer"],
+      "roles": [
+        "moderator"
+      ],
+      "review": [
+        "editorial-reviewer"
+      ],
       "default_depth": "standard"
     },
     "youtube": {
       "display_name": "YouTube Team",
-      "domains": ["youtube", "video", "thumbnail", "title", "packaging", "hook", "retention", "channel"],
-      "default_members": ["mkbhd", "networkchuck", "hormozi"],
+      "domains": [
+        "youtube",
+        "video",
+        "thumbnail",
+        "title",
+        "packaging",
+        "hook",
+        "retention",
+        "channel"
+      ],
+      "default_members": [
+        "mkbhd",
+        "networkchuck",
+        "hormozi"
+      ],
       "conditional_members": {
-        "personal-brand": ["garyvee"],
-        "positioning": ["chris-do"],
-        "seo": ["neil-patel"]
+        "personal-brand": [
+          "garyvee"
+        ],
+        "positioning": [
+          "chris-do"
+        ],
+        "seo": [
+          "neil-patel"
+        ]
       },
-      "roles": ["moderator"],
+      "roles": [
+        "moderator"
+      ],
       "member_roles": {
         "audience_advocate": "mkbhd",
         "technical_educator": "networkchuck",
         "value_and_click_reason": "hormozi"
       },
       "stages": {
-        "strategy": ["hormozi", "mkbhd"],
-        "ideation": ["networkchuck", "mkbhd"],
-        "packaging": ["hormozi", "mkbhd"],
-        "review": ["skeptical-reviewer", "evidence-reviewer"]
+        "strategy": [
+          "hormozi",
+          "mkbhd"
+        ],
+        "ideation": [
+          "networkchuck",
+          "mkbhd"
+        ],
+        "packaging": [
+          "hormozi",
+          "mkbhd"
+        ],
+        "review": [
+          "skeptical-reviewer",
+          "evidence-reviewer"
+        ]
       },
-      "review": ["skeptical-reviewer", "evidence-reviewer"],
+      "review": [
+        "skeptical-reviewer",
+        "evidence-reviewer"
+      ],
       "default_depth": "standard",
       "notes": "Before councils run, read wiki/learnings/ for own-channel evidence — own results outrank persona defaults."
     },
     "email": {
       "display_name": "Email Marketing Team",
-      "domains": ["email", "newsletter", "subject-lines", "sequences", "email-marketing"],
-      "default_members": ["hormozi", "chris-do", "neil-patel"],
+      "domains": [
+        "email",
+        "newsletter",
+        "subject-lines",
+        "sequences",
+        "email-marketing"
+      ],
+      "default_members": [
+        "hormozi",
+        "chris-do",
+        "neil-patel"
+      ],
       "conditional_members": {
-        "attention": ["garyvee"],
-        "storytelling": ["garyvee"]
+        "attention": [
+          "garyvee"
+        ],
+        "storytelling": [
+          "garyvee",
+          "tim-growth"
+        ]
       },
-      "roles": ["moderator"],
-      "review": ["editorial-reviewer", "evidence-reviewer"],
+      "roles": [
+        "moderator"
+      ],
+      "review": [
+        "editorial-reviewer",
+        "evidence-reviewer"
+      ],
       "default_depth": "standard"
     },
     "product": {
       "display_name": "Product Council",
-      "domains": ["product", "ux", "feature", "user-experience", "product-strategy"],
-      "default_members": ["mkbhd", "hormozi"],
+      "domains": [
+        "product",
+        "ux",
+        "feature",
+        "user-experience",
+        "product-strategy"
+      ],
+      "default_members": [
+        "mkbhd",
+        "hormozi"
+      ],
       "conditional_members": {
-        "technical": ["networkchuck"],
-        "positioning": ["chris-do"]
+        "technical": [
+          "networkchuck"
+        ],
+        "positioning": [
+          "chris-do"
+        ]
       },
-      "roles": ["moderator", "customer-advocate"],
-      "review": ["skeptical-reviewer", "customer-advocate"],
+      "roles": [
+        "moderator",
+        "customer-advocate"
+      ],
+      "review": [
+        "skeptical-reviewer",
+        "customer-advocate"
+      ],
       "default_depth": "standard"
     },
     "engineering": {
       "display_name": "Engineering Council",
-      "domains": ["engineering", "architecture", "code", "infrastructure", "security", "devops", "tech-debt"],
+      "domains": [
+        "engineering",
+        "architecture",
+        "code",
+        "infrastructure",
+        "security",
+        "devops",
+        "tech-debt"
+      ],
       "default_members": [],
       "conditional_members": {
-        "infrastructure": ["networkchuck"],
-        "networking": ["networkchuck"],
-        "homelab": ["networkchuck"],
-        "self-hosting": ["networkchuck"]
+        "infrastructure": [
+          "networkchuck"
+        ],
+        "networking": [
+          "networkchuck"
+        ],
+        "homelab": [
+          "networkchuck"
+        ],
+        "self-hosting": [
+          "networkchuck"
+        ]
       },
-      "roles": ["moderator", "technical-reviewer", "skeptical-reviewer"],
-      "review": ["technical-reviewer", "skeptical-reviewer"],
+      "roles": [
+        "moderator",
+        "technical-reviewer",
+        "skeptical-reviewer"
+      ],
+      "review": [
+        "technical-reviewer",
+        "skeptical-reviewer"
+      ],
       "default_depth": "standard",
       "notes": "Honest coverage: the bench has no software architect yet, so this council is role-driven (technical + skeptical reviewer) with NetworkChuck as conditional infra voice. Grows when an engineering persona (e.g. a planned tier-2 clone) goes active."
     },
     "research": {
       "display_name": "Research Team",
-      "domains": ["research", "evidence", "sources", "fact-check", "comparison"],
+      "domains": [
+        "research",
+        "evidence",
+        "sources",
+        "fact-check",
+        "comparison"
+      ],
       "default_members": [],
       "conditional_members": {
-        "seo": ["neil-patel"],
-        "marketing": ["neil-patel"]
+        "seo": [
+          "neil-patel"
+        ],
+        "marketing": [
+          "neil-patel"
+        ]
       },
-      "roles": ["moderator", "evidence-reviewer"],
-      "review": ["skeptical-reviewer"],
+      "roles": [
+        "moderator",
+        "evidence-reviewer"
+      ],
+      "review": [
+        "skeptical-reviewer"
+      ],
       "default_depth": "standard",
       "notes": "Role-driven; also reach for the /brain skill (second-brain hub) and /deep-research for external evidence."
     }
