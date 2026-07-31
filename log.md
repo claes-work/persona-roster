@@ -1673,3 +1673,19 @@ Skalieren). weak_for: SEO, cold-outbound, 1:1-high-ticket-sales, ecommerce-ops, 
 **Sprechbar** via /council (auto in growth/content) oder --include webinar-hero / Agent webinar-hero-advisor.
 Geschwister-Klon zu agency-scaler. Hinweis: Angebot-Kapitel hat Nebenstimmen (Nick/Erik), ehrlich vermerkt.
 Knowledge: setup. hub-candidate: no.
+
+## [2026-08-01] setup | Neuer Klon: eddy-ad — Adbaker Mentoring, active
+Codename **eddy-ad** = Adbaker Mentoring (Simon Marder / Adbaker), DACH Meta/Facebook Paid-Social.
+Quelle: privater Bezahlkurs auf **LearningSuite** (adbaker-mentoring.learningsuite.io), 3 Kurse
+(Starter 155 / Advanced 215 / Creative 151 = **521 Lektionen, 484 Transkripte**). Extraktion NEU
+via LearningSuite-GraphQL-API (window.__APOLLO_CLIENT__, eingeloggte Session): courseContent-Baum,
+Video-fileId je Step, `StepFileTranscriptQuery(id)` — Bulk statt Durchklicken. Transkripte im
+privaten Repo `ki-business-agenten/eddy-ad-transcripts`; Klon `ki-business-agenten/eddy-ad-clone`
+(Quellen in wiki/sources/adbaker/). System-Prompt v1 (319 Zeilen) synthetisiert (Push-vs-Pull,
+BM/Kampagnenstruktur, ABO/CBO, Targeting/Lookalikes, Ad Building Blocks/Hooks, Pixel/CAPI,
+CPA/ROAS-KPIs, Testing-Phasen, Skalierung vertikal/horizontal). Sitze: growth + content (Meta/
+Facebook/Paid-Social/Ad-Creatives-Tags). Composite — primär Simon, teils Nebenstimmen (Marius/Jan/
+Nico), ehrlich vermerkt. **Sprechbar** via /council (auto in growth/content) oder --include eddy-ad
+/ Agent eddy-ad-advisor. Geschwister zu agency-scaler + webinar-hero.
+OFFEN (User bestätigen): private GitHub-Repos vs. Memory-Regel "Bezahlkurs = local-only".
+Knowledge: setup. hub-candidate: no.

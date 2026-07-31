@@ -311,6 +311,52 @@
       "tier": 2,
       "status": "active",
       "note": "Codename heartbeat = Stefan Graf (CEO Heartbeat Consulting), DACH agency/sales-scaling. GERMAN persona. 284 core lessons ingested (of 568 transcribed; CRM/Ads catalogued L1). LOCAL-ONLY (paid content). Overlaps agency-scaler on DACH agency-scaling but distinct angle: sales-team-building, cold-calling systems, sales compensation, remote leadership."
+    },
+    {
+      "slug": "eddy-ad",
+      "name": "eddy-ad",
+      "repo": "clones/eddy-ad-clone",
+      "github": "ki-business-agenten/eddy-ad-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": [
+        "meta-ads",
+        "facebook-ads",
+        "paid-social",
+        "performance-marketing",
+        "campaign-structure",
+        "targeting",
+        "ad-creatives",
+        "tracking-pixel",
+        "ad-scaling"
+      ],
+      "strong_for": [
+        "meta-ads",
+        "facebook-ads",
+        "paid-social-advertising",
+        "campaign-setup",
+        "business-manager",
+        "audience-targeting",
+        "ad-creatives",
+        "performance-creative",
+        "pixel-tracking",
+        "conversion-tracking",
+        "ad-kpis",
+        "roas-cpa-optimization",
+        "ad-scaling"
+      ],
+      "weak_for": [
+        "seo",
+        "organic-content",
+        "cold-outbound",
+        "high-ticket-1on1-sales",
+        "webinar-funnels",
+        "ecommerce-ops",
+        "software-architecture",
+        "legal"
+      ],
+      "tier": 1,
+      "status": "active",
+      "note": "Active since 2026-08-01: system-prompt v1 (319 lines) compiled from 521 Adbaker Mentoring lessons / 484 transcripts (private paid course, LearningSuite), sources in wiki/sources/adbaker/. Codename eddy-ad = Simon Marder / Adbaker (DACH performance-marketing agency). Lane: Meta/Facebook paid-social ads (Business Manager, campaign structure, targeting/lookalikes, creatives/performance-design, pixel/CAPI tracking, CPA/ROAS KPIs, testing, scaling). Composite — primary voice lead instructor (Simon), some Creative/Growth lessons carry secondary voices — disclosed in SUBJECT/prompt. Sibling of agency-scaler + webinar-hero. PRIVATE clone (ki-business-agenten/eddy-ad-clone)."
     }
   ],
   "planned": [

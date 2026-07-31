@@ -149,7 +149,26 @@
           "webinar-hero"
         ],
         "paid-ads": [
-          "webinar-hero"
+          "webinar-hero",
+          "eddy-ad"
+        ],
+        "meta-ads": [
+          "eddy-ad"
+        ],
+        "facebook-ads": [
+          "eddy-ad"
+        ],
+        "paid-social": [
+          "eddy-ad"
+        ],
+        "performance-marketing": [
+          "eddy-ad"
+        ],
+        "targeting": [
+          "eddy-ad"
+        ],
+        "ad-scaling": [
+          "eddy-ad"
         ]
       },
       "roles": [
@@ -189,6 +208,12 @@
         ],
         "presentation": [
           "webinar-hero"
+        ],
+        "ad-creatives": [
+          "eddy-ad"
+        ],
+        "performance-creative": [
+          "eddy-ad"
         ]
       },
       "roles": [
