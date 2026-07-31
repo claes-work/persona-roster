@@ -43,7 +43,11 @@
         "attention": ["garyvee"],
         "personal-brand": ["garyvee"],
         "product": ["mkbhd"],
-        "credibility": ["mkbhd"]
+        "credibility": ["mkbhd"],
+        "high-ticket-sales": ["agency-scaler"],
+        "agency-scaling": ["agency-scaler"],
+        "offer-creation": ["agency-scaler"],
+        "fulfillment-ops": ["agency-scaler"]
       },
       "roles": ["moderator", "skeptical-reviewer"],
       "review": ["evidence-reviewer", "skeptical-reviewer"],
@@ -56,7 +60,11 @@
       "default_members": ["hormozi", "neil-patel", "garyvee"],
       "conditional_members": {
         "positioning": ["chris-do"],
-        "branding": ["chris-do"]
+        "branding": ["chris-do"],
+        "high-ticket-sales": ["agency-scaler"],
+        "cold-calling": ["agency-scaler"],
+        "agency-scaling": ["agency-scaler"],
+        "leadgen": ["agency-scaler"]
       },
       "roles": ["moderator"],
       "review": ["evidence-reviewer"],

@@ -58,6 +58,12 @@ persistence. See `AGENTS.md`.
 
 ## Next actions
 
+- **NEU 2026-07-31: Klon `agency-scaler` (Agency Scaler) angelegt** (status: created, reservierter
+  Sitz in growth+executive). Quelle = 248 Text-Transkripte aus BEZAHLTEM DXR-Kurs (privates Repo
+  `ki-business-agenten/dxr-course-transcripts`), KEINE öffentliche YouTube-Person → Standard-Ingest
+  (Kanal-Enumeration) passt NICHT. **Offen:** Synthese-Ansatz für text-basierte Persona festlegen
+  (Transkripte als `wiki/sources/` in den Klon → System-Prompt kompilieren), dann `status: active`.
+  Bis dahin nur via `--include agency-scaler` als experimenteller Seat.
 - **Autopilot built (WP1–WP5 done 2026-07-19)** — daily nudge: `/loop /roster-loop`
   (time-boxed dispatcher; discovery refresh + focus-until-active ingest via clone
   loops). First supervised run pending (WP4 review step: `/loop /roster-loop 2`),

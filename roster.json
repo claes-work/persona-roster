@@ -73,6 +73,19 @@
       "tier": 1,
       "status": "created",
       "note": "Repo scaffolded 2026-07-14 from template. Run /clone-setup, then ingest."
+    },
+    {
+      "slug": "agency-scaler",
+      "name": "Agency Scaler",
+      "repo": "clones/agency-scaler-clone",
+      "github": "ki-business-agenten/agency-scaler-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["agency-scaling", "high-ticket-sales", "cold-calling", "offer-creation", "fulfillment-ops", "recruiting", "sales-automation", "linkedin-outbound"],
+      "strong_for": ["high-ticket-sales", "sales-closing", "cold-calling", "appointment-setting", "offer-creation", "agency-scaling", "fulfillment-ops", "sales-team-building", "objection-handling", "founder-mindset"],
+      "weak_for": ["ecommerce-ops", "seo", "creative-production", "software-architecture", "consumer-branding", "enterprise-sales"],
+      "tier": 1,
+      "status": "created",
+      "note": "Repo scaffolded 2026-07-31 (PRIVATE — synthesized from paid DXR course, 248 transcripts). One persona (DACH agency-scaling + principle-based-selling system). Source material: private repo ki-business-agenten/dxr-course-transcripts. Run /clone-setup, then ingest to compile system-prompt."
     }
   ],
   "planned": [

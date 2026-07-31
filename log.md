@@ -1353,3 +1353,221 @@ Verknappung = Offer-Mechanik → an Founder zurückgegeben (harte Regel 3), NICH
 entschieden. Record: wiki/decisions/2026-07-28-website-conversion-review-growth-council.md.
 Ziel-Projekt-Doku (log/STATE) separat in ki-business-agenten-website. Orchestrierung: Growth-Team
 + Chris-Do-Include bewährt sich für Website/Brand-Reviews. Knowledge: none (projekt-lokal).
+
+## [2026-07-30] council | Workshop-Rabattanfrage (Kunde Marleau) — halten vs. bewegen
+Executive-Team (Chris Do × Hormozi), standard + Kreuzbefragung. Kunde drückt auf den
+Tagessatz eines 2-Tages-Workshops (3.800 €/Tag, + Anfahrt + Dozentenkosten). Record:
+wiki/decisions/2026-07-24-workshop-rabattanfrage-marleau.md.
+**Verdikt:** kein Nein, sondern der beste Einwand (Kunde will intern verteidigen, bietet
+selbst Umfangsanpassung an). Tagessatz HALTEN, nur Umfang/Terme bewegen, nie nackter
+Rabatt, nie rechtfertigen. Entscheidender Fork (beide Sitze): ist „rahmenkonform" ein
+psychologischer Anker (→ Value-Reframe) oder eine harte Beschaffungsdecke (→ BATNA-/
+Autoritätstatsache, rückwärts von der Decke zuschneiden oder absagen)? Deshalb ZUERST eine
+Diagnose-Frage, dann bauen. Kreuzbefragung brachte zwei eingeräumte Korrekturen: Chris Do
+zeigte, dass Hormozis „1 Tag / 3.800 €"-Option ein verkappter 50-%-Rabatt ist (schlanke
+Option = andere Zusammensetzung, nicht halbierter Kauf); Hormozi zog die Diagnose-Frage vor
+die Optionen und hält die Jahres-Paket-/Vorkasse-Option als Reziprozitätskarte zurück.
+Sequenz: Mail 1 (Sachfrage ehrlich + eine Frage + eine Richtung + Call-Einladung) →
+15-Min-Call → kalibrierte Recap-Optionen als interne Verteidigungsmunition. Kostenzeilen
+(Anfahrt/Dozent) ins Paket statt einzeln. Walk-away, wenn er am Preis pro Einheit dreht
+statt am Umfang. Fertige Antwort-Mail im Record. Knowledge: decision.
+
+## [2026-07-30] council | Workshop-Rabattanfrage Marleau — Nachtrag: Hackathon, kein Call
+Zwei korrigierte Fakten (bereits ein Call gehabt → schriftlich lösen; Hackathon-
+Hintergrundsupport → „weniger Zeit" beschädigt den Kernwert). Beide Sitze konvergent:
+schriftliches Dokument = legitimes Recap (nicht bedürftig); Rescope über Zeit ist die
+falsche Achse → halten, allenfalls Peripherie tauschen (nie Kern-Verfügbarkeit); der
+ökonomische Kern ist der Schubladenwechsel — Marleaus Anker ist gegen Standard-Trainer-
+Tagessätze gerechnet, ihr liefert spezialisierte Event-Begleitung (kein Vergleichsmaßstab).
+Value-Reframe von „Tage geliefert" auf „Event-Risiko reduziert / Experten auf Abruf".
+Optionen jetzt schriftlich als Setups (Fokus vs. Voll), nicht als Zeitmengen; Voll gegen
+Vorkasse + Fallstudie. Überarbeitete Mail im Record ergänzt. Knowledge: decision-update.
+
+## [2026-07-30] council | Marleau Nachtrag 2 — Kostenpositionen (Anreise vs. Dozent)
+Frage: Anreise (eigene Position 2, km + Stundenpauschale, lange Anfahrt) in die 3.800
+reinpacken? Beide Sitze: Dozentenkosten rein (margen-nah, Zerpflück-Einladung), Anreise
+RAUS — reinpacken vergrößert die Anker-Zahl gegen den Trainer-Vergleich, vermischt Wert mit
+Selbstkosten, verschenkt eine Konzessions-Karte. Fix = Label statt Struktur: km-Rechnung →
+glatte benannte Reisekostenpauschale zu Selbstkosten (keine Kalkulation = kein Feilschen;
+fiduziarisches Signal stärkt den Tagessatz). Kosten nach der Nachfrage zu verstecken =
+schlechtester Zug (Ertappt-Verdacht). Ein-Satz-Antwort auf die Position-2-Frage im Record.
+Knowledge: decision-update.
+
+## [2026-07-28] council | Quiz-Länge/Konversion ki-business-agenten.de (Growth: Hormozi × Neil × Chris Do)
+Founder-Sorge „mehr Fragen = mehr Abbruch" am Workshop-Anfrage-Quiz (7 Fragen). Einstimmig:
+**`bereich` (Multi-Select) raus**, **Reorder Desire→Geld**, Kern behalten (bauwunsch+umsatz+
+team_size). Größter Hebel (Hormozi): **Buchung am Ergebnis** (Live-Kalender, vorbefüllt, kein
+Doppel-Eintrag). Dissens erhalten: **Hormozi „auf 4"** (kamera+timing auch raus) vs. **Neil
+„6–7 behalten"** (714k-Lead-Magnet-Quiz-Daten) — Moderator landet ~5 (Neils Optimum ist
+Low-Ticket-Kontext; High-Ticket → Hormozis „ändert es das Lead-Handling?"). kamera bedingt
+behalten aber als Deliverable reframen (Chris Do). Umami misst jetzt Drop-off → A/B vor Commit;
+Umsetzung = Founder-Freigabe (harte Regel 3). Record: wiki/decisions/2026-07-28-quiz-laenge-
+konversion-growth-council.md. Knowledge: none (projekt-lokal).
+
+## [2026-07-30] council | Marleau Nachtrag 3 — echtes Angebot AG0122, Reframe korrigiert
+Angebot-PDF vorgelegt: Pos 1 „8-stündiger In-House-Workshop zur Einführung", 2 Tage
+7.600 €; Pos 2 „Fahrtkostenpauschale 930 €" (330 km + 600 Referent gemischt); O1 optional
+Person 2, 6.000/2 Tage. **Materielle Korrektur:** Beschreibung = frontaler Einführungs-
+Workshop, nicht der mündlich genannte Hackathon-Support → Kategorie-Reframe (Nachtrag 1)
+tot, Marleaus Trainer-Vergleich laut Papier legitim. Neue Linie: Knappheit × Ergebnis.
+Haupthebel = Pos 1 von „Einführung/8-stündig" auf Outcome umschreiben („lauffähige
+Automatisierungen an euren Prozessen, gebaut und übergeben"). Pos 2 entmischen (Hormozi
+korrigiert Nachtrag 2): Referentenpauschale 600 ins Honorar, Anreise ehrlich 330 als reine
+km — NICHT alle 930 als Reise labeln (versteckt Marge). Person 2 @ 3.000 perforiert den
+3.800-Anker → als Fokus/Voll-Setup mit begründetem Bundle-Vorteil rahmen. Offene
+Faktenfrage an Nutzer: real hands-on-bauen oder Frontal-Vortrag? (entscheidet, ob
+Outcome-Wording ehrlich ist). Knowledge: decision-update.
+
+## [2026-07-30] council | Marleau Nachtrag 4 — Hackathon bestätigt, finale Antwort + Mail
+Fakt geklärt: es IST ein Hackathon (kein Vortrag); 3.800 = Standardsatz. Verdikt: NICHT
+runtergehen — Hackathon ist mehr wert als Vortrag; der Druck kam aus der zu schwachen
+Beschreibung, Fix ist das Wording, nicht der Preis. Outcome-Wording aus Nachtrag 3 jetzt
+ehrlich → verteidigt den Satz. 4-Schritt-Plan: Pos 1 auf Hackathon/Outcome umschreiben,
+Pos 2 entmischen (Referent 600 ins Honorar, Anreise 330 rein), Person 2 als Fokus/Voll-
+Setup, Mail ohne zweiten Call mit Anreise-Erlass-bei-Vorkasse als einziger Geste. Korrektur:
+Basis ist bereits 1 Senior → „einer statt zwei" ist KEIN Sparhebel (Person 2 = Aufstockung).
+Finale Mail im Record. Knowledge: decision-update.
+
+## [2026-07-30] council | Marleau Nachtrag 5 — kein Resend, finale Antwort-Mail
+Nutzer-Constraint: kein aktualisiertes Angebot nachschieben (wirkt schwach nach bereits
+gesendetem AG0122). Konsequenz: Wording-/Struktur-Fixes werden Zukunftsvorlage; für dieses
+Deal Formatklärung rein mündlich in der Mail, Tagessatz gehalten. Einzige bewegte Zahl geht
+für den Kunden nach unten: Erlass Fahrtkostenpauschale Pos 2 (930 €) bei Vorkasse (Geste +
+Zahlungssicherheit, kein Nachschieben). Diagnose-Frage bleibt. Finale Mail-Fassung ohne jede
+Andeutung eines zweiten Angebots im Record + Chatverlauf. Knowledge: decision-update.
+
+## [2026-07-30] council | Marleau Nachtrag 6 — Kunde kennt Format, Re-Pitch raus (final)
+Kunde weiß bereits, dass es ein Hackathon mit echtem Bauen ist (vorab besprochen). Format-
+Klarstellung aus Nachtrag 5 daher redundant/schwächend → raus. Finale Mail: selbstsicherer
+Verweis auf gemeinsames Wissen statt Re-Pitch, Benchmark-Konter als geteilte Einsicht,
+kürzer. Satz gehalten, eine Frage, Vorkasse→930-Erlass, kein Resend, kein Call. Finale
+Version im Record + Chatverlauf. Knowledge: decision-update.
+
+## [2026-07-30] council | Marleau Nachtrag 7 — Konzession finalisiert (930 bei Annahme+Zahlung 2 Wo)
+Geste festgelegt: Annahme + Zahlung binnen 2 Wochen → Fahrtkostenpauschale 930 € gestrichen
+(deckt sich mit Angebots-Zahlungsfrist, wirkt als Close-Anreiz, als „Anfahrt übernehmen wir"
+gerahmt statt Rabatt). Konzessionssatz in finaler Mail ersetzt. Versandfertige Endfassung im
+Record + Chatverlauf. Knowledge: decision-update.
+
+## [2026-07-30] council | Workshop-Funnel: Buchungs-Buttons, Terminname, Mails, Vorname (ki-business-agenten)
+Team email (Hormozi × Chris Do × Neil Patel), kreuzbefragt. Einstimmig: 3-Termin-Buttons behalten
+(Assumed Close/Goldilocks); kundenseitigen Terminnamen von „Erstgespräch" auf Ergebnis-Namen
+umbenennen (interner Kalendername bleibt); eine Mail + Google-Einladung richtig, DOI-Zweitmail als
+Geschenk; Vorname Pflicht bei Buchung / optional beim Newsletter (wie gebaut), „Hallo,"-Fallback ok,
+keine Extra-Mails ohne Vorname. Verknappungs-Spannung gelöst (Hormozi): Call ≠ Studio-Tag, 4
+Studio-Tage/Monat sind die echte Produkt-Scarcity. Dissens erhalten: Priorisierung — Hormozi
+(Reminder-Kadenz 24h/12h/3h zuerst) vs. Neil (Buchungs-Conversion + Tracking zuerst; keine verbürgte
+No-Show-Zahl im Wiki) vs. Chris Do (Framing/Name zuerst). Moderator: umbenennen → Funnel
+instrumentieren → Reminder; empirisch auflösen. Record:
+`wiki/decisions/2026-07-30-workshop-buchung-termin-mails.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Prep-Geschenk (Aufzeichnung) vor dem gebuchten Call (ki-business-agenten)
+Team growth (Hormozi × Neil × Chris Do, kreuzbefragt; GaryVee reserviert). Frage: Workshop-
+Aufzeichnungen vor dem Call als Geschenk/Trust — schadet es (2. CTA/Show-Rate/Kannibalisierung)?
+Verdikt (Confidence high): **ja, aber nur EINE kuratierte Aufzeichnung, streng als Vorbereitung
+geframt, in der Buchungsbestätigung**; 24h-Reminder trägt nur einen Ein-Satz-Prep-Nudge (kein 2.
+CTA), Reminder bleiben Single-CTA „erscheinen"; NIE die ganze Bibliothek vor dem Call (Substitution).
+Keine Kannibalisierung (live+interaktiv ≠ Aufzeichnung). Cross-exam-Bewegung: Hormozi+Neil → Bestätigung
+als Container, Chris Do → Prep-Video sei kein 2. CTA, dürfe in die 24h-Mail (Dissens erhalten). Record:
+`wiki/decisions/2026-07-30-prep-geschenk-vor-dem-call.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Close-CRM: Aufräumen + Setup für Inbound-Funnel (ki-business-agenten)
+Team growth (Hormozi × Neil × Chris Do, kreuzbefragt). Grundlage: echte Close-Daten — 2.551 Leads,
+~72 % tot/kalt, nur ~20 % warm, nur ~52 % mit E-Mail; gewuchertes Schema (3 Pipelines, 16 Status,
+18 Fields). Verdikt (high): EINE verhaltensbasierte Pipeline (Quiz→Call gebucht→Call gehalten→
+Angebot→Won/Lost + Nurture/Advocate), Alt-Ballast archivieren; die 2.551 NICHT massen-mailen
+(Kalt-Akquise ohne Opt-in) — nur warmes ~20 % per Anruf/1:1, Rest archivieren. Cross-exam:
+Hormozi konzediert Blast, Neil qualifiziertes Ja NUR für isolierten Consent-Filter-Touch auf
+Wegwerf-Subdomain; Moderator-Default = kein Massen-Filter (Dissens erhalten). DSGVO-Gap → Anwalt.
+Record: `wiki/decisions/2026-07-30-close-crm-cleanup-und-setup.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Close Smart-Views: wie viele, welche (ki-business-agenten)
+Team growth (Hormozi × Neil × Chris Do). Frage: mehr Smart-Views nutzen? Verdikt (high): Views =
+Arbeits-Warteschlangen (auf null abarbeiten), keine Reports. Empfohlen 6 total: Warm + Archiv
+(bestehend) + Heute-anrufen (Wiedervorlage/Rückruf ≤ heute) + Angebot-offen-nachfassen + Neue-
+Quiz-Leads (Speed-to-Lead) + Calls-nächste-48h. Regel: View = eine tägliche Handlung, Fünftklässler-
+Test, 7 Tage ungeöffnet → killen. Dissens Zahl (Chris Do 4 / Hormozi 6 / Neil ≤8). Record:
+`wiki/decisions/2026-07-30-close-smart-views.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Close-Felder aus aufgezeichnetem Call (ki-business-agenten)
+Team executive (Hormozi × Chris Do, kreuzbefragt). Frage: welche Themen/Kriterien aus einem
+aufgezeichneten Call in Close speichern? Verdikt (high): Zusammenfassung in 3 strikt getrennten
+Blöcken **A) O-Ton (wörtlich) · B) Diagnose (STAR + Wert-Gleichung + Ampel) · C) nächster Schritt**.
+Ampel rot/gelb/grün bleibt, aber regelbasiert/auditierbar (Index auf STAR, kein Black-Box-„87 %") +
+**Bauch-Override-Feld** (Mensch vetoet jede Farbe). KI auf **Schmerz+Klarheit** trainiert, nicht auf
+Kaufsignale (fehlt Schmerz → hinschreiben). Einwand-Kategorie **„Avoidance" gestrichen** (Charakter-
+urteil), jeder Einwand mit O-Ton belegt. Aufzeichnung zu Call-Beginn ansagen. Dissens erhalten
+(Auto-Score, „Munition"-Framing, felt-pain-Verbatim). DSGVO → Anwalt. Record:
+`wiki/decisions/2026-07-30-close-call-summary-felder.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Close-Pipelines + Status: Altlasten bereinigen (ki-business-agenten)
+Team ad-hoc (Hormozi + Chris Do, kreuzbefragt). Auf echter Live-Struktur (4 Pipelines: 3 alt +
+neu „Studio-Workshop (Inbound)"; 16 Lead-Status). Verdikt (high, einstimmig): **EINE aktive
+Pipeline mit exakt den 5 Stufen** (Call gebucht→gehalten→Angebot raus→Gewonnen→Verloren), KEIN
+Quiz/Nurture/Advocate als Stufe. **Fortschritt auf EINER Achse** (Opportunity = Wert); Lead-Status
+nur Vor-/Nach-Deal (empfohlen 5–6: Neu/Follow-up/Aktive-Opp/Nurture/Kein-Fit/Kunde), Ampel = Score.
+Pflichtfeld **„Verloren-Grund"** (No-Show/BadFit/Preis/Timing-Nurture/Wettbewerber) → No-Show+Nurture
+= Gründe, keine Stufen. Alt-Pipelines archivieren (Records behalten), Alt-Status nach Bulk-Remap aus
+der Auswahl entfernen. Dissens: Lead-Status-Zahl (Hormozi 6 vs. Chris Do 4). Größter Fehler: Stufen
+über interne Aktivität statt filmbare Käufer-Handlung (Hormozi) / Anhaftung an Altlasten (Chris Do).
+Record: `wiki/decisions/2026-07-30-close-pipelines-und-status.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Website-Review + Next Steps ki-business-agenten.de (Hormozi × Neil × Chris Do)
+Growth Council, standard, kreuzbefragt — Florian ließ die LIVE-Seite durchgehen. Verdikt (high bei
+Website-Fixes): Fundament stimmt (ein Angebot/CTA/Quiz/Fit-Filter/persönliche Buchung) → Cleanup, kein
+Rebuild. Prioritäten: (1) `/workshop` löschen/301 (SEO-Kannibalisierung; /langform-Redirect bleibt);
+(2) Proof Vanity→**Ergebnis-in-Euro**; (3) **prozess-/asset-basierte Garantie** (Chris Do: nie fremde
+Betriebsergebnisse garantieren; Neil: 60>30-Tage +7%); (4) **Feind benennen** + Preis value-based
+herleiten + Film in Euro; (5) Tracking an **CRM-Cash** + Nurture hinterm Gate. Danach: Traffic-Motor
+(YouTube→/quiz, Content-Cluster aus 50h Video), Angebots-Sequenz (Upsell/Downsell statt 0€/Premium-Anker).
+Reibungen aufgelöst: A/B (Hormozi) vs. „nicht testbar bei 4 Sales/Monat" (Neil) → **CTR an der Gabelung**
++ qualitativ + CRM-Cash. Preis/Angebotsmechanik/Garantie = Founder-Hoheit; hier nur Bau-Input.
+Record: `wiki/decisions/2026-07-30-website-review-growth-council.md`. Knowledge: decision. hub-candidate.
+
+## [2026-07-30] council | Marleau Nachtrag 8 — Gegenanker 1.500–2.800, finaler Reply
+Marleau ankert gegen Einzel-Coach-Sätze (falsche Kategorie), Benchmark nicht harte Decke,
+weicher Walk-away. Beide Sitze: Tagessatz halten (26-%-Cut vom Tisch); Anker per „agree and
+one-up" annehmen+umdrehen (Ergebnis-Vergleich statt Tagessatz-Vergleich); Anbietervergleich
+aktiv einladen (walk-ready); Konzession = Anreise 930 als Kennenlern-Geste (Nutzer-Rahmung)
++ Bonus statt Rabatt (Doku + 2 Wo Support); 1-Tages-Pilot als Fallback (nicht in Mail 1, da
+Einwand am Tagessatz hängt). Walk-away-Linie: Tagessatz-Druck auf 2.800 → ziehen lassen.
+Finaler Reply im Chatverlauf. Knowledge: decision-update.
+
+## [2026-07-31] council | YouTube-Kooperations-Intake (self-qualifying sponsorship form) — ki-business-agenten
+Team youtube (mkbhd × hormozi × chris-do, cross-examined). Verdict: inbound sponsor requests run
+through a self-qualifying application form; the channel is the funnel for the 5k workshop and
+audience trust IS the business, so judge every deal by "help or hurt the workshop machine."
+Auto-decline anything competing with the workshop; budget a required forced-choice field with the
+lowest band = the floor; editorial control + Werbung/Anzeige labelling non-negotiable;
+usage-rights/whitelisting priced separately as a licence/royalty; paid-first (deposit = qualifier).
+Dissent (transactional vs. long-term) resolved by Hormozi himself: few trusted repeat partners at
+the RELATIONSHIP level, cash-first clean deals at the DEAL level (goose vs. eggs). Cross-examine
+added blindspots: off-ramp/post-publish caveats (MKBHD), exclusivity + frequency cap (Hormozi),
+German media-contract usage-scope trap + reveal-first for shy partners (Chris Do). Record:
+wiki/decisions/2026-07-31-youtube-kooperations-intake.md. Knowledge: decision. hub-candidate: no.
+
+## [2026-07-31] plan | Kooperations-Bewerbungsformular (unlisted /kooperationen) — ki-business-agenten
+/plan seeded from the 2026-07-31-youtube-kooperations-intake council record. Hidden, noindex,
+non-linked landing page with a self-qualifying application form; Founder constraint: unlisted,
+sent only on email request, no CTA competition with the workshop. Auto-decline only on hard
+machine-checkable criteria (budget-below-floor / non-negotiables not accepted / no decision-maker);
+fit + competitor screening stays a HUMAN flag (freitext unreliable); qualified -> server-validated
+team mail, kept separate from the workshop pipeline; honeypot + rate-limit + DSGVO consent. 7 WPs
+(WP6 = Founder: price floor + lawyer media-contract, out of build scope). Skeptical pass integrated
+into the plan. Plan file lives in the TARGET project: ki-business-agenten-website/plans/
+2026-07-31-kooperations-formular.md (status draft, awaiting founder OK). Knowledge: plan.
+
+## [2026-07-31] council | TAKTILo-Landing: ROI-/Kosten-Zahlen platzieren
+Verdikt: absolute €-Zahlen/Vergleichstabelle raus von der Cold-Muster-Seite (→ Datenblatt-PDF + Gespräch); Ersparnis als operative Proof-Zeile (10→2 Tage, Haftung/Ablöserisiko, Trägermaterial/RAL) unter dem Falz; Hero/CTA ohne Zahl. Dissens Neil (Prozent-Deltas rein) vs Hormozi+Chris (Kosten-Framing raus) → konservativ 2:1 aufgelöst. Seats: hormozi, neil-patel, chris-do. Knowledge: decision.
+
+## [2026-07-31] council | Lern-/Selbstlern-Tier ~49 €/Monat (Console, ohne Community)
+Verdikt: JA zum niedrigschwelligen Monats-Tier — aber (1) unterste Sprosse der EINEN Leiter, kein zweiter Funnel („one funnel to rule them all"); (2) verkauft als **Console/Schmerzlinderung** („nutze die Console, fall nie hinter den Stand"), NICHT „Zugang zu Videos" (Commodity/Preiskampf); (3) primärer Job = Top-of-Funnel/Ascension → gemessen an **Workshop-Buchungen pro Mitglieds-Monat**, nicht MRR; (4) **ERST per Pre-Sell validieren, nicht bauen** — 20 zahlende Signups in 7 Tagen + ≥10 % Self-Book Fit-Call, sonst nicht bauen. Minimal/versteckt bewerben richtig (Nav/Footer + Quiz-„nicht-Fit"-Zweig, kein Hero-Wettbewerb); Aufstieg via In-Product-Wall + Antizipation, nie Pitch. Billing 49 €/4-Wochen, konsumierbar; zero-touch onboarding oder schließen; auf Churn budgetieren (>5 % = kaputt, <10 % Ascension in 6 Mon = Leck). Seats: hormozi, chris-do, neil-patel (deep, cross-examined). Dissens erhalten: Hormozi (Decoy) / Neil (Lead-Source) vs. Chris Do (reiner Give-first-Service, „decoy zum Scheitern gebaut = Manipulation") → aufgelöst: interne Decoy/Lead-Mess-Logik + bindende Integritäts-Bedingung (Mitglied bekommt Gegenwert unabhängig vom Aufstieg). Refines 2026-07-28-workshop-upsell-ascension. Record: wiki/decisions/2026-07-31-lernbereich-membership-49eur-tier.md. Knowledge: decision. hub-candidate: no.
+
+## [2026-07-31] council | Bibliotheks-Gate: personalisiertes Upgrade statt Video-Wall
+Frage: nur EIN Workshop-Video gratis gegen E-Mail (Wall aufs Video) statt volle Bibliothek? Verdikt (nach Cross-Examine EINSTIMMIG): NEIN zur E-Mail-Wall auf dem Content. **Video/Bibliothek ungated** (Discovery/SEO/Binge/Autorität — „Google can't index what's behind a form"; Hormozi konzediert „Get Flow → Monetize → THEN Add Friction", Teil-Gate „destroys trust", Gratis > bezahlter Konkurrenz-Content). **E-Mail auf dem personalisierten Upgrade** einsammeln (Fit-Check-Quiz-Ergebnis / maßgeschneiderter Plan), Wert vorher sichtbar → routet in Anfrage→Call→5k. **49 € Console = bezahlter Raum, Bibliothek NIE dahinter** (Linie: „Aufzeichnung vs. lebend/interaktiv" / „WAS frei, WIE bezahlt"). Metrik = qualifizierte CRM-Anfragen pro 100 Viewer (nicht Opt-in-Rate), in Close. Erst A/B (ungated-Video+Exit-Intent-Upgrade vs. Video-Wall), kein Rebuild. Florians Instinkt (E-Mail einsammeln, EIN Flagship) bleibt richtig — nur der Gate-Ort wandert. Seats: hormozi, chris-do, neil-patel (deep, cross-examined). **Löst den am 2026-07-27 offen gelassenen Gate-Dissens** (zugunsten Chris Do + Neil ungated; Hormozi eingerückt) und **reversiert Status-quo E-Mail-Gate-vor-Langform** (2026-07-21 / Commitment §3/§4) → Founder-Ratifizierung nötig. Refines 2026-07-27-aufzeichnungs-bibliothek-lead-magnet; löst Free-vs-49€-Kollision aus 2026-07-31-lernbereich-membership-49eur-tier. Record: wiki/decisions/2026-07-31-bibliothek-gate-personalisiertes-upgrade.md. Knowledge: decision. hub-candidate: no.
+
+## [2026-07-31] council | Console-Tier-Preis: Job bestimmt Preis, 49 vs 99 Pre-Sell-Test
+Frage: 49 € zu niedrig fürs Console-Tier (gefühlter Wert hoch)? Verdikt (einstimmig auf dem Grundsatz): NICHT auf „die Tipps sind unglaublich" preisen — das ist „selling out of your own wallet", optimiert MRR (die für dieses Tier verworfene Kennzahl) und hungert den 5k aus. Der JOB (Lead-Quelle/Aufstieg) bestimmt den Preis, gemessen an Workshop-Buchungen nicht MRR. Start 49 €/4-Wochen + Garantie (self-serve zero-contact). Rungs weit auseinander, Ceiling ~100 (49 = 1% von 5k). Dissens Richtung: Hormozi+Chris „niedrig halten" (39–59; low price = feature am Front-End; Buchungen = Mitglieder × Rate, Preis schneidet Mitglieder schneller; wetten 49 gewinnt) vs. Neil „als Filter höher" (Preis filtert auf 5k-Käufer, senkt Casual-Churn, „zu billig wirkt fake"/Diamond Foundry; wettet 99). Aufgelöst in DENSELBEN Test, den beide unabhängig vorschlugen: **Pre-Sell A/B 49 € vs 99 €, entschieden an Workshop-Buchungen pro 100 Besucher** (nicht MRR, nicht Buchungs-Rate). Chris' Leitplanke falls höher gewinnt: nur mit menschlichem Angebots-Zusatz (Gruppen-Call/Hot-Seat), sonst preist man ein Tool wie einen Raum → Order-Taker-Rahmung. Seats: hormozi, chris-do, neil-patel (standard). Refines 2026-07-31-lernbereich-membership-49eur-tier (löst dessen offenen Preis-Punkt). Record: wiki/decisions/2026-07-31-console-tier-preis.md. Knowledge: decision. hub-candidate: no.
+
+## [2026-07-31] setup | Neuer Klon: agency-scaler (Agency Scaler) — DXR-Kurs, EINE Persona
+`/add-clone` end-to-end. Neuer Klon **agency-scaler** ("Agency Scaler") registriert (roster.json, status: created, tier 1, github: ki-business-agenten/agency-scaler-clone, **PRIVAT** — synthetisiert aus BEZAHLTEM DXR-Kurs). EINE Persona (kein A/B-Split, obwohl zwei Stimmen im Kurs) — eine zusammenhängende Denkwelt (DACH-Agenturaufbau + Principle-Based-Selling). Quelle: 248 Transkripte in privatem Repo ki-business-agenten/dxr-course-transcripts (12 Kapitel), zuvor per logged-in Chrome vom Membersport gezogen. **strong_for:** high-ticket-sales, sales-closing, cold-calling, appointment-setting, offer-creation, agency-scaling, fulfillment-ops, sales-team-building, objection-handling, founder-mindset. **weak_for:** ecommerce-ops, seo, creative-production, software-architecture, consumer-branding, enterprise-sales. Sitzplätze (conditional, nicht default → gezielt bei Agentur/Sales, nicht redundant zu hormozi): **growth** (high-ticket-sales, cold-calling, agency-scaling, leadgen), **executive** (high-ticket-sales, agency-scaling, offer-creation, fulfillment-ops). gen_agents + install_global neu gebaut (agency-scaler-advisor/-operator, 14 Agenten). validate.py sauber. **Reservierter Sitz** (status: created, kein System-Prompt) → nimmt an Councils nur via explizitem --include als experimentell teil. **Besonderheit:** Text-Transkript-Quelle aus privatem Bezahlkurs, KEINE öffentliche YouTube-Person → Standard-Ingest (Kanal-Enumeration) passt nicht; „aktiv" (sprechfähig) erst nach Synthese der Transkripte → persona/system-prompt.md. Nächster Schritt offen (Synthese-Ansatz). Knowledge: setup. hub-candidate: no.
