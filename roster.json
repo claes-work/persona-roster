@@ -84,8 +84,8 @@
       "strong_for": ["high-ticket-sales", "sales-closing", "cold-calling", "appointment-setting", "offer-creation", "agency-scaling", "fulfillment-ops", "sales-team-building", "objection-handling", "founder-mindset"],
       "weak_for": ["ecommerce-ops", "seo", "creative-production", "software-architecture", "consumer-branding", "enterprise-sales"],
       "tier": 1,
-      "status": "created",
-      "note": "Repo scaffolded 2026-07-31 (PRIVATE — synthesized from paid DXR course, 248 transcripts). One persona (DACH agency-scaling + principle-based-selling system). Source material: private repo ki-business-agenten/dxr-course-transcripts. Run /clone-setup, then ingest to compile system-prompt."
+      "status": "active",
+      "note": "Active since 2026-07-31: system-prompt v1 compiled from 248 DXR transcripts (private paid course), sources placed in wiki/sources/dxr-course/. One persona (DACH agency-scaling + principle-based-selling). PRIVATE clone. v2 enrichment pending (5 dense doctrine digests in the add-clone session's tasks/*.output — fold in for verbatim depth)."
     }
   ],
   "planned": [
