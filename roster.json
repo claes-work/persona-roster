@@ -237,6 +237,19 @@
       "tier": 2,
       "status": "active",
       "note": "Codename tim-growth = Matthew Pollard ('The Rapid Growth Guy'). Corpus: 141 paid-course lessons (Introvert's Edge Networking, No Small Talk Meetings, Rapid Growth Academy). LOCAL-ONLY repo (paid content, not pushed to GitHub). Flip to active after system-prompt synthesis."
+    },
+    {
+      "slug": "webinar-hero",
+      "name": "Webinar Hero",
+      "repo": "clones/webinar-hero-clone",
+      "github": "ki-business-agenten/webinar-hero-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": ["webinar", "webinar-funnel", "offer-creation", "paid-ads", "presentation"],
+      "strong_for": ["webinar-structure", "webinar-intro", "webinar-pitch", "offer-in-webinar", "slide-content", "meta-ads-for-webinars", "ad-tracking", "lookalike-scaling", "going-live"],
+      "weak_for": ["seo", "cold-outbound", "high-ticket-1on1-sales", "ecommerce-ops", "software-architecture", "legal"],
+      "tier": 1,
+      "status": "active",
+      "note": "Active since 2026-07-31: system-prompt v1 (322 lines) compiled from 21 Webinare transcripts (private paid course), sources in wiki/sources/webinare/, pushed (9edfdc9). Webinar funnels (Webinarstruktur/Angebot/ADS) for DACH. Sibling of agency-scaler. NOTE: Angebot chapter has secondary voices (Nick/Erik) — disclosed in SUBJECT/prompt. 2 video-only lessons flagged. PRIVATE clone."
     }
   ],
   "planned": [

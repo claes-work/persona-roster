@@ -136,6 +136,15 @@
         ],
         "storytelling": [
           "tim-growth"
+        ],
+        "webinar": [
+          "webinar-hero"
+        ],
+        "webinar-funnel": [
+          "webinar-hero"
+        ],
+        "paid-ads": [
+          "webinar-hero"
         ]
       },
       "roles": [
@@ -169,6 +178,12 @@
         ],
         "seo": [
           "neil-patel"
+        ],
+        "webinar": [
+          "webinar-hero"
+        ],
+        "presentation": [
+          "webinar-hero"
         ]
       },
       "roles": [

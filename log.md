@@ -1658,3 +1658,18 @@ seats, not stubs), validate clean. Now a live voice: auto-seats in growth (high-
 cold-calling, agency-scaling, leadgen) + executive (high-ticket-sales, agency-scaling, offer-creation,
 fulfillment-ops), or via --include agency-scaler / the agency-scaler-advisor agent. v2 enrichment
 pending (5 dense doctrine digests preserved in this session's tasks/*.output). Knowledge: setup. hub-candidate: no.
+
+## [2026-07-31] setup | Neuer Klon: webinar-hero (Webinar Hero) — Webinare-Kurs, active
+`/add-clone` + Synthese. **webinar-hero** ("Webinar Hero") aus dem privaten Bezahl-Kurs "Webinare"
+(21 Transkripte, 3 Kapitel: Webinarstruktur 10 / Angebot 3 / ADS 8; 2 video-only). Quelle: privates
+Repo ki-business-agenten/webinare-transcripts; Klon-Repo (privat) ki-business-agenten/webinar-hero-clone.
+System-prompt v1 (322 Zeilen) via Hintergrund-Agent synthetisiert, gepusht (9edfdc9); Quellen in
+wiki/sources/webinare/. roster.json status active, tier 1. Sitze (conditional): **growth** (webinar,
+webinar-funnel, paid-ads), **content** (webinar, presentation). gen_agents + install_global neu gebaut
+(webinar-hero-advisor/-operator = echte Seats). validate sauber. strong_for: Webinar-Struktur/Intro
+(4 Säulen Status/Dringlichkeit/Commitment/Hoffnung, Show-don't-tell), Webinar-Pitch/Angebot (magisches
+Angebot), Slides/Content, Going-Live (WebinarJam), Meta-Ads (Leadpreis, Pixel/Tracking, Lookalike,
+Skalieren). weak_for: SEO, cold-outbound, 1:1-high-ticket-sales, ecommerce-ops, software, legal.
+**Sprechbar** via /council (auto in growth/content) oder --include webinar-hero / Agent webinar-hero-advisor.
+Geschwister-Klon zu agency-scaler. Hinweis: Angebot-Kapitel hat Nebenstimmen (Nick/Erik), ehrlich vermerkt.
+Knowledge: setup. hub-candidate: no.
