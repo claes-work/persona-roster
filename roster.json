@@ -244,12 +244,73 @@
       "repo": "clones/webinar-hero-clone",
       "github": "ki-business-agenten/webinar-hero-clone",
       "system_prompt": "persona/system-prompt.md",
-      "domains": ["webinar", "webinar-funnel", "offer-creation", "paid-ads", "presentation"],
-      "strong_for": ["webinar-structure", "webinar-intro", "webinar-pitch", "offer-in-webinar", "slide-content", "meta-ads-for-webinars", "ad-tracking", "lookalike-scaling", "going-live"],
-      "weak_for": ["seo", "cold-outbound", "high-ticket-1on1-sales", "ecommerce-ops", "software-architecture", "legal"],
+      "domains": [
+        "webinar",
+        "webinar-funnel",
+        "offer-creation",
+        "paid-ads",
+        "presentation"
+      ],
+      "strong_for": [
+        "webinar-structure",
+        "webinar-intro",
+        "webinar-pitch",
+        "offer-in-webinar",
+        "slide-content",
+        "meta-ads-for-webinars",
+        "ad-tracking",
+        "lookalike-scaling",
+        "going-live"
+      ],
+      "weak_for": [
+        "seo",
+        "cold-outbound",
+        "high-ticket-1on1-sales",
+        "ecommerce-ops",
+        "software-architecture",
+        "legal"
+      ],
       "tier": 1,
       "status": "active",
       "note": "Active since 2026-07-31: system-prompt v1 (322 lines) compiled from 21 Webinare transcripts (private paid course), sources in wiki/sources/webinare/, pushed (9edfdc9). Webinar funnels (Webinarstruktur/Angebot/ADS) for DACH. Sibling of agency-scaler. NOTE: Angebot chapter has secondary voices (Nick/Erik) — disclosed in SUBJECT/prompt. 2 video-only lessons flagged. PRIVATE clone."
+    },
+    {
+      "slug": "heartbeat",
+      "name": "Stefan Graf",
+      "repo": "clones/heartbeat-clone",
+      "system_prompt": "persona/system-prompt.md",
+      "domains": [
+        "vertrieb-sales",
+        "outbound-akquise",
+        "team-leadership",
+        "skalierung-systeme",
+        "crm-automation",
+        "funnel-content",
+        "fulfillment-delivery",
+        "paid-ads"
+      ],
+      "strong_for": [
+        "cold-calling",
+        "sales-team-building",
+        "sales-compensation",
+        "objection-handling",
+        "closing",
+        "linkedin-outbound",
+        "appointment-setting",
+        "agency-scaling",
+        "remote-team-leadership",
+        "referral-systems"
+      ],
+      "weak_for": [
+        "paid-advertising",
+        "product-design",
+        "software-architecture",
+        "visual-design",
+        "seo"
+      ],
+      "tier": 2,
+      "status": "active",
+      "note": "Codename heartbeat = Stefan Graf (CEO Heartbeat Consulting), DACH agency/sales-scaling. GERMAN persona. 284 core lessons ingested (of 568 transcribed; CRM/Ads catalogued L1). LOCAL-ONLY (paid content). Overlaps agency-scaler on DACH agency-scaling but distinct angle: sales-team-building, cold-calling systems, sales compensation, remote leadership."
     }
   ],
   "planned": [

@@ -68,17 +68,20 @@
         ],
         "high-ticket-sales": [
           "agency-scaler",
-          "tim-growth"
+          "tim-growth",
+          "heartbeat"
         ],
         "agency-scaling": [
-          "agency-scaler"
+          "agency-scaler",
+          "heartbeat"
         ],
         "offer-creation": [
           "agency-scaler",
           "tim-growth"
         ],
         "fulfillment-ops": [
-          "agency-scaler"
+          "agency-scaler",
+          "heartbeat"
         ]
       },
       "roles": [
@@ -122,14 +125,16 @@
         ],
         "cold-calling": [
           "agency-scaler",
-          "tim-growth"
+          "tim-growth",
+          "heartbeat"
         ],
         "agency-scaling": [
           "agency-scaler"
         ],
         "leadgen": [
           "agency-scaler",
-          "tim-growth"
+          "tim-growth",
+          "heartbeat"
         ],
         "networking": [
           "tim-growth"
