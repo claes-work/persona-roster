@@ -1689,3 +1689,18 @@ Nico), ehrlich vermerkt. **Sprechbar** via /council (auto in growth/content) ode
 / Agent eddy-ad-advisor. Geschwister zu agency-scaler + webinar-hero.
 OFFEN (User bestätigen): private GitHub-Repos vs. Memory-Regel "Bezahlkurs = local-only".
 Knowledge: setup. hub-candidate: no.
+
+## [2026-08-01] council | Finanz-Dashboard-KPIs für GF/Controller (KI-Buchhaltungs-App)
+Executive Council (deep), 6 Sitze: heartbeat, hormozi, agency-scaler, neil-patel, mkbhd, chris-do.
+Frage: wichtigste Dashboard-KPIs/-Ansichten für GF/Controller (KI-App + Lexware-API). Verdikt:
+Cashflow/Umsatz/Ausgaben = Rückspiegel; GF-Dashboard braucht Treiber + Entscheidungs-Metriken —
+Gross Profit/Marge statt Umsatz, CAC + LTV:CAC + 30-Tage-Cash/Payback, Runway/Worry-Date + True Free
+Cash (verfügbar − Steuern), Sales-Funnel-KPIs pro Closer/Setter (Show>80%/Offer~80%/Close), 3 Buckets +
+DB-Korridore, Churn/NRR + Profitabilität pro Kunde/Service + Konzentrationsrisiko, Umsatz/MA >20-25k,
+offene Forderungen als Action-Liste. Struktur: Vogelperspektive→Trends→Drill-down, 2 Sichten (CEO vs
+Controller), jede Zahl mit Kontext (vs Vormonat/Ziel), Ampel, Alerts + Review-Ritual. Bonus: gegen
+bereinigte Ist-Zahlen reconcilen, KI-Kategorisierung-Vertrauens-UX (Konfidenz+Warum+1-Gesten-Korrektur),
+Outcome-Positionierung. Dissens aufgelöst: Bank-Reconcile (bereinigte Ist), Umsatzziel (Trajektorie statt
+fixem Ziel), Alerts+Ritual. Gaps: Steuer-Korrektheit/GoBD/Lexware-Datenmodell = Steuerberater-Lane (alle
+Seats deferren). Record: wiki/decisions/2026-08-01-finanz-dashboard-kpis-gf-controller.md.
+Knowledge: council. hub-candidate: no.
