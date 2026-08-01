@@ -93,3 +93,29 @@ Arithmetik, unabhängig vom Buchungsstandard.
 
 ## Nächster Schritt
 Umsetzung: `/plan` (Dashboard-Informationsarchitektur + KPI-Definitionen + Datenherkunft aus Lexware) — oder direkt als Feature-Spec an den Gründer. Steuer-Korrektheit vorab mit einem Steuerberater klären.
+
+---
+
+## Runde 2 (2026-08-01): Verhältnisse/Richtwerte + Produkt-Sicht (alle 6 Sitze)
+
+**Frage:** Welche Kennzahlen in welchem VERHÄLTNIS (mit gutem/schlechtem Richtwert)? Ist „3 Monate Runway" ein guter Step? Produkt-Idee: welche Produkte = höchster Umsatz UND Marge → fokussieren?
+
+**Konsens:** Eine Einzelzahl = Rauschen; eine **Ratio mit Vergleich** = Entscheidung. „Umsatz ist Eitelkeit, Marge/Profit ist Wahrheit."
+
+**Verhältnis-Kennzahlen + Richtwerte:**
+- **Gewinn-Marge %** („von 100 € behältst du wie viel") — Ziel netto ~20–30% (Chris Do); <10% = nur ein Job. Bruttomarge Dienstleistung 80%+ (Hormozi, <50% = falsch bepreist). DB-Korridor **je nach Umsatzstufe** (Heartbeat: 0–50k→50–70%, 100–500k→30–50%, >1M→30–40%).
+- **Jeder Kostenblock als % vom Umsatz** (Hormozi, Heartbeat, Neil): Personal %, Fulfillment **<30%** (agency: 30–35% gelb, >35% rot), Marketing ~15%, Sales ~20%, Overhead lean. Leck = % steigt bei gleichem Umsatz.
+- **Umsatz pro Mitarbeiter (FTE) >20–25k/Monat** (agency-scaler) = „Return on Mitarbeiter".
+- **Operativer Cashflow** (Cash − Betriebskosten − USt) = Herzgesundheit; kein fixer %-Benchmark → „schlag deine eigene Vergangenheit" (agency, Neil).
+- **Wachstums-RATE statt Total**, vs. Vormonat/Vorjahr (Neil).
+Golden Rule (mkbhd, Neil, alle): jede Ratio in Klartext + **Vergleich** („verglichen womit": Trend + Richtwert-Linie); Ampel (grün leise, rot schreit); 3–5 Kennzahlen, keine 40 (Dashboarditis).
+
+**Runway „3 Monate":** JA als Standard-Richtwert/rote Linie (agency: grün ≥3, gelb 1–3, rot <1). Heartbeat/Hormozi/Neil: eher Untergrenze, für lumpige/Dienstleistungs-Geschäfte Richtung 6, verschiebbar. Berechnen aus **bereinigtem Cash** (Konto + offene Forderungen − geschuldete Steuern) ÷ Monats-Fixkosten — NICHT nackte Kontozahl. Plus **„Worry Date" = Runway − 1 Monat** (Chris) und Runway als **Trend** zeigen (wichtiger als Absolutwert).
+
+**Produkt-Sicht — einstimmig JA, mit Fix + Warnung + Daten-Caveat:**
+- **Fix:** nach **Gewinn-Beitrag (Umsatz × Marge / absoluter DB €) ranken, NICHT Umsatz** — höchster Umsatz ≠ höchste Marge (Chris: Video; Hormozi: Stift; Neil: KISSmetrics).
+- **Bild:** alle 6 → **Quadranten-Matrix** (X=Umsatz, Y=Marge, Punktgröße=Gewinn €), Ecken in Klartext + Aktion: Gewinner→mehr / versteckte Perlen→ausbauen / Fleißarbeit→Preis prüfen / hinterfragen→streichen. Ein Klartext-Satz darüber. Liste als Drill-down.
+- **Warnung (Heartbeat, Neil):** margenschwache **Einstiegs-/Lockprodukte** nicht blind streichen — sie ziehen das lukrative Folgegeschäft; nach dem bewerten, was sie *nähren*.
+- **Daten-Caveat (agency-scaler):** Buchhaltung liefert **Umsatz pro Produkt** nur bei sauberer Einnahmen-Kategorisierung; **Vollkosten-Marge pro Produkt** braucht Kostenstellen/Tags/Time-Tracking — keine Produkt-Marge-Ampel bauen, die die Daten nicht hergeben.
+
+**Gaps (alle deferren ehrlich):** exakte „gesunde" %-/Runway-Werte sind **branchenabhängig** → sinnvolle Defaults ausliefern, kalibrierbar machen, gegen die *eigene* Vergangenheit benchmarken. Hormozi/Heartbeat/Neil markieren fehlende belegte Runway-Regel als Meinung.

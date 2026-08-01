@@ -1704,3 +1704,11 @@ Outcome-Positionierung. Dissens aufgelöst: Bank-Reconcile (bereinigte Ist), Ums
 fixem Ziel), Alerts+Ritual. Gaps: Steuer-Korrektheit/GoBD/Lexware-Datenmodell = Steuerberater-Lane (alle
 Seats deferren). Record: wiki/decisions/2026-08-01-finanz-dashboard-kpis-gf-controller.md.
 Knowledge: council. hub-candidate: no.
+
+## [2026-08-01] council | Runde 2: Finanz-Dashboard Verhältnisse/Richtwerte + Produkt-Sicht
+Follow-up (6 Sitze) zur Finanz-Dashboard-Frage: Ratios statt Einzelzahlen; Gewinn-Marge/Kostenquoten in %,
+Umsatz/MA >20-25k, operativer Cashflow, Wachstumsrate, jede Zahl mit Vergleich+Ampel. Runway 3 Mon = guter
+Standard-Boden (verschiebbar, aus bereinigtem Cash, + Worry-Date, als Trend). Produkt-Sicht einstimmig:
+nach Gewinn (Umsatz×Marge) ranken nicht Umsatz → Quadranten-Matrix (Umsatz×Marge, Gewinner/Perlen/Fleiß/
+streichen); Warnung Lockprodukte nicht blind killen; Daten-Caveat Produkt-Marge braucht Kostenzuordnung.
+Angehängt an Record 2026-08-01-finanz-dashboard-kpis-gf-controller.md. Knowledge: council. hub-candidate: no.
