@@ -356,7 +356,7 @@
       ],
       "tier": 1,
       "status": "active",
-      "note": "Active since 2026-08-01: system-prompt v1 (319 lines) compiled from 521 Adbaker Mentoring lessons / 484 transcripts (private paid course, LearningSuite), sources in wiki/sources/adbaker/. Codename eddy-ad = Simon Marder / Adbaker (DACH performance-marketing agency). Lane: Meta/Facebook paid-social ads (Business Manager, campaign structure, targeting/lookalikes, creatives/performance-design, pixel/CAPI tracking, CPA/ROAS KPIs, testing, scaling). Composite — primary voice lead instructor (Simon), some Creative/Growth lessons carry secondary voices — disclosed in SUBJECT/prompt. Sibling of agency-scaler + webinar-hero. PRIVATE clone (ki-business-agenten/eddy-ad-clone)."
+      "note": "Active since 2026-08-01: system-prompt v1.1 compiled from 521 Adbaker Mentoring lessons / 484 transcripts (private paid course, LearningSuite), sources in wiki/sources/adbaker/. Codename eddy-ad = Simon Marder / Adbaker (DACH performance-marketing agency). Lane: Meta/Facebook paid-social ads (Business Manager, campaign structure, targeting/lookalikes, creatives/performance-design, pixel/CAPI tracking, CPA/ROAS KPIs, testing, scaling). v1.1 (2026-08-01) adds one attributed EXTERNAL source on Meta's Andromeda delivery shift (consolidated campaign + Advantage+ broad targeting + creative-team + roster optimization) — takes precedence on structure/targeting for evergreen campaigns; classic structure = fallback. Composite — primary voice Simon + secondary voices, plus the external Andromeda voice — all disclosed. Sibling of agency-scaler + webinar-hero. PRIVATE clone (ki-business-agenten/eddy-ad-clone)."
     }
   ],
   "planned": [
